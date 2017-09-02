@@ -1,0 +1,372 @@
+<html lang="en,ar">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Language" content="en,ar">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/theme.css" type="text/css">
+  <title>FQM - Free Queue Management 0.1</title>
+  <meta name="description" content="FQM free queue management system - نظام إدارة الحشود المجاني">
+  <meta name="keywords" content="Free Queue Management System queue system management free software FQM QMS qms fqm linux gnu/linux macos macOS windows raspberry pi نظام برنامج إدارة الحشود مجاني المجاني">
+  <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Changa|Lateef" rel="stylesheet"> 
+  <style>
+  span:hover {
+  	filter: brightness(0.5);
+  }
+  i:hover {
+  	filter: brightness(0.5);
+  }
+  .hide {
+  	display: none;
+  }
+	</style>
+	<style>
+	div.fademe {
+    	opacity: 1;
+    	background-color:#000; 
+    	width:100%; 
+    	height:100%; 
+    	z-index:10;
+    	top:0; 
+    	left:0; 
+    	position:fixed;
+    	-webkit-transition: opacity 2s ease-in;
+    	-moz-transition: opacity 2s ease-in;
+    	-o-transition: opacity 2s ease-in;
+    	-ms-transition: opacity 2s ease-in;
+    	transition: opacity 2s ease-in;
+  	}
+  </style>
+</head>
+
+<body class="text-center" onload="wmsg();">
+	<div class="fademe"></div>
+  <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-inverse" id="thev">
+    <div class="container">
+      <a class="navbar-brand" href="#cover">FQM 0.1 beta</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" id="en1" style="font-family: 'Changa', sans-serif" href="javascript:slang()">عربي</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en2" href="#app">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en24" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en3" href="http://youtube.com" target="_blank">Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en4" href="http://facebook.com" target="_blank">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en23" href="mailto:fqm_support@gmail.com" target="_blank">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide" id="ar1" href="javascript:slang()">English</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide" id="ar2" href="#app" style="font-family: 'Changa', sans-serif">عنى</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide" id="ar24" href="#features" style="font-family: 'Changa', sans-serif">مميزات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide" id="ar3" href="http://youtube.com" style="font-family: 'Changa', sans-serif" target="_blank">شروح</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide" id="ar4" href="http://facebook.com" style="font-family: 'Changa', sans-serif" target="_blank">اخبار</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide" id="ar23" href="mailto:fqm_support@gmail.com" style="font-family: 'Changa', sans-serif" target="_blank">دعم</a>
+          </li>
+        </ul>
+        <a class="btn navbar-btn btn-secondary mx-3" id="en5" href="#download">Download</a>
+        <a class="btn navbar-btn btn-secondary mx-3 hide" id="ar5" style="font-family: 'Changa', sans-serif" href="#download">تحميل</a>
+      </div>
+    </div>
+  </nav>
+  <div class="cover d-flex align-items-center pt-5 bg-inverse" id="cover">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-md-left align-self-center my-5">
+          <h1 class="text-white display-1">FQM</h1>
+          <h4 class="text-white" id="en6">Free Queue Management, made easy and simple ..</h4>
+          <h4 class="text-white hide" id="ar6" style="font-family: 'Changa', sans-serif">إدارة الحشود بسهولة , ببساطة و بالمجان </h4>
+          <div class="row mt-5 text-center">
+            <div class="col-md-2 col-3">
+              <a href="#download"> <span class="center-block img-fluid d-block fa fa-4x fa-youtube text-white"> </span></a>
+            </div>
+            <div class="col-md-3 col-3">
+              <a href="#download"> <span class="center-block img-fluid d-block fa fa-4x fa-facebook text-white"> </span></a>
+            </div>
+            <div class="col-md-3 col-3">
+              <a href="mailto:fqm_support@gmail.com" target="_blank"> <span class="center-block img-fluid d-block fa fa-4x fa-envelope-o text-white"> </span></a>
+            </div>
+            <div class="col-md-3 col-3">
+              <a href="#download"> <span class="center-block img-fluid d-block fa fa-4x fa-linkedin text-white"> </span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img class="img-fluid d-block mx-auto" id="ilogo" src="images/logo.png"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="section py-5 text-md-left" id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 push-md-5 my-3 align-self-center">
+          <h2 class="text-white bg-inverse my-3 text-center" id="en7">What is FQM ?</h2>
+          <h2 class="text-white bg-inverse my-3 text-center hide" id="ar7" style="font-family: 'Changa', sans-serif">ما هوا نظام إدارة الحشود المجاني ؟</h2>
+          <p id="en8" class="lead"> A web based management system developed for the purpose of easing the process of orgnizing queues 
+          and lines. Like many other (QMS)s Queue Management Systems, FQM does provide a basic dashboard to allow the users 
+          of the system and customers alike to interact with the system via a basic yet simple user interface . A point that 
+          makes FQM different than others, is the fact that's free to use and share with others, which make it the first free 
+          alternative to many expensive QMSs out-there. Moreover among many other points of differntionation between FQM and 
+          other QMS. The free base of FQM, influance the development for more freeing IT solutions, that won't require you 
+          to be more dependant on specific OS or hardware, instead finding new soultions that fits all.</p>
+          <p id="ar8" class="lead hide text-right" style="font-family: 'Lateef', cursive; font-size: 170%;">
+          نظام إدارة يعتمد على تقنية الويب , التي تتيح لأكثر من مستخدم على الشبكة المحلية التواصل و التفاعل مع النظام بشكل فعال و سريع .
+          يعود سبب تفعيل تقنية الويب لإدارة الحشود , كونها جد مناسبة للمستلزمات و المتطلبات التقنية لإدارة الحشود . ومن مميزات نظام إدارة 
+          الحشود المجاني انه يوفر منصة لإدارة المكاتب , المهمات , المستخدمين و التذاكر بشكل فعال و دقيق . مع توفير منصة لخصخصة 
+          واجهات الإستخدام , التي يتفاعل معها مديروا النظام و مستخدميه . و كون نظام إدارة الحشود هذا مجاني , يجعل منه المرشح الأول لإستبدال
+          الكثير من أنظمة إدارة الحشود القديمة و الباهضة الثمن . و كون هذا النظام مجاني ايضاً , يجعل من توجهنا في تطوير حلول برمجية تعمل على إستبدال 
+          الحلول القديمة ذات المتطلبات المتعددة , بحلول مجانية بلا اي إعتمادات متطلبة
+          </p>
+          <a href="features.html" class="btn btn-outline-info btn-lg" id="en9"><span class="fa fa-play"></span> Try live demo</a>
+          <a href="features.html" class="btn btn-outline-info btn-lg" id="en10"><span class="fa fa-download"></span> Download</a>
+          <a href="features.html" class="btn btn-outline-info btn-lg hide" id="ar9" style="font-family: 'Changa', sans-serif"><span class="fa fa-play"></span> عرض رسومي</a>
+          <a href="features.html" class="btn btn-outline-info btn-lg hide" id="ar10" style="font-family: 'Changa', sans-serif"><span class="fa fa-download"></span> تحميل</a>
+        </div>
+        <div class="col-md-5 pull-md-7 my-3">
+          <img src="images/gui.png" class="img-fluid d-block mx-auto"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-left">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 align-self-center my-3">
+          <h2 class="text-white bg-inverse my-3 text-center" id="en11">Version 0.1 beta </h2>
+          <h2 class="text-white bg-inverse my-3 text-center hide" id="ar11" style="font-family: 'Changa', sans-serif"> النسخة التجريبية 0.1</h2>
+          <p id="en12" class="lead">
+            This is the first realse of FQM , 0.1 beta release. although, it's still under mass testing
+			it has been already tested in a simi productive enviroument without any flaws been exposed .
+			This version has the base on-which a lot of other more adavanced features will be added
+			and based on , in the comming releases. Nevertheless with the giving approach of providing the
+			ability to run our system on multiple different OSs, that eventually will result in more 
+			variation of unintended mishaps, which creates a challenge of fixing them all, that 
+			we're willing to take.
+          </p>
+          <p id="ar12" class="lead text-right hide" style="font-family: 'Lateef', cursive; font-size: 170%;">
+          هذه الإصدارة التجريبية الأولى من نظام إدارة الحشود المجاني, الغاية الأساسية منها هيا تجربة مدا فاعلية النظام 
+          و خلوه من الأخطاء البرمجية. مع ذالك هذه ليست أول مرحلة تجريبية فعلية للنظام ,فقد تم إخضاع البرنامج لمرحلة 
+          تجريبية محدودة و قد أثبت فاعليته إلى حد اللحضة. مع ذالك كون النظام يدعم قابلية التشغيل على نظم تشغيل متعددة 
+          يزيد من إحتمالية ظهور أخطاء برمجية لم يتم معلجتها مسبقاً . هذه النسخة الأولية من النظام تحتوي البنية الأساسية 
+          التي سيبنا عليها كثير من المميزات الأكثر تقدماً في النسخ القادمة
+          </p>
+          <a href="#download" class="btn btn-outline-info btn-lg" id="en13"> <span class="fa fa-youtube"></span> Tutorials</a>
+          <a href="#download" class="btn btn-outline-info btn-lg" id="en14"> <span class="fa fa-facebook"></span> News</a>
+          <a href="#download" class="btn btn-outline-info btn-lg hide" id="ar13" style="font-family: 'Changa', sans-serif"> <span class="fa fa-youtube"></span> شروح</a>
+          <a href="#download" class="btn btn-outline-info btn-lg hide" id="ar14" style="font-family: 'Changa', sans-serif"> <span class="fa fa-facebook"></span> أخبار</a>
+        </div>
+        <div class="col-md-6 my-3">
+          <img src="images/version.png" class="img-fluid d-block mx-auto"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="section py-5" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="pb-4 text-white bg-inverse" id="en15">Features of current version</h1>
+          <h1 class="pb-4 text-white bg-inverse hide" id="ar15" style="font-family: 'Changa', sans-serif">مميزات النسخة الحالية</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="align-self-center text-left col-lg-4 col-md-6">
+          <div class="row my-5">
+            <div class="col-10">
+              <h4 id="en16">Web-based platform</h4>
+              <h4 id="ar16" class="hide text-right" style="font-family: 'Changa', sans-serif"> مبني على تقنية الويب</h4>
+              <p id="en17">It gives the ability to multiple users and devices to interact with
+                system at the same time, without the need for Internet access. 
+                It has the ability to run on any local network .</p>
+                <p id="ar17" class="hide text-right" style="font-family: 'Changa', sans-serif">
+                يوفر المقدرة لعدد لا متنهي من المستخدمين لتفاعل مع النظام بشكل آني و سريع , و لا يتطلب توفر إتصال بالإنترنت لتفعيله . يمكن تشغيله على أي شبكة محلية 
+                </p>
+            </div>
+            <div class="col-2"><i class="d-block fa fa-3x fa-globe"></i></div>
+          </div>
+          <div class="row my-5">
+            <div class="col-10">
+              <h4 id="en18">Customization</h4>
+              <h4 id="ar18" class="hide text-right" style="font-family: 'Changa', sans-serif">التخصيص</h4>
+              <p id="en19">Gives the user the ability to customize every interface ,
+              granting a uniqe and speical experiance for every user .</p>
+              <p id="ar19" class="hide text-right" style="font-family: 'Changa', sans-serif">
+            يوفر منصة لتخصيص معظم واجهات الإستخدام التي يتفعل معها مستخدمين النظام, لتكون تجربة الإستخدام مميزة و خاصة لكل مستخدم 
+              </p>
+            </div>
+            <div class="col-2"><i class="d-block fa  fa-3x fa-wrench"></i></div>
+          </div>
+          <div class="row my-5">
+            <div class="col-10">
+              <h4 id="en20">User management</h4>
+              <h4 id="ar20" class="hide text-right" style="font-family: 'Changa', sans-serif"> إدارة المستخدمين</h4>
+              <p id="en21">Offers a user-based platform, so multiple users have the ability
+                to register, log-in and monitor their own assigned by Admin tasks .</p>
+                <p id="ar21" class="hide text-right" style="font-family: 'Changa', sans-serif">
+                توفر منصة لإدارة شؤون المستخدمين و توفر المقدرة على تخصيص إدارة المكاتب و التذاكر لمستخدمين معينين و تحديد صلحياتهم و مهامهم 
+                </p>
+            </div>
+            <div class="col-2"><i class="d-block fa  fa-3x fa-users"></i></div>
+          </div>
+        </div>
+        <div class="my-3 col-lg-4 col-md-6">
+          <img class="img-fluid d-block mx-auto" id="pimg" src="images/phone.png"> </div>
+        <div class="align-self-center text-left col-lg-4 col-md-12">
+          <div class="row my-5">
+            <div class="col-3"><i class="d-block fa fa-print fa-3x"></i></div>
+            <div class="col-9">
+              <h4 id="en25">POS Printers</h4>
+              <h4 id="ar25" class="hide text-left" style="font-family: 'Changa', sans-serif"> الطابعات</h4>
+              <p id="en26">Support for major POS USB printers on the market. 
+              By a simple click, you can assigne any connected USB printer.</p>
+            	<p id="ar26" class="hide text-right" style="font-family: 'Changa', sans-serif">
+            	يتعرف النظام بشكل تلقائي على طابعات نقاط البيع يو آس بي , و يمكن تخصيص و إعداد عدد لا محدود من الطابعات بشكل تفاعلي و آمن
+            	</p>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-3"><i class="d-block mx-auto fa  fa-3x fa-film"></i></div>
+            <div class="col-9">
+              <h4 id="en27">Multimedia</h4>
+              <h4 id="ar27" class="hide text-left" style="font-family: 'Changa', sans-serif"> الوسائط المتعددة</h4>
+              <p id="en28">Offers a multimedia platform, that any permitied user can upload videos, images
+              or sound files to, so they can be incorporated in the cutomization proccess .</p>
+            	<p id="ar28" class="hide text-right" style="font-family: 'Changa', sans-serif">
+            	يوفر النظام منصة لرفع ملفات الفيديو, الصوت و الصور , ليتم إستخدامها لحقاً في مهمة تخصيص واجهات الإستخدام و الإشعارات
+            	</p>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-3"><i class="d-block fa  fa-3x fa-bullhorn"></i></div>
+            <div class="col-9">
+              <h4 id="en29">Verbal announcement</h4>
+              <h4 id="ar29" class="hide text-left" style="font-family: 'Changa', sans-serif"> إشعار شفهي</h4>
+              <p id="en30">Supports text-to-speech clear and high-quality verbal
+              announcement, in two different languages English and Arabic
+              and with different preferences and settings .</p>
+              <p id="ar30" class="hide text-right" style="font-family: 'Changa', sans-serif">
+              ميزة الإشعار الشفهي التي تعتمد على تقنية تحويل النصوص المكتوبة إلى كلام منطوق , و يمكن تخصيص اللغة المستخدمة في الإشعار إلى العربية أو الإنجليزية مع توفر خصائص أخرى
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 section bg-inverse" id="download">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-md-left align-self-center my-5">
+          <h1 class="display-4 text-center">Download FQM</h1>
+          <h4 class="text-center" id="en22">Free to download, use and share on the major operating systems ..</h4>
+          <h4 class="text-center hide" id="ar22" style="font-family: 'Changa', sans-serif">مجاني لتحميل و الإستخدام و المشاركة على جميع نظم التشغيل المشهورة</h4>
+          <div class="row mt-5">
+            <div class="col-sm-5 col-md-3">
+              <a href="#cover">
+                <p class="text-white text-center h3"> <span class="center-block img-fluid d-block fa fa-5x fa-windows"></span> Windows </p>
+              </a>
+            </div>
+            <div class="col-sm-5 col-md-3">
+              <a href="#cover">
+                <p class="text-white text-center h3"> <span class="center-block img-fluid d-block fa fa-5x fa-linux"></span> GNU/Linux </p>
+              </a>
+            </div>
+            <div class="col-sm-5 col-md-3">
+              <a href="#cover">
+                <p class="text-white text-center h3"> <span class="center-block img-fluid d-block fa fa-5x fa-apple"></span> MacOS </p>
+              <a href="#cover">
+              </a>
+            </div>
+            <div class="col-sm-5 col-md-3">
+                <p class="text-white text-center h3"> <span class="center-block img-fluid d-block fa fa-5x fa-linux"></span> Raspberry PI </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-inverse" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <p class="text-left lead">&copy; FQM - Since 2017 with contagious passion</p>
+
+        </div>
+        <div class="col-3 col-md-1 align-self-center">
+          <a href="https://youtube.com" target="_blank"><i class="fa fa-fw fa-youtube fa-3x text-white"></i></a>
+        </div>
+        <div class="col-3 col-md-1 align-self-center">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-white"></i></a>
+        </div>
+        <div class="col-3 col-md-1 align-self-center">
+          <a href="mailto:fqm_support@gmail.com" target="_blank"><i class="fa fa-fw fa-envelope-o fa-3x text-white"></i></a>
+        </div>
+        <div class="col-3 col-md-1 align-self-center">
+          <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-fw fa-linkedin text-white fa-3x"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="js/bootstrap-4.0.0-alpha.6.min.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script type="text/javascript">
+  function slang(){
+    var noi=31
+    if ($('#en1').hasClass('hide')) {
+      for (var i=0;i<noi;++i){
+      	if ($('#en'+String(i)) || $('#ar'+String(i))) {
+        	$('#ar'+String(i)).addClass('hide');
+        	$('#en'+String(i)).removeClass('hide');
+        }
+      }
+      $('#ilogo').attr('src', 'images/logo.png');
+      $('#pimg').attr('src', 'images/phone.png');
+    } else {
+      for (var i=0;i<noi;++i){
+      	if ($('#en'+String(i)) || $('#ar'+String(i))) {
+        	$('#en'+String(i)).addClass('hide');
+        	$('#ar'+String(i)).removeClass('hide');
+        }
+      }
+      $('#ilogo').attr('src', 'images/logo_ar.png');
+      $('#pimg').attr('src', 'images/phone_ar.png');
+    }
+  }
+  function wmsg() {
+  	var msgg = "Notice: this website is still under construction ..\n\n\n تنبيه: هذا الموقع لزال قيد الإنشاء .."
+  	alert(msgg)
+  }
+  $('.fademe').css('opacity', 0);
+  setTimeout(function(){ 
+  	$('#thev').addClass('fixed-top'); 
+  	$('.fademe').remove();
+  }, 2000);
+  </script>
+</body>
+
+</html>
