@@ -50,7 +50,11 @@
   gtag('config', 'UA-105759902-1');
   gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
 </script>
-
+<script>
+ if (navigator.userAgent.search("Chrome") <= 2 && navigator.userAgent.search("Firefox") <= 2 && navigator.userAgent.search("Opera") <= 2) { 
+ 	alert("This site is designed and mostly optimized for Firefox, Chrome and Opera. So please consider using one of them for browsing it.");
+ }
+</script>
 </head>
 
 <body class="text-center" onload="wmsg();">
@@ -112,16 +116,16 @@
           <h4 class="text-white hide" id="ar6" style="font-family: 'Changa', sans-serif">إدارة الحشود بسهولة , ببساطة و بالمجان </h4>
           <div class="row mt-5 text-center">
             <div class="col-md-2 col-3">
-              <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" target="_blank"> <span class="center-block img-fluid d-block fa fa-4x fa-youtube text-white"> </span></a>
+              <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" target="_blank"> <span class="center-block fa fa-4x fa-youtube text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
-              <a href="https://www.facebook.com/FreeQueueManagement/" target="_blank"> <span class="center-block img-fluid d-block fa fa-4x fa-facebook text-white"> </span></a>
+              <a href="https://www.facebook.com/FreeQueueManagement/" target="_blank"> <span class="center-block fa fa-4x fa-facebook text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
-              <a href="mailto:freequem@gmail.com" target="_blank"> <span class="center-block img-fluid d-block fa fa-4x fa-envelope-o text-white"> </span></a>
+              <a href="mailto:freequem@gmail.com" target="_blank"> <span class="center-block fa fa-4x fa-envelope-o text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
-              <a href="https://www.linkedin.com/in/mohamed-feddad-5aa42a14a/" target="_blank"> <span class="center-block img-fluid d-block fa fa-4x fa-linkedin text-white"> </span></a>
+              <a href="https://www.linkedin.com/in/mohamed-feddad-5aa42a14a/" target="_blank"> <span class="center-block fa fa-4x fa-linkedin text-white"> </span></a>
             </div>
           </div>
         </div>
@@ -293,24 +297,20 @@
           <h4 class="text-center" id="en22">Free to download, use and share on the major operating systems ..</h4>
           <h4 class="text-center hide" id="ar22" style="font-family: 'Changa', sans-serif">مجاني لتحميل و الإستخدام و المشاركة على جميع نظم التشغيل المشهورة</h4>
           <div class="row mt-5">
-            <div class="col-sm-5 col-md-3">
+            <div class="col-xs-12 col-md-4">
               <a href="#cover">
-                <p class="text-white text-center h3"> <span class="center-block img-fluid d-block fa fa-5x fa-windows"></span> Windows </p>
+                <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-windows"></span><br> Windows </p>
               </a>
             </div>
-            <div class="col-sm-5 col-md-3">
+            <div class="col-xs-12 col-md-4">
               <a href="#cover">
-                <p class="text-white text-center h3"> <span class="center-block img-fluid d-block fa fa-5x fa-linux"></span> GNU/Linux </p>
+                <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-linux"></span><br> GNU/Linux </p>
               </a>
             </div>
-            <div class="col-sm-5 col-md-3">
+            <div class="col-xs-12 col-md-4">
               <a href="#cover">
-                <p class="text-white text-center h3"> <span class="center-block img-fluid d-block fa fa-5x fa-apple"></span> MacOS </p>
+                <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-apple"></span><br> MacOS </p>
               <a href="#cover">
-              </a>
-            </div>
-            <div class="col-sm-5 col-md-3">
-                <p class="text-white text-center h3"> <span class="center-block img-fluid d-block fa fa-5x fa-linux"></span> Raspberry PI </p>
               </a>
             </div>
           </div>
