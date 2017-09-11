@@ -1,5 +1,4 @@
 <html lang="en,ar">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Language" content="en,ar">
@@ -22,6 +21,9 @@
   }
   .hide {
   	display: none;
+  }
+  .lightit:hover {
+    filter: brightness(1.3);
   }
 	</style>
 	<style>
@@ -51,7 +53,7 @@
   gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
 </script>
 <script>
- if (navigator.userAgent.search("Chrome") <= 2 && navigator.userAgent.search("Firefox") <= 2 && navigator.userAgent.search("Opera") <= 2) { 
+ if (navigator.userAgent.search("Chrome") <= 2 && navigator.userAgent.search("Firefox") <= 2 && navigator.userAgent.search("Opera") <= 2) {
  	alert("This site is designed and mostly optimized for Firefox, Chrome and Opera. So please consider using one of them for browsing it.");
  }
 </script>
@@ -130,7 +132,10 @@
           </div>
         </div>
         <div class="col-md-6">
-          <img class="img-fluid d-block mx-auto" id="ilogo" src="images/logo.png"> </div>
+            <a href="#" target="_blank" data-target="#demo" data-toggle="modal">
+              <img class="img-fluid d-block mx-auto lightit" id="ilogo" src="images/logo.png">
+            </a>
+        </div>
       </div>
     </div>
   </div>
@@ -298,19 +303,18 @@
           <h4 class="text-center hide" id="ar22" style="font-family: 'Changa', sans-serif">مجاني لتحميل و الإستخدام و المشاركة على جميع نظم التشغيل المشهورة</h4>
           <div class="row mt-5">
             <div class="col-xs-12 col-md-4">
-              <a href="#cover">
+              <a href="#cover" data-toggle="tooltip" title="Tested on Windows XP, 7, 8, 10 32-bit and 64-bit">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-windows"></span><br> Windows </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a href="#cover">
+              <a href="#cover" data-toggle="tooltip" title="Tested on Ubuntu 14.04 . And can run on any later on released linux distros">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-linux"></span><br> GNU/Linux </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a href="#cover">
+              <a href="#" data-toggle="tooltip" title="Tested on MacOS 10.8.4 . And can run on any later on released MacOS">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-apple"></span><br> MacOS </p>
-              <a href="#cover">
               </a>
             </div>
           </div>
@@ -338,6 +342,24 @@
           <a href="https://www.linkedin.com/in/mohamed-feddad-5aa42a14a/" target="_blank"><i class="fa fa-fw fa-linkedin text-white fa-3x"></i></a>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="modal fade" id="demo">
+    <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+          <p class="modal-title text-center h3"> Video demonstration </p>
+		      <button type="button" class="close" data-dismiss="modal">&times;</button>
+	       </div>
+	      <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/i__1Z5a9Sak"
+                allowfullscreen=""></iframe>
+          </div>
+	      </div>
+	      <div class="modal-footer">
+		      <button type="button" class="close btn-warning pull-left" data-dismiss="modal">Close</button>
+	      </div>
     </div>
   </div>
   <script src="js/jquery-3.1.1.min.js"></script>
@@ -378,5 +400,4 @@
   }, 2000);
   </script>
 </body>
-
 </html>
