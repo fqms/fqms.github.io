@@ -43,25 +43,19 @@
     	transition: opacity 2s ease-in;
   	}
   </style>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105759902-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
-  gtag('config', 'UA-105759902-1');
-  gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
-</script>
-<script>
- if (navigator.userAgent.search("Chrome") <= 2 && navigator.userAgent.search("Firefox") <= 2 && navigator.userAgent.search("Opera") <= 2) {
- 	alert("This site is designed and mostly optimized for Firefox, Chrome and Opera. So please consider using one of them for browsing it.");
- }
-</script>
-<script type="text/javascript" src="//ylx-1.com/bnr.php?section=General&pub=821778&format=728x90&ga=g"></script>
+  <script type="text/javascript">
+   if (navigator.userAgent.search("Chrome") <= 2 && navigator.userAgent.search("Firefox") <= 2 && navigator.userAgent.search("Opera") <= 2) {
+   	alert("This site is designed and mostly optimized for Firefox, Chrome and Opera. So please consider using one of them for browsing it.");
+   }
+   setTimeout(function(){
+     $('#thev').addClass('fixed-top');
+     $('#fademe').remove()
+   }, 2500);
+  </script>
 </head>
 
-<body class="text-center" onload="wmsg();">
-	<div class="fademe"></div>
+<body class="text-center" onload="$('.fademe').css('opacity', 0);">
+	<div id="fademe" class="fademe"></div>
   <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-inverse" id="thev">
     <div class="container">
       <a class="navbar-brand" href="#cover">FQM 0.1 beta</a>
@@ -107,6 +101,10 @@
         </ul>
         <a class="btn navbar-btn btn-secondary mx-3" id="en5" href="#download">Download</a>
         <a class="btn navbar-btn btn-secondary mx-3 hide" id="ar5" style="font-family: 'Changa', sans-serif" href="#download">تحميل</a>
+        <a class="btn navbar-btn btn-secondary mx-2" data-toggle="tooltip" title="Lock or unlock navigation bar"
+           href="javascript:tlock();">
+          <span id="lockit" class="fa fa-1x fa-lock"></span>
+        </a>
       </div>
     </div>
   </nav>
@@ -395,11 +393,17 @@
   	var msgg = "Notice: this website is still under construction ..\n\n\n تنبيه: هذا الموقع لزال قيد الإنشاء .."
   	alert(msgg)
   }
-  $('.fademe').css('opacity', 0);
-  setTimeout(function(){
-  	$('#thev').addClass('fixed-top');
-  	$('.fademe').remove();
-  }, 2000);
+  function tlock() {
+    if($('#lockit').hasClass('fa-lock')) {
+      $('#lockit').removeClass('fa-lock');
+      $('#lockit').addClass('fa-unlock');
+      $('#thev').removeClass('fixed-top');
+    } else {
+      $('#lockit').removeClass('fa-unlock');
+      $('#lockit').addClass('fa-lock');
+      $('#thev').addClass('fixed-top');
+    }
+  }
   </script>
 </body>
 </html>
