@@ -169,7 +169,24 @@ body {
     -webkit-transform-origin: 47px 23px 0px;
     -moz-transform-origin: 47px 23px 0px;
     left: 892px;
-}</style>
+}
+
+div.fademe {
+    opacity: 1;
+    background-color:#000;
+    width:100%;
+    height:100%;
+    z-index:10;
+    top:0;
+    left:0;
+    position:fixed;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+  }
+</style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     function pull() {
@@ -186,10 +203,17 @@ body {
       var num = parseInt($('#dpt').text())
       $('#dpt').text(num + 1);
     }
+
+    setTimeout(function(){
+      $('#thev').addClass('fixed-top');
+      $('#fademe').remove()
+    }, 2500);
   </script>
 </head>
 
-<body class="htmlNoPages">
+<body class="htmlNoPages" onload="$('#fademe').css('opacity', 0);">
+  <div id="fademe" class="fademe">
+  </div>
   <img src="images/smaller_tv.png" class="gwd-img-7vch">
   <p class="gwd-p-igvv" id="dpt">0</p>
   <p class="gwd-p-93rd">( شاشة العرض )</p>
