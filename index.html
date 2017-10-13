@@ -603,8 +603,7 @@
         </div>
         <div class="snb bg-inverse hide" id="ar37" style="font-family: 'Changa', sans-serif">
           <br />
-          <form class="form-horizontal text-center" method="post"
-          action="https://formspree.io/freequem@gmail.com">
+          <form class="form-horizontal text-center" method="POST" id="fnews">
             <h3 id="ar37" class="text-white" style="font-family: 'Changa', sans-serif"
             > إشترك في قائمة التواصل البريدي :
               <button type="submit" class="btn btn-primary"
@@ -613,8 +612,10 @@
                 إشترك
               </button>
             </h3>
-            <input type="email" name="email" class="form-control text-center" placeholder="أدخل البريد الإلكتروني">
+            <input type="email" name="_replyto" class="form-control text-center" placeholder="أدخل البريد الإلكتروني">
             <input type="hidden" name="_next" value="//fqms.github.io/index.html#thankj" />
+            <input type="hidden" name="_subject" value="FQM 0.2 Updates subs" />
+            <input type="text" name="_gotcha" style="display:none" />
           </form>
           <br />
         </div>
@@ -764,15 +765,18 @@
           <p class="modal-title text-center h3"> E-Mail to us </p>
 		      <button type="button" class="close" data-dismiss="modal">&times;</button>
 	       </div>
-         <form class="form-horizontal text-center" method="post"
-           action="https://formspree.io/freequem@gmail.com">
+         <form class="form-horizontal text-center" method="POST" id="femail">
 	      <div class="modal-body">
           <br />
-            <input type="email" name="email" class="form-control text-center" placeholder="Enter email">
+          <input type="text" name="name" class="form-control text-center" placeholder="Enter your name">
+          <br />
+            <input type="email" name="_replyto" class="form-control text-center" placeholder="Enter email">
           <br />
             <textarea class="form-control" name="comment" rows="5" id="comment" placeholder="Enter your message .."></textarea>
           <br />
-          <input type="hidden" name="_next" value="https://fqms.github.io/index.html#thanke" />
+          <input type="hidden" name="_subject" value="FQM 0.2 emails" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="hidden" name="_next" value="//fqms.github.io/index.html#thanke" />
 	      </div>
 	      <div class="modal-footer">
 		      <button type="submit" class="close btn-danger">Send</button>
@@ -805,6 +809,8 @@
   <script src="js/bootstrap-4.0.0-alpha.6.min.js"></script>
   <script src="js/smooth-scroll.js"></script>
   <script type="text/javascript">
+  $('#femail').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com');
+  $('#fnews').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com');
   function slang(){
     var noi=39
     if ($('#en1').hasClass('hide')) {
