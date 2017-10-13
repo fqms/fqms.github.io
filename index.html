@@ -1,12 +1,15 @@
+<!DOCTYPE html>
 <html lang="en,ar">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Language" content="en,ar">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" href="https://fqms.github.io/" hreflang="en" />
+  <link rel="alternate" href="https://fqms.github.io/#ar" hreflang="ar" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="css/theme.css" type="text/css">
-  <title>FQM - Free Queue Management 0.1</title>
-  <meta name="description" content="FQM free queue management system - نظام إدارة الحشود المجاني">
+  <title>FQM - Free Queue Management 0.2</title>
+  <meta name="description" content="FQM free queue management system - نظام إدارة الحشود المجاني و الحر">
   <meta name="keywords" content="Free Queue Management System queue system management free software FQM QMS qms fqm linux gnu/linux macos macOS windows raspberry pi نظام برنامج إدارة الحشود مجاني المجاني">
   <link rel="icon"
       type="image/png"
@@ -28,6 +31,19 @@
   .lightit:hover {
     filter: brightness(1.3);
   }
+  .dimit:hover {
+    filter: brightness(0.5);
+  }
+  .snb {
+    -moz-box-shadow: 0 0 10px 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.5);
+  }
+  .shb {
+    -moz-box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+  }
 	</style>
 	<style>
 	div.fademe {
@@ -47,21 +63,27 @@
   	}
   </style>
   <script type="text/javascript">
-   if (navigator.userAgent.search("Chrome") <= 2 && navigator.userAgent.search("Firefox") <= 2 && navigator.userAgent.search("Opera") <= 2) {
+   if (navigator.userAgent.search("Chrome") <= 2 && navigator.userAgent.search("Firefox") <= 2) {
    	alert("This site is designed and mostly optimized for Firefox, Chrome and Opera. So please consider using one of them for browsing it.");
    }
    setTimeout(function(){
-     $('#thev').addClass('fixed-top');
      $('#fademe').remove()
    }, 2500);
+  function check_l(){
+    var l = location.href
+
+    if (l.substr(l.length - 2) == "ar") {
+      slang();
+    }
+  }
   </script>
 </head>
 
-<body class="text-center" onload="$('.fademe').css('opacity', 0);">
+<body class="text-center" onload="$('.fademe').css('opacity', 0); check_l( );">
 	<div id="fademe" class="fademe"></div>
   <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-inverse" id="thev">
     <div class="container">
-      <a class="navbar-brand" href="#cover">FQM 0.1 beta</a>
+      <a class="navbar-brand" href="#cover">FQM 0.2 beta</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav ">
@@ -69,16 +91,19 @@
             <a class="nav-link" id="en1" style="font-family: 'Changa', sans-serif" href="javascript:slang()">عربي</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="en2" href="#app">About</a>
+            <a class="nav-link" id="en2" href="#app">Intro</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="en24" href="#features">Features</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="en3" href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" target="_blank">Tutorials</a>
+            <a class="nav-link" id="en32" href="#license">License</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="en4" href="https://www.facebook.com/FreeQueueManagement/" target="_blank">News</a>
+            <a class="nav-link" id="en33" href="#updates">Updates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en3" href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" target="_blank">Tutorials</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="en23" href="mailto:fqmquem@gmail.com" target="_blank">Support</a>
@@ -87,16 +112,19 @@
             <a class="nav-link hide" id="ar1" href="javascript:slang()">English</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hide" id="ar2" href="#app" style="font-family: 'Changa', sans-serif">عنى</a>
+            <a class="nav-link hide" id="ar2" href="#app" style="font-family: 'Changa', sans-serif">مقدمة</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hide" id="ar24" href="#features" style="font-family: 'Changa', sans-serif">مميزات</a>
+            <a class="nav-link hide" id="ar24" href="#features" style="font-family: 'Changa', sans-serif">المميزات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide" id="ar32" href="#license" style="font-family: 'Changa', sans-serif">الرخصة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hide" id="ar33" href="#updates" style="font-family: 'Changa', sans-serif">التحديثات</a>
           </li>
           <li class="nav-item">
             <a class="nav-link hide" id="ar3" href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" style="font-family: 'Changa', sans-serif" target="_blank">شروح</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hide" id="ar4" href="https://www.facebook.com/FreeQueueManagement/" style="font-family: 'Changa', sans-serif" target="_blank">اخبار</a>
           </li>
           <li class="nav-item">
             <a class="nav-link hide" id="ar23" href="mailto:freequem@gmail.com" style="font-family: 'Changa', sans-serif" target="_blank">دعم</a>
@@ -106,7 +134,7 @@
         <a class="btn navbar-btn btn-secondary mx-3 hide" id="ar5" style="font-family: 'Changa', sans-serif" href="#download">تحميل</a>
         <a class="btn navbar-btn btn-secondary mx-2" data-toggle="tooltip" title="Lock or unlock navigation bar"
            href="javascript:tlock();">
-          <span id="lockit" class="fa fa-1x fa-lock"></span>
+          <span id="lockit" class="fa fa-1x fa-unlock"></span>
         </a>
       </div>
     </div>
@@ -116,20 +144,24 @@
       <div class="row">
         <div class="col-md-6 text-md-left align-self-center my-5">
           <h1 class="text-white display-1">FQM</h1>
-          <h4 class="text-white" id="en6">Free Queue Management, made easy and simple ..</h4>
-          <h4 class="text-white hide" id="ar6" style="font-family: 'Changa', sans-serif">إدارة الحشود بسهولة , ببساطة و بالمجان </h4>
+          <h4 class="text-white" id="en6">Free Queue Management, made easy, simple ..</h4>
+          <h4 class="text-white hide" id="ar6" style="font-family: 'Changa', sans-serif">إدارة الحشود بسهولة , ببساطة و بحرية </h4>
           <div class="row mt-5 text-center">
             <div class="col-md-2 col-3">
-              <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" data-toggle="tooltip" title="Youtube account for tutorials and demonistrations" target="_blank"> <span class="center-block fa fa-4x fa-youtube text-white"> </span></a>
+              <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" data-toggle="tooltip" title="Youtube account for tutorials and demonistrations" target="_blank">
+                <span class="center-block fa fa-4x fa-youtube text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
-              <a href="https://www.facebook.com/FreeQueueManagement/" data-toggle="tooltip" title="Facebook news account" target="_blank"> <span class="center-block fa fa-4x fa-facebook text-white"> </span></a>
+              <a href="https://github.com/mrf345" data-toggle="tooltip" title="Github source code account" target="_blank">
+                <span class="center-block fa fa-4x fa-github text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
-              <a href="mailto:freequem@gmail.com" data-toggle="tooltip" title="Email us for support and reporting" target="_blank"> <span class="center-block fa fa-4x fa-envelope-o text-white"> </span></a>
+              <a href="#" data-toggle="modal" data-target="#mailus" data-toggle="tooltip" title="Email us for support and reporting" target="_blank">
+                <span class="center-block fa fa-4x fa-envelope-o text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
-              <a href="https://www.linkedin.com/in/mohamed-feddad-5aa42a14a/" data-toggle="tooltip" title="My linkedin account" target="_blank"> <span class="center-block fa fa-4x fa-linkedin text-white"> </span></a>
+              <a href="https://www.linkedin.com/in/mohamed-feddad-5aa42a14a/" data-toggle="tooltip" title="My linkedin account" target="_blank">
+                <span class="center-block fa fa-4x fa-linkedin text-white"> </span></a>
             </div>
           </div>
         </div>
@@ -139,7 +171,7 @@
           --> <a href="javascript:wmsg();"
             data-toggle="tooltip" title="Watch video demonstration">
 
-              <img class="img-fluid d-block mx-auto lightit" id="ilogo" src="images/logo.png">
+              <img class="img-fluid d-block mx-auto lightit snb" id="ilogo" src="images/logo.gif" alt="Logo animation">
             </a>
         </div>
       </div>
@@ -149,8 +181,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7 push-md-5 my-3 align-self-center">
-          <h2 class="text-white bg-inverse my-3 text-center" id="en7">What is FQM ?</h2>
-          <h2 class="text-white bg-inverse my-3 text-center hide" id="ar7" style="font-family: 'Changa', sans-serif">ما هوا نظام إدارة الحشود المجاني ؟</h2>
+          <h2 class="text-white bg-inverse my-3 text-center shb" id="en7">What is FQM ?</h2>
+          <h2 class="text-white bg-inverse my-3 text-center hide shb" id="ar7" style="font-family: 'Changa', sans-serif">ما هوا نظام إدارة الحشود الحر ؟</h2>
           <p id="en8" class="lead"> A web based management system developed for the purpose of easing the process of orgnizing queues
           and lines. Like many other (QMS)s Queue Management Systems, FQM does provide a basic dashboard to allow the users
           of the system and customers alike to interact with the system via a basic yet simple user interface . A point that
@@ -172,7 +204,8 @@
           <a href="#download" class="btn btn-outline-info btn-lg hide" id="ar10" style="font-family: 'Changa', sans-serif"><span class="fa fa-download"></span> تحميل</a>
         </div>
         <div class="col-md-5 pull-md-7 my-3">
-          <img src="images/gui.png" class="img-fluid d-block mx-auto"> </div>
+          <img id="guig" src="images/gui.gif" class="img-fluid d-block mx-auto shb" alt="GUI animation">
+        </div>
       </div>
     </div>
   </div>
@@ -180,31 +213,32 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 align-self-center my-3">
-          <h2 class="text-white bg-inverse my-3 text-center" id="en11">Version 0.1 beta </h2>
-          <h2 class="text-white bg-inverse my-3 text-center hide" id="ar11" style="font-family: 'Changa', sans-serif"> النسخة التجريبية 0.1</h2>
+          <h2 class="text-white bg-inverse my-3 text-center shb" id="en11">Version 0.2 beta </h2>
+          <h2 class="text-white bg-inverse my-3 text-center hide shb" id="ar11" style="font-family: 'Changa', sans-serif"> النسخة التجريبية 0.2</h2>
           <p id="en12" class="lead">
-            This is the first realse of FQM , 0.1 beta release. although, it's still under mass testing
-			it has been already tested in a simi productive enviroument without any flaws been exposed .
-			This version has the base on-which a lot of other more adavanced features will be added
-			and based on , in the comming releases. Nevertheless with the giving approach of providing the
-			ability to run our system on multiple different OSs, that eventually will result in more
-			variation of unintended mishaps, which creates a challenge of fixing them all, that
-			we're willing to take.
+            In this second beta release of the system, a lot of improvements made in
+            regard to the speed and responsiveness of the system. As well as multiple
+            newly added features. Nevertheless, the current state of the system is still
+            under-testing but with the recent improvements on the core functionalities and
+            code, the proformace speed of the current release is almost double that of the
+            previous one. Lastly and most importantly the project been relicensed as a free
+            open-source project.
           </p>
           <p id="ar12" class="lead text-right hide" style="font-family: 'Lateef', cursive; font-size: 170%;">
-          هذه الإصدارة التجريبية الأولى من نظام إدارة الحشود المجاني, الغاية الأساسية منها هيا تجربة مدا فاعلية النظام
-          و خلوه من الأخطاء البرمجية. مع ذالك هذه ليست أول مرحلة تجريبية فعلية للنظام ,فقد تم إخضاع البرنامج لمرحلة
-          تجريبية محدودة و قد أثبت فاعليته إلى حد اللحضة. مع ذالك كون النظام يدعم قابلية التشغيل على نظم تشغيل متعددة
-          يزيد من إحتمالية ظهور أخطاء برمجية لم يتم معلجتها مسبقاً . هذه النسخة الأولية من النظام تحتوي البنية الأساسية
-          التي سيبنا عليها كثير من المميزات الأكثر تقدماً في النسخ القادمة
+            كثير من التحديثات و الإصلاحات تمت في هذه النسخة التجريبية الثانية , مما جعل من إداء
+            البرنامج و سرعته يتعدا ضعف السرعة و الأداء للنسخة السابقة . مع ذالك لاتزال هذه النسخة
+            نسخة تجريبية لأنه لم يتم إخضاعها لمرحلة إختبار طويلة لتتبين مجمل عيوبها البرمجية .
+            و من أهم تطورات هذه النسخة أن المشروع أصبح حر و مفتوح المصدر مما يتح لجميع المهتمين
+            المشاركة في التطوير و المساهمة في حل العلل المكتشفة
           </p>
           <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" target="_blank" class="btn btn-outline-info btn-lg" id="en13"> <span class="fa fa-youtube"></span> Tutorials</a>
-          <a href="https://www.facebook.com/FreeQueueManagement/" target="_blank" class="btn btn-outline-info btn-lg" id="en14"> <span class="fa fa-facebook"></span> News</a>
+          <a href="https://www.facebook.com/FreeQueueManagement/" target="_blank" class="btn btn-outline-info btn-lg" id="en14"> <span class="fa fa-github"></span> Source code</a>
           <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" target="_blank" class="btn btn-outline-info btn-lg hide" id="ar13" style="font-family: 'Changa', sans-serif"> <span class="fa fa-youtube"></span> شروح</a>
-          <a href="https://www.facebook.com/FreeQueueManagement/" target="_blank" class="btn btn-outline-info btn-lg hide" id="ar14" style="font-family: 'Changa', sans-serif"> <span class="fa fa-facebook"></span> أخبار</a>
+          <a href="https://www.facebook.com/FreeQueueManagement/" target="_blank" class="btn btn-outline-info btn-lg hide" id="ar14" style="font-family: 'Changa', sans-serif"> <span class="fa fa-github"></span> مصدر الكود</a>
         </div>
         <div class="col-md-6 my-3">
-          <img src="images/version.png" class="img-fluid d-block mx-auto"> </div>
+            <img id="uia" src="images/version.gif" class="img-fluid d-block mx-auto shb" alt="User interface animation">
+        </div>
       </div>
     </div>
   </div>
@@ -212,8 +246,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="pb-4 text-white bg-inverse" id="en15">Features of current version</h1>
-          <h1 class="pb-4 text-white bg-inverse hide" id="ar15" style="font-family: 'Changa', sans-serif">مميزات النسخة الحالية</h1>
+          <h1 class="pb-4 text-white bg-inverse shb" id="en15">Major Features</h1>
+          <h1 class="pb-4 text-white bg-inverse hide shb" id="ar15" style="font-family: 'Changa', sans-serif">أهم المميزات</h1>
         </div>
       </div>
       <div class="row">
@@ -257,7 +291,7 @@
           </div>
         </div>
         <div class="my-3 col-lg-4 col-md-6">
-          <img class="img-fluid d-block mx-auto" id="pimg" src="images/phone.png"> </div>
+          <img class="img-fluid d-block mx-auto" id="pimg" src="images/phone.png" alt="Phone features image"> </div>
         <div class="align-self-center text-left col-lg-4 col-md-12">
           <div class="row my-5">
             <div class="col-3"><i class="d-block fa fa-print fa-3x"></i></div>
@@ -300,6 +334,257 @@
       </div>
     </div>
   </div>
+  <div class="section py-5" id="updates">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="pb-4 text-white bg-inverse shb" id="en34">0.2 Updates</h1>
+          <h1 class="pb-4 text-white bg-inverse hide shb hide" id="ar34"
+          style="font-family: 'Changa', sans-serif">تحديثات 0.2</h1>
+        </div>
+      </div>
+      <br /><br />
+      <div class="row">
+        <table id="en36" class="table table-striped snb">
+          <thead>
+            <tr class="bg-inverse">
+              <th class="text-center h4">Update / Feature</th>
+              <th class="text-center h4">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="h5">
+              <td class="text-center">
+                Support usb POS printers and interacts
+                with them on Windows platforms
+              </td>
+              <td class="text-center"> Works and tested on XP and above </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Implementing PySide Qthread, to manage the web server
+              </td>
+              <td class="text-center">
+                Works and
+                solved running error on MacOS when using multiprocessing thread </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Arabic language support to GUI and Web UI
+              </td>
+              <td class="text-center">
+                Works perfectly </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Adding QR code shortcuts support, to the major routes
+              </td>
+              <td class="text-center">
+                Works perfectly using Flask-QRcode</td>
+            </tr>
+            <tr class="text-danger h5">
+              <td class="text-center">
+                Support printing tickets in Arabic
+              </td>
+              <td class="text-center">
+                Almost impossible directly, but there's unstable work-around using
+                Pillow library to create an image of the ticket and print it
+                instead of dealing with unicode and Arabic letters
+              </td>
+            </tr>
+            <tr class="h5">
+                <td class="text-center">
+                  Adding more interactive front-end features and improving appearance
+                </td>
+                <td class="text-center">
+                  Works perfectly and bugs free so far </td>
+            </tr>
+            <tr class="h5 text-danger">
+                <td class="text-center">
+                  Improving performance on browsers other than Firefox
+                </td>
+                <td class="text-center">
+                  A work in progress , supports Chrome on major platform so far </td>
+            </tr>
+            <tr class="h5">
+                <td class="text-center">
+                  Dual text to speech announcement in two languages
+                </td>
+                <td class="text-center">
+                  Works perefectly , using gTTS library  and with added threading to
+                  reduce response time </td>
+            </tr>
+            <tr class="h5">
+                <td class="text-center">
+                  Autoreload touch and display screens, whenever customized
+                </td>
+                <td class="text-center">
+                  Tested on Firefox and works well so far </td>
+            </tr>
+            <tr class="h5 bg-primary">
+                <td class="text-center">
+                  Becomming open-source and Free as in Freedome
+                </td>
+                <td class="text-center ">
+                  <i>It feels amazing ! </i> </td>
+            </tr>
+          </tbody>
+        </table>
+          <table id="ar36" class="table table-striped snb hide" DIR="RTL">
+            <thead>
+              <tr class="bg-inverse">
+                <th class="text-center h4"
+                style="font-family: 'Lateef', cursive; font-size: 250%;">
+                  التحديث \ الميزة
+                </th>
+                <th class="text-center h4"
+                style="font-family: 'Lateef', cursive; font-size: 250%;"
+                >
+                  الحالة
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="h5">
+                <td class="text-center" style="font-family: 'Changa', sans-serif">
+                  دعم طابعات اليو آس بي على أنظمة تشغيل ويندوز
+                </td>
+                <td class="text-center"
+                style="font-family: 'Changa', sans-serif">
+                  مجرب و يعمل بشكل جيد على أنظمة ويندوز إكس بي , 7 و 10
+                </td>
+              </tr>
+              <tr class="h5">
+                <td class="text-center"
+                style="font-family: 'Changa', sans-serif">
+                  تفعيل ميزة تعدد المهمات لتشغيل و إدارة خادم الوب
+                </td>
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    تعمل بشكل جيد و تحل مشكلة تشغيل البرنامج على بعض أنظمة MacOS X
+                  </td>
+              </tr>
+              <tr class="h5">
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    دعم اللغة العربية لواجهة الإستخدام الرسومية و واجهة إستخدام الويب
+                  </td>
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    تعمل بشكل جيد
+                  </td>
+              </tr>
+              <tr class="h5">
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    إضافة إختصارات شفرة QR للأهم مسارات النظام
+                  </td>
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    يعمل بشكل جيد بدعم مكتبة Flask-QRcode
+                  </td>
+              </tr>
+              <tr class="text-danger h5">
+                <td class="text-center"
+                style="font-family: 'Changa', sans-serif">
+                  دعم طباعة التذاكر بالعربية
+                </td>
+                <td class="text-center"
+                style="font-family: 'Changa', sans-serif">
+                  تعمل لكن بشكل غير مستقر , لعدم توفر مكتبات تتيح التعامل
+                  مع طابعات اليو إس بي و الحروف العربية بشكل مباشر
+                </td>
+              </tr>
+              <tr class="h5">
+                    <td class="text-center"
+                    style="font-family: 'Changa', sans-serif">
+                      إضافة تحسينات و ميزات أكثر تفاعلية لواجهة إستخدام الويب
+                    </td>
+                    <td class="text-center"
+                    style="font-family: 'Changa', sans-serif">
+                      تعمل بشكل جيد
+                    </td>
+              </tr>
+              <tr class="h5 text-danger">
+                    <td class="text-center"
+                    style="font-family: 'Changa', sans-serif">
+                      دعم و تحسين أداء النظام على متصفحات الإنترنت المتعددة
+                    </td>
+                    <td class="text-center"
+                    style="font-family: 'Changa', sans-serif">
+                      يعمل على Firefox و Chrome بشكل جيد , لكن يتطلب مزيد من
+                      الدعم للمتصفحات الأخرى
+                    </td>
+              </tr>
+              <tr class="h5">
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    الإشعار الشفهي باللغتين الإنجليزية و العربية بالتوالي
+                  </td>
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    يعمل بشكل جيد بالإستعانة بمكتبة Google لتحويل النصوص إلى أصوات منطوقة
+                  </td>
+              </tr>
+              <tr class="h5">
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    إعادة تجيديد صفحات شاشة العرض و شاشة اللمس بشكل تلقائي
+                    حينما يتم إجراء أي عملية تخصيص أو إدارة
+                  </td>
+                  <td class="text-center"
+                  style="font-family: 'Changa', sans-serif">
+                    تعمل بشكل جيد , تم تجربتها على متصفح Firefox إلى الآن
+                     </td>
+              </tr>
+              <tr class="h5 bg-primary">
+                    <td class="text-center"
+                    style="font-family: 'Changa', sans-serif">
+                      تحرير مصدر النظام و مشاركته مع الجميع
+                    </td>
+                    <td class="text-center"
+                    style="font-family: 'Changa', sans-serif">
+                      <i>
+                      تم بكل سعادة !
+                      </i>
+                    </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <br /><br />
+      <div class="col-md-12">
+        <div class="snb bg-inverse" id="en37">
+          <br />
+          <form class="form-horizontal text-center" method="post"
+            action="https://formspree.io/freequem@gmail.com">
+            <h3 id="en37" class="text-white">Join our mailing list for more updates :
+              <button type="submit" class="btn btn-primary">Join</button>
+            </h3>
+            <input type="email" name="email" class="form-control text-center" placeholder="Enter email">
+          </form>
+          <br />
+        </div>
+        <div class="snb bg-inverse hide" id="ar37" style="font-family: 'Changa', sans-serif">
+          <br />
+          <form class="form-horizontal text-center" method="post"
+          action="https://formspree.io/freequem@gmail.com">
+            <h3 id="ar37" class="text-white" style="font-family: 'Changa', sans-serif"
+            > إشترك في قائمة التواصل البريدي :
+              <button type="submit" class="btn btn-primary"
+              style="font-family: 'Changa', sans-serif"
+              >
+                إشترك
+              </button>
+            </h3>
+            <input type="email" name="email" class="form-control text-center" placeholder="أدخل البريد الإلكتروني">
+          </form>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <br /><br />
   <div class="py-5 section bg-inverse" id="download">
     <div class="container">
       <div class="row">
@@ -307,23 +592,103 @@
           <h1 class="display-4 text-center">Download FQM</h1>
           <h4 class="text-center" id="en22">Free to download, use and share on the major operating systems ..</h4>
           <h4 class="text-center hide" id="ar22" style="font-family: 'Changa', sans-serif">مجاني لتحميل و الإستخدام و المشاركة على جميع نظم التشغيل المشهورة</h4>
+          <br />
+          <div class="row text-center snb bg-primary hide" id="shareus">
+            <div class="col-md-12">
+              <br />
+            </div>
+            <div class="col-md-12">
+              <h1 id="en38" class="text-center">Tell your friends that, we exist .. </h1>
+              <h1 id="ar38" class="text-center hide"
+                style="font-family: 'Changa', sans-serif"
+              >
+               أخبر أصدقائك عنا ..
+             </h1>
+            </div>
+            <div class="col-md-12">
+              <br />
+            </div>
+            <div class="col-md-2 col-xs-12"></div>
+            <div class="col-md-2">
+              <a href="https://www.facebook.com/sharer.php?u=https://fqms.github.io"
+              data-toggle="tooltip" title="Share us on Facebook" target="_blank">
+                <span class="ssh fa fa-5x fa-facebook-square fa-spin text-white"></span>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://twitter.com/share?url=https://fqms.github.io"
+              data-toggle="tooltip" title="Share us on Twitter" target="_blank">
+                <i class="ssh fa fa-5x fa-twitter-square fa-spin text-white"></i>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://plus.google.com/share?url=https://fqms.github.io"
+              data-toggle="tooltip" title="Share us on Google+" target="_blank">
+                <i class="ssh fa fa-5x fa-google-plus-square fa-spin text-white"></i>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://fqms.github.io"
+              data-toggle="tooltip" title="Share us on Linkedin" target="_blank">
+                <i class="ssh fa fa-5x fa-linkedin-square fa-spin text-white"></i>
+              </a>
+            </div>
+            <div class="col-md-12">
+              <br />
+            </div>
+          </div>
           <div class="row mt-5">
             <div class="col-xs-12 col-md-4">
-              <a href="https://archive.org/download/FQM01/FQM_01_windows.zip" data-toggle="tooltip" title="Tested on Windows XP, 7, 8, 10 32-bit and 64-bit">
+              <a href="https://archive.org/download/FQM01/FQM_01_windows.zip"
+              onclick="$('#shareus').removeClass('hide');"
+              data-toggle="tooltip" title="Tested on Windows XP, 7, 8, 10 32-bit and 64-bit">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-windows"></span><br> Windows </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a href="https://archive.org/download/FQM01/FQM_01_Linux.zip" data-toggle="tooltip" title="Tested on Ubuntu 14.04 . And can run on any later on released linux distros">
+              <a href="https://archive.org/download/FQM01/FQM_01_Linux.zip" data-toggle="tooltip"
+                onclick="$('#shareus').removeClass('hide');"
+               title="Tested on Ubuntu 14.04 . And can run on any later on released linux distros">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-linux"></span><br> GNU/Linux </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a href="https://archive.org/download/FQM01/FQM_01_MacOS.zip" data-toggle="tooltip" title="Tested on MacOS 10.8.4 . And can run on any later on released MacOS">
+              <a href="https://archive.org/download/FQM01/FQM_01_MacOS.zip"
+              onclick="$('#shareus').removeClass('hide');"
+              data-toggle="tooltip" title="Tested on MacOS 10.8.4 . And can run on any later on released MacOS">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-apple"></span><br> MacOS </p>
               </a>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="license" class="col-md-12 text-md-left align-self-center my-5">
+          <center>
+            <a id="licl" href="https://en.wikipedia.org/wiki/Mozilla_Public_License" target="_blank" data-toggle="tooltip" title="MPL license details">
+              <img class="img-fluid display-4 dimit" src="images/license.png" alt="Mozilla MPL license">
+            </a>
+          </center>
+          <br /><br />
+          <h4 class="text-center" id="en31">
+            This work is a free, open-source project licensed under Mozilla Public License version 2.0 .<br />
+            Which means anyone can modify and improve this project. Get involved :
+          </h4>
+          <h4 class="text-center hide" id="ar31" style="font-family: 'Changa', sans-serif" DIR="RTL">
+            هذا العمل مجاني و حر , و يخضع لرخصة البرامج الحرة و مفتوحة المصدر موزيلا النسخة الثانية .
+             حيث بإمكان أي شخص التعديل و إعادة النشر بحرية و من غير قيود , شاركنا في التطوير :
+          </h4>
+          <br /><br />
+            <div class="col-xs-12">
+              <center>
+                <a href="#" target="_blank" data-toggle="tooltip" title="Source code on Github">
+                  <img class="img-responsive dimit" src="images/github.png" alt="Github logo">
+                </a>
+                <a href="#" target="_blank" data-toggle="tooltip" title="Source code on SourceForge">
+                  <img class="img-responsive dimit" src="images/sourceforge.png" alt="Sourceforge logo">
+                </a>
+              </center>
+            </div>
         </div>
       </div>
     </div>
@@ -336,20 +701,48 @@
 
         </div>
         <div class="col-3 col-md-1 align-self-center">
-          <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" data-toggle="tooltip" title="Youtube account for tutorials and demonistrations" target="_blank"><i class="fa fa-fw fa-youtube fa-3x text-white"></i></a>
+          <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" data-toggle="tooltip" title="Youtube account for tutorials and demonistrations" target="_blank">
+            <i class="fa fa-fw fa-youtube-square fa-3x text-white"></i></a>
         </div>
         <div class="col-3 col-md-1 align-self-center">
-          <a href="https://www.facebook.com/FreeQueueManagement/" data-toggle="tooltip" title="Facebook news account" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-white"></i></a>
+          <a href="https://github.com/mrf345" data-toggle="tooltip" title="Github source-code account" target="_blank">
+            <i class="fa fa-fw fa-github-square fa-3x text-white"></i></a>
         </div>
         <div class="col-3 col-md-1 align-self-center">
-          <a href="mailto:freequem@gmail.com" data-toggle="tooltip" title="Email us for support and reporting" target="_blank"><i class="fa fa-fw fa-envelope-o fa-3x text-white"></i></a>
+          <a href="mailto:freequem@gmail.com" data-toggle="tooltip" title="Email us for support and reporting" target="_blank">
+            <i class="fa fa-fw fa-envelope fa-3x text-white"></i></a>
         </div>
         <div class="col-3 col-md-1 align-self-center">
-          <a href="https://www.linkedin.com/in/mohamed-feddad-5aa42a14a/" data-toggle="tooltip" title="My linkedin account" target="_blank"><i class="fa fa-fw fa-linkedin text-white fa-3x"></i></a>
+          <a href="https://www.linkedin.com/in/mohamed-feddad-5aa42a14a/" data-toggle="tooltip" title="My linkedin account" target="_blank">
+            <i class="fa fa-fw fa-linkedin-square text-white fa-3x"></i></a>
         </div>
       </div>
     </div>
   </div>
+  <div class="modal fade" id="mailus">
+    <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+          <p class="modal-title text-center h3"> E-Mail to us </p>
+		      <button type="button" class="close" data-dismiss="modal">&times;</button>
+	       </div>
+         <form class="form-horizontal text-center" method="post"
+           action="https://formspree.io/freequem@gmail.com">
+	      <div class="modal-body">
+          <br />
+            <input type="email" name="email" class="form-control text-center" placeholder="Enter email">
+          <br />
+            <textarea class="form-control" name="comment" rows="5" id="comment" placeholder="Enter your message .."></textarea>
+          <br />
+          <input type="hidden" name="_next" value="//fqms.github.io/index.html#thanke" />
+	      </div>
+	      <div class="modal-footer">
+		      <button type="submit" class="close btn-danger">Send</button>
+	      </div>
+        </form>
+    </div>
+  </div>
+</div>
   <div class="modal fade" id="demo">
     <div class="modal-dialog">
 	    <div class="modal-content">
@@ -368,13 +761,14 @@
 	      </div>
     </div>
   </div>
+</div>
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="js/bootstrap-4.0.0-alpha.6.min.js"></script>
   <script src="js/smooth-scroll.js"></script>
   <script type="text/javascript">
   function slang(){
-    var noi=31
+    var noi=39
     if ($('#en1').hasClass('hide')) {
       for (var i=0;i<noi;++i){
       	if ($('#en'+String(i)) || $('#ar'+String(i))) {
@@ -382,8 +776,11 @@
         	$('#en'+String(i)).removeClass('hide');
         }
       }
-      $('#ilogo').attr('src', 'images/logo.png');
+      $('#ilogo').attr('src', 'images/logo.gif');
+      $('#guig').attr('src', 'images/gui.gif');
+      $('#uia').attr('src', 'images/version.gif');
       $('#pimg').attr('src', 'images/phone.png');
+      $('#licl').attr('href', 'https://en.wikipedia.org/wiki/Mozilla_Public_License')
     } else {
       for (var i=0;i<noi;++i){
       	if ($('#en'+String(i)) || $('#ar'+String(i))) {
@@ -391,8 +788,11 @@
         	$('#ar'+String(i)).removeClass('hide');
         }
       }
-      $('#ilogo').attr('src', 'images/logo_ar.png');
+      $('#ilogo').attr('src', 'images/logo_ar.gif');
+      $('#guig').attr('src', 'images/gui_ar.gif');
+      $('#uia').attr('src', 'images/version_ar.gif');
       $('#pimg').attr('src', 'images/phone_ar.png');
+      $('#licl').attr('href', 'https://ar.wikipedia.org/wiki/Mozilla_Public_License')
     }
   }
   function wmsg() {
@@ -410,6 +810,9 @@
       $('#thev').addClass('fixed-top');
     }
   }
+  $('.ssh').hover(
+    function(){ $(this).toggleClass('fa-spin') }
+  );
   </script>
 </body>
 </html>
