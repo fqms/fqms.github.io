@@ -77,9 +77,15 @@
     }
     if (l.substr(l.length - 6) == "thanke") {
       $('#thanke').removeClass('hide');
+      setTimeout(function() {
+        $('#thanke').fadeOut();
+      }, 10000);
     }
     if (l.substr(l.length - 6) == "thankj") {
       $('#thankj').removeClass('hide');
+      setTimeout(function() {
+        $('#thankj').fadeOut();
+      }, 10000);
     }
   }
   </script>
@@ -860,6 +866,7 @@
   function slang(){
     var noi=41
     if ($('#en1').hasClass('hide')) {
+      localStorage['arabic'] = 'No'
       for (var i=0;i<noi;++i){
       	if ($('#en'+String(i)) || $('#ar'+String(i))) {
         	$('#ar'+String(i)).addClass('hide');
@@ -873,6 +880,7 @@
       $('#licl').attr('href', 'https://en.wikipedia.org/wiki/Mozilla_Public_License')
       $('.mlink').attr('data-target', '#mailus');
     } else {
+      localStorage['arabic'] = 'Yes'
       for (var i=0;i<noi;++i){
       	if ($('#en'+String(i)) || $('#ar'+String(i))) {
         	$('#en'+String(i)).addClass('hide');
@@ -893,10 +901,12 @@
   }
   function tlock() {
     if($('#lockit').hasClass('fa-lock')) {
+      localStorage['lock'] = "No";
       $('#lockit').removeClass('fa-lock');
       $('#lockit').addClass('fa-unlock');
       $('#thev').removeClass('fixed-top');
     } else {
+      localStorage['lock'] = "Yes";
       $('#lockit').removeClass('fa-unlock');
       $('#lockit').addClass('fa-lock');
       $('#thev').addClass('fixed-top');
@@ -905,6 +915,22 @@
   $('.ssh').hover(
     function(){ $(this).toggleClass('fa-spin') }
   );
+  var yetAr = localStorage['arabic'];
+  var yetLock = localStorage['lock'];
+  if (!yetAr) {
+    localStorage['arabic'] = "No";
+  }
+  if (yetAr == 'Yes') {
+    slang();
+  }
+  if (!yetLock) {
+    localStorage['lock'] = "No";
+  }
+  if (yetLock == "Yes") {
+    setTimeout(function(){
+      tlock();
+    }, 3000);
+  }
   </script>
 </body>
 </html>
