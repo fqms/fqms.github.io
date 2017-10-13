@@ -75,6 +75,12 @@
     if (l.substr(l.length - 2) == "ar") {
       slang();
     }
+    if (l.substr(l.length - 6) == "thanke") {
+      $('#thanke').removeClass('hide');
+    }
+    if (l.substr(l.length - 6) == "thankj") {
+      $('#thankj').removeClass('hide');
+    }
   }
   </script>
 </head>
@@ -141,17 +147,6 @@
   </nav>
   <div class="cover d-flex align-items-center pt-5 bg-inverse" id="cover">
     <div class="container">
-      <div id="thanke" class="row hide">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8 snb bg-primary" id="en37">
-          <br />
-          <p class="h3 text-white">
-            Thanks for Emailing us, will get back to you as soon as possible
-          </p>
-          <br />
-        </div>
-      </div>
       <div class="row">
         <div class="col-md-6 text-md-left align-self-center my-5">
           <h1 class="text-white display-1">FQM</h1>
@@ -186,6 +181,36 @@
             </a>
         </div>
       </div>
+    </div>
+  </div>
+  <div id="thankj" class="row hide">
+    <div class="col-md-12">
+      <br /><br />
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6 snb bg-primary">
+      <button type="button" class="close h2" onclick="$('#thankj').fadeOut();">&times;</button>
+      <br />
+      <p class="h3 text-white">
+        Thanks for joining our mailing list, will keep you updated
+      </p>
+      <br />
+    </div>
+  </div>
+  <div id="thanke" class="row hide">
+    <div class="col-md-12">
+      <br /><br />
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6 snb bg-primary">
+      <button type="button" class="close h2" onclick="$('#thanke').fadeOut();">&times;</button>
+      <br />
+      <p class="h3 text-white">
+        Thanks for Emailing us, will reply back as soon as possible
+      </p>
+      <br />
     </div>
   </div>
   <div class="section py-5 text-md-left" id="app">
@@ -589,6 +614,7 @@
               </button>
             </h3>
             <input type="email" name="email" class="form-control text-center" placeholder="أدخل البريد الإلكتروني">
+            <input type="hidden" name="_next" value="//fqms.github.io/index.html#thankj" />
           </form>
           <br />
         </div>
@@ -606,6 +632,7 @@
           <br />
           <div class="row text-center snb bg-primary hide" id="shareus">
             <div class="col-md-12">
+              <button type="button" class="close h2" onclick="$('#shareus').fadeOut();">&times;</button>
               <br />
             </div>
             <div class="col-md-12">
