@@ -916,22 +916,24 @@
   $('.ssh').hover(
     function(){ $(this).toggleClass('fa-spin') }
   );
-  var yetAr = localStorage['arabic'];
-  var yetLock = localStorage['lock'];
-  if (!yetAr) {
-    localStorage['arabic'] = "No";
-  }
-  if (yetAr == 'Yes') {
-    slang();
-  }
-  if (!yetLock) {
-    localStorage['lock'] = "No";
-  }
-  if (yetLock == "Yes") {
-    setTimeout(function(){
-      tlock();
-    }, 3000);
-  }
+  $(document).ready(function(){
+    var yetAr = localStorage['arabic'];
+    var yetLock = localStorage['lock'];
+    if (!yetAr) {
+      localStorage['arabic'] = "No";
+    }
+    if (yetAr == 'Yes') {
+      slang();
+    }
+    if (!yetLock) {
+      localStorage['lock'] = "No";
+    }
+    if (yetLock == "Yes") {
+      setTimeout(function(){
+        tlock();
+      }, 3000);
+    }
+  });
   </script>
 </body>
 </html>
