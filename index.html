@@ -644,6 +644,13 @@
           <h4 class="text-center" id="en22">Free to download, use and share on the major operating systems ..</h4>
           <h4 class="text-center hide" id="ar22" style="font-family: 'Changa', sans-serif">مجاني لتحميل و الإستخدام و المشاركة على جميع نظم التشغيل المشهورة</h4>
           <br />
+          <div class="col-md-12 text-center">
+            <div class="btn-group">
+               <button id="archive" onclick="lswitch();" type="button" class="btn btn-danger active h4" disabled=" " >Archive.org</button>
+               <button id="sourceforge" onclick="lswitch();" type="button" class="btn btn-primary h4">Sourceforge.net</button>
+            </div>
+          </div>
+          <br /><br />
           <div class="row text-center snb bg-primary hide" id="shareus">
             <div class="col-md-12">
               <button type="button" class="close h2" onclick="$('#shareus').fadeOut();">&times;</button>
@@ -691,21 +698,21 @@
           </div>
           <div class="row mt-5">
             <div class="col-xs-12 col-md-4">
-              <a href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Windows.zip"
+              <a id="winl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Windows.zip"
               onclick="$('#shareus').removeClass('hide');"
               data-toggle="tooltip" title="Tested on Windows XP, 7, 8, 10 32-bit and 64-bit">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-windows"></span><br> Windows </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux.zip" data-toggle="tooltip"
+              <a id="linl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux.zip" data-toggle="tooltip"
                 onclick="$('#shareus').removeClass('hide');"
                title="Tested on Ubuntu 14.04 . And can run on any later-on released linux distros">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-linux"></span><br> GNU/Linux </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_MacOS.zip"
+              <a id="macl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_MacOS.zip"
               onclick="$('#shareus').removeClass('hide');"
               data-toggle="tooltip" title="Tested on MacOS 10.8.4, And can run on any later-on released MacOS">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-apple"></span><br> MacOS </p>
@@ -733,10 +740,10 @@
           <br /><br />
             <div class="col-xs-12">
               <center>
-                <a href="#" target="_blank" data-toggle="tooltip" title="Source code on Github">
+                <a href="https://github.com/mrf345/FQM" target="_blank" data-toggle="tooltip" title="Source code on Github">
                   <img class="img-responsive dimit" src="images/github.png" alt="Github logo">
                 </a>
-                <a href="#" target="_blank" data-toggle="tooltip" title="Source code on SourceForge">
+                <a href="https://sourceforge.net/p/free-queue-manager/source_code/ci/master/tree/" target="_blank" data-toggle="tooltip" title="Source code on SourceForge">
                   <img class="img-responsive dimit" src="images/sourceforge.png" alt="Sourceforge logo">
                 </a>
               </center>
@@ -913,6 +920,34 @@
   $('.ssh').hover(
     function(){ $(this).toggleClass('fa-spin') }
   );
+  function lswitch() {
+    if ($('#archive').hasClass('active')){
+      $('#archive').removeClass('active');
+      $('#sourceforge').addClass('active');
+      $('#sourceforge').prop('disabled', true);
+      $('#archive').prop('disabled', false);
+      $('#winl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_Windows.zip/download');
+      $('#linl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_Linux.zip/download');
+      $('#macl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_MacOS.zip/download');
+      $('#winl').attr('target', '_blank');
+      $('#linl').attr('target', '_blank');
+      $('#macl').attr('target', '_blank');
+    } else {
+      $('#sourceforge').removeClass('active');
+      $('#sourceforge').prop('disabled', false);
+      $('#archive').prop('disabled', true);
+      $('#archive').addClass('active');
+      $('#winl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Windows.zip');
+      $('#linl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux.zip');
+      $('#macl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_MacOS.zip');
+      $('#winl').attr('target', '');
+      $('#linl').attr('target', '');
+      $('#macl').attr('target', '');
+    }
+    $('#winl').fadeOut().fadeIn();
+    $('#linl').fadeOut().fadeIn();
+    $('#macl').fadeOut().fadeIn();
+  }
   $(document).ready(function(){
     var yetAr = localStorage['arabic'];
     var yetLock = localStorage['lock'];
