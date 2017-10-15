@@ -107,7 +107,7 @@
   </script>
 </head>
 
-<body class="text-center" onload="$('.fademe').css('opacity', 0);">
+<body class="text-center">
 	<div id="fademe" class="fademe"></div>
   <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-inverse" id="thev">
     <div class="container">
@@ -968,6 +968,7 @@
     $('#macl').fadeOut().fadeIn();
   }
   $(document).ready(function(){
+    $('.fademe').css('opacity', 0);
     var yetAr = localStorage['arabic'];
     var yetLock = localStorage['lock'];
     if (!yetAr) {
