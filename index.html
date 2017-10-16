@@ -989,8 +989,10 @@
       $('#fademe').remove()
     }, 2500);
     var l = location.href
-    if (l.substr(l.length - 2) == "ar" && yetAr == "No" || !yetAr) {
-      slang();
+    if (l.substr(l.length - 2) == "ar") {
+      if (yetAr == "No" || !yetAr) {
+        slang();
+      }
     }
     if (l.substr(l.length - 6) == "thanke") {
       $('#thanke').removeClass('hide');
