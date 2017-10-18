@@ -63,6 +63,22 @@
     	-ms-transition: opacity 2s ease-in;
     	transition: opacity 2s ease-in;
   	}
+    #loading {
+      	opacity: 1;
+      	background-color:#000;
+      	width:100%;
+      	height:100%;
+      	z-index:10;
+      	top:0;
+      	left:0;
+      	position:fixed;
+    	}
+    .vertical-center {
+        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh; /* These two lines are counted as one :-)       */
+        display: flex;
+        align-items: center;
+    }
   </style>
   <script type="text/javascript">
    if (navigator.userAgent.search("Chrome") <= 2 && navigator.userAgent.search("Firefox") <= 2) {
@@ -124,6 +140,13 @@
 </head>
 
 <body class="text-center">
+  <div id="loading">
+    <div class="vertical-center">
+      <div class="col-md-12 text-center" style="width:40%; heigth:40%">
+        <span class="fa fa-refresh fa-spin text-primary" style="font-size:1000%;"></span>
+      </div>
+    </div>
+  </div>
 	<div id="fademe" class="fademe"></div>
   <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-inverse" id="thev">
     <div class="container">
@@ -740,7 +763,7 @@
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a id="linl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux.zip" data-toggle="tooltip"
+              <a id="linl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux_SourceCode.zip" data-toggle="tooltip"
                 onclick="$('#shareus').removeClass('hide');"
                title="Tested on Ubuntu 14.04 . And can run on any later-on released linux distros">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-linux"></span><br> GNU/Linux </p>
@@ -962,7 +985,7 @@
       $('#sourceforge').prop('disabled', true);
       $('#archive').prop('disabled', false);
       $('#winl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_Windows.zip/download');
-      $('#linl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_Linux.zip/download');
+      $('#linl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_Linux_SourceCode.zip/download');
       $('#macl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_MacOS.zip/download');
       $('#winl').attr('target', '_blank');
       $('#linl').attr('target', '_blank');
@@ -973,7 +996,7 @@
       $('#archive').prop('disabled', true);
       $('#archive').addClass('active');
       $('#winl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Windows.zip');
-      $('#linl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux.zip');
+      $('#linl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux_SourceCode.zip');
       $('#macl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_MacOS.zip');
       $('#winl').attr('target', '');
       $('#linl').attr('target', '');
@@ -984,6 +1007,7 @@
     $('#macl').fadeOut().fadeIn();
   }
   $(document).ready(function(){
+    $('#loading').remove();
     $('.fademe').css('opacity', 0);
     var yetAr = localStorage['arabic'];
     var yetLock = localStorage['lock'];
