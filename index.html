@@ -1006,9 +1006,14 @@
     $('#linl').fadeOut().fadeIn();
     $('#macl').fadeOut().fadeIn();
   }
-  $(document).ready(function(){
+  $(window).on('load', function(){
     $('#loading').remove();
     $('.fademe').css('opacity', 0);
+    setTimeout(function(){
+      $('#fademe').remove();
+    }, 2500);
+  })
+  $(document).ready(function(){
     var yetAr = localStorage['arabic'];
     var yetLock = localStorage['lock'];
     if (!yetAr) {
@@ -1025,9 +1030,6 @@
         tlock();
       }, 2700);
     }
-    setTimeout(function(){
-      $('#fademe').remove()
-    }, 2500);
     var l = location.href
     if (l.substr(l.length - 2) == "ar") {
       if (yetAr == "No" || !yetAr) {
