@@ -1006,6 +1006,12 @@
     setTimeout(function(){
       $('#fademe').remove();
     }, 2500);
+    var yetLock = localStorage['lock'];
+    if (yetLock == "Yes") {
+      setTimeout(function(){
+        tlock();
+      }, 2500);
+    }
   })
   $(document).ready(function(){
     var yetAr = localStorage['arabic'];
@@ -1018,11 +1024,6 @@
     }
     if (!yetLock) {
       localStorage['lock'] = "No";
-    }
-    if (yetLock == "Yes") {
-      setTimeout(function(){
-        tlock();
-      }, 2700);
     }
     var l = location.href
     if (l.substr(l.length - 2) == "ar") {
