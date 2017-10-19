@@ -47,9 +47,9 @@
     box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
   }
   #loading {
-    -moz-box-shadow: 0 0 10px 10px rgba(255,255,255,0.5);
-    -webkit-box-shadow: 0 0 10px 10px rgba(255,255,255,0.5);
-    box-shadow: 0 0 10px 10px rgba(255,255,255,0.5);
+    -moz-text-shadow: 0 0 30px rgba(255,255,255,0.5);
+    -webkit-text-shadow: 0 0 30px rgba(255,255,255,0.5);
+    text-shadow: 0 0 30px rgba(255,255,255,0.5);
   }
 	</style>
 	<style>
@@ -138,7 +138,7 @@
 	<div id="fademe" class="fademe">
     <div class="vertical-center">
       <div class="col-md-12 text-center">
-        <span class="fa fa-retweet fa-spin text-white" id="loading" style="font-size:1000%;"></span>
+        <span class="fa fa-refresh fa-spin text-white" id="loading" style="font-size:1000%;"></span>
       </div>
     </div>
 	</div>
@@ -1012,7 +1012,7 @@
         tlock();
       }, 2500);
     }
-  })
+  });
   $(document).ready(function(){
     var yetAr = localStorage['arabic'];
     var yetLock = localStorage['lock'];
