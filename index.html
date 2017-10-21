@@ -751,26 +751,127 @@
           <div class="row mt-5">
             <div class="col-xs-12 col-md-4">
               <a id="winl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Windows.zip"
-              onclick="$('#shareus').removeClass('hide');"
+              onclick="$('#shareus').removeClass('hide');$('#win_in').removeClass('hide');"
               data-toggle="tooltip" title="Tested on Windows XP, 7, 8, 10 32-bit and 64-bit">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-windows"></span><br> Windows </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
               <a id="linl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux_SourceCode.zip" data-toggle="tooltip"
-                onclick="$('#shareus').removeClass('hide');"
+                onclick="$('#shareus').removeClass('hide');$('#linux_in').removeClass('hide');"
                title="Tested on Ubuntu 14.04 . And can run on any later-on released linux distros">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-linux"></span><br> GNU/Linux </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
               <a id="macl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_MacOS.zip"
-              onclick="$('#shareus').removeClass('hide');"
+              onclick="$('#shareus').removeClass('hide');$('#macos_in').removeClass('hide');"
               data-toggle="tooltip" title="Tested on MacOS 10.8.4, And can run on any later-on released MacOS">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-apple"></span><br> MacOS </p>
               </a>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <br />
+        </div>
+        <div class="col-md-12 snb bg-danger hide" id="linux_in">
+          <button type="button" class="close h2" onclick="$('#linux_in').addClass('hide');">&times;</button>
+          <br />
+          <div id="en41">
+            <p class="h3 text-white" id="en41">
+              Linux install instructions :
+            </p>
+            <ol class="h5 text-white">
+              <li> Extract the zip file</li>
+              <li> From the command line inside the app directory ./run_me_on_linux.sh --help </li>
+            </ol>
+          </div>
+          <div id="ar41" class="hide" DIR="RTL">
+            <p class="h3 text-white"
+            style="font-family: 'Changa', sans-serif">
+              إرشادات التنصيب على أنظمة لينكس :
+            </p>
+            <ol class="h5 text-white">
+              <li style="font-family: 'Changa', sans-serif">
+                 قم بإستخراج ملف الضغط .zip
+               </li>
+              <li style="font-family: 'Changa', sans-serif">
+                 من داخل ملف البرنامج قم بتنفيذ الأمر ./run_me_on_linux.sh --help
+               </li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-12 snb bg-danger hide" id="macos_in">
+          <button type="button" class="close h2" onclick="$('#macos_in').addClass('hide');">&times;</button>
+          <br />
+          <div id="en42">
+            <p class="h3 text-white">
+              MacOS install instructions :
+            </p>
+            <ol class="h5 text-white">
+              <li> Extract the zip file</li>
+              <li> From the command line inside the app directory ./FQM.command </li>
+            </ol>
+          </div>
+          <div id="ar42" class="hide" DIR="RTL">
+            <p class="h3 text-white"
+            style="font-family: 'Changa', sans-serif">
+              إرشادات التنصيب على أنظمة ماك :
+            </p>
+            <ol class="h5 text-white">
+              <li style="font-family: 'Changa', sans-serif">
+                 قم بإستخراج ملف الضغط .zip
+               </li>
+              <li style="font-family: 'Changa', sans-serif">
+                 من داخل ملف البرنامج قم بتنفيذ الأمر ./FQM.command
+               </li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-12 snb bg-danger hide" id="win_in">
+          <button type="button" class="close h2" onclick="$('#win_in').addClass('hide');">&times;</button>
+          <br />
+          <div id="en43">
+            <p class="h3 text-white">
+              Windows install instructions :
+            </p>
+            <ol class="h5 text-white">
+              <li>Make sure that you've installed the POS printer windows drivers</li>
+              <li> Make sure to share the POS usb printer on your local network, from control panel</li>
+              <li> Make sure that the printer shared name is identical to the default printer name </li>
+              <li> Extract the zip file</li>
+              <li> And double-click FQM 0.2.exe </li>
+            </ol>
+          </div>
+          <div id="ar43" class="hide" DIR="RTL">
+            <p class="h3 text-white"
+            style="font-family: 'Changa', sans-serif">
+              إرشادات التنصيب على أنظمة ويندوز :
+            </p>
+            <ol class="h5 text-white">
+              <li style="font-family: 'Changa', sans-serif">
+                تأكد أنك قمت بتحميل تعريفات الطابعة بشكل صحيح
+              </li>
+              <li style="font-family: 'Changa', sans-serif">
+                تأكد من أن الطابعة تم مشاركتها على الشبكة المحلية
+              </li>
+              <li style="font-family: 'Changa', sans-serif">
+                تأكد من أن إسم الطابعة على الشبكة يطابق الإسم الإفتراضي للطابعة
+              </li>
+              <li style="font-family: 'Changa', sans-serif">
+                 قم بإستخراج ملف الضغط .zip
+               </li>
+              <li style="font-family: 'Changa', sans-serif">
+                 قم بتشغيل الملف FQM 0.2.exe
+               </li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <br />
         </div>
       </div>
       <div class="row">
@@ -921,7 +1022,7 @@
   $('#fnews').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com');
   $('#fnewsar').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com');
   function slang(){
-    var noi=41
+    var noi=44
     if ($('#en1').hasClass('hide')) {
       localStorage['arabic'] = 'No'
       for (var i=0;i<noi;++i){
