@@ -189,7 +189,7 @@
             <a class="nav-link hide" id="ar3" href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" style="font-family: 'Changa', sans-serif" target="_blank">شروح</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hide" id="ar23" href="#" data-toggle="modal" data-target="#mailus" style="font-family: 'Changa', sans-serif">دعم</a>
+            <a class="nav-link hide" id="ar23" href="#" data-toggle="modal" data-target="#mailus_ar" style="font-family: 'Changa', sans-serif">دعم</a>
           </li>
         </ul>
         <a class="btn navbar-btn btn-secondary mx-3" id="en5" href="#download">Download</a>
@@ -334,14 +334,14 @@
           <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" target="_blank" class="btn btn-outline-info btn-lg" id="en13"> <span class="fa fa-youtube"></span> Tutorials</a>
           <a href="images/user_guide.pdf" target="_blank" class="btn btn-outline-info btn-lg" id="en14"> <span class="fa fa-university"></span> User guide</a>
           <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" target="_blank" class="btn btn-outline-info btn-lg hide" id="ar13" style="font-family: 'Changa', sans-serif"> <span class="fa fa-youtube"></span> شروح</a>
-          <a href="images/user_guide.pdf" target="_blank" class="btn btn-outline-info btn-lg hide" id="ar14" style="font-family: 'Changa', sans-serif"> <span class="fa fa-university"></span> دليل الﻹستخدام</a>
+          <a href="images/user_guide.pdf" target="_blank" class="btn btn-outline-info btn-lg hide" id="ar14" style="font-family: 'Changa', sans-serif"> <span class="fa fa-university"></span> دليل الإستخدام</a>
         </div>
         <div class="col-md-6 my-3">
             <img id="uia" src="images/version.gif" class="img-fluid d-block mx-auto shb" alt="User interface animation">
         </div>
       </div>
     </div>
-  </div>
+  </div>0
   <div class="section py-5" id="features">
     <div class="container">
       <div class="row">
@@ -751,21 +751,21 @@
           </div>
           <div class="row mt-5">
             <div class="col-xs-12 col-md-4">
-              <a id="winl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Windows.zip"
+              <a id="winl" href="https://archive.org/download/Free_Queue_Manager_0.2.5/FQM_025_Windows.zip"
               onclick="$('#shareus').removeClass('hide');$('#win_in').removeClass('hide');"
               data-toggle="tooltip" title="Tested on Windows XP, 7, 8, 10 32-bit and 64-bit">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-windows"></span><br> Windows </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a id="linl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux_SourceCode.zip" data-toggle="tooltip"
+              <a id="linl" href="https://archive.org/download/Free_Queue_Manager_0.2.5/FQM_025_Linux_SourceCode.zip" data-toggle="tooltip"
                 onclick="$('#shareus').removeClass('hide');$('#linux_in').removeClass('hide');"
                title="Tested on Ubuntu 14.04 . And can run on any later-on released linux distros">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-linux"></span><br> GNU/Linux </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a id="macl" href="https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_MacOS.zip"
+              <a id="macl" href="https://archive.org/download/Free_Queue_Manager_0.2.5/FQM_025_MacOS.zip"
               onclick="$('#shareus').removeClass('hide');$('#macos_in').removeClass('hide');"
               data-toggle="tooltip" title="Tested on MacOS 10.8.4, And can run on any later-on released MacOS">
                 <p class="text-white text-center h3"> <span class="center-block img-fluid fa fa-5x fa-apple"></span><br> MacOS </p>
@@ -918,7 +918,7 @@
                 <a href="https://github.com/mrf345/FQM" target="_blank" data-toggle="tooltip" title="Source code on Github">
                   <img class="img-responsive dimit" src="images/github.png" alt="Github logo">
                 </a>
-                <a href="https://sourceforge.net/p/free-queue-manager/source_code/ci/master/tree/" target="_blank" data-toggle="tooltip" title="Source code on SourceForge">
+                <a href="https://sourceforge.net/p/free-queue-manager/code/ci/master/tree/" target="_blank" data-toggle="tooltip" title="Source code on SourceForge">
                   <img class="img-responsive dimit" src="images/sourceforge.png" alt="Sourceforge logo">
                 </a>
               </center>
@@ -980,7 +980,7 @@
     </div>
   </div>
 </div>
-<div class="modal fade" id="mailus_ar">
+<div class="modal" id="mailus_ar">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -1101,9 +1101,9 @@
       $('#sourceforge').addClass('active');
       $('#sourceforge').prop('disabled', true);
       $('#archive').prop('disabled', false);
-      $('#winl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_Windows.zip/download');
-      $('#linl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_Linux_SourceCode.zip/download');
-      $('#macl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2/FQM_0.2_MacOS.zip/download');
+      $('#winl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2.5/FQM_025_Windows.zip/download');
+      $('#linl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2.5/FQM_025_Linux_SourceCode.zip/download');
+      $('#macl').attr('href', 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2.5/FQM_025_MacOS.zip/download');
       $('#winl').attr('target', '_blank');
       $('#linl').attr('target', '_blank');
       $('#macl').attr('target', '_blank');
@@ -1112,9 +1112,9 @@
       $('#sourceforge').prop('disabled', false);
       $('#archive').prop('disabled', true);
       $('#archive').addClass('active');
-      $('#winl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Windows.zip');
-      $('#linl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_Linux_SourceCode.zip');
-      $('#macl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2/FQM_0.2_MacOS.zip');
+      $('#winl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2.5/FQM_025_Windows.zip');
+      $('#linl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2.5/FQM_025_Linux_SourceCode.zip');
+      $('#macl').attr('href', 'https://archive.org/download/Free_Queue_Manager_0.2.5/FQM_025_MacOS.zip');
       $('#winl').attr('target', '');
       $('#linl').attr('target', '');
       $('#macl').attr('target', '');
