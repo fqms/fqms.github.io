@@ -152,7 +152,7 @@ jQuery(document).ready(function ($) {
   }
 })
 
-$(window).ready(function () {
+window.addEventListener('load', function () {
   // things todo, when everything loaded
   addStyle() // add arabic fonts
   // locking if locked before
