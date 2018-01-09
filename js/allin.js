@@ -1,5 +1,6 @@
 /* global location, $, localStorage, alert, jQuery, beloading */ // to avoide false linter
 
+var version = ' 0.2.6 beta' // current version to modify all, easily
 var loader = false // global name for beloader to get duration
 var noi = 44 // number of elements to translate
 var links = {
@@ -133,11 +134,12 @@ var lswitch = function lswitch () {
 jQuery(document).ready(function ($) {
   // things todo when jquery loads
   // setting loading screen
+  $('.version').append(version)
   if (localStorage.arabic === 'Yes') {
     loader = beloading({
       duration: 2,
       text_font: '"Changa", sans-serif',
-      text: 'مدير إدارة الحشود الحر , يقوم بالتحميل ...'
+      text: 'مدير إدارة الحشود الحر , يقوم بالتحميل '
     })
   } else {
     loader = beloading({
