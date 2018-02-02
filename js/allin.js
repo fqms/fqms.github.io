@@ -146,10 +146,11 @@ jQuery(document).ready(function ($) {
       text: ENGLISH['loading']
     })
   }
-  if (localStorage.arabic === 'Yes') slang(); else localStorage.arabic = 'No'
+  if (localStorage.arabic === undefined) localStorage.arabic = 'No'
+  if (localStorage.arabic === 'Yes') slang()
   if (localStorage.lock === undefined) localStorage.lock = 'No'
   if (location.href.substr(location.href.length - 2) === 'ar') {
-    if (localStorage.arabic === 'No') slang()
+    if (localStorage.arabic === 'No' || localStorage.arabic === undefined) slang()
   }
 })
 
