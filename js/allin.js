@@ -1,4 +1,4 @@
-/* global location, $, localStorage, alert, jQuery, beloading */ // to avoide false linter
+/* global location, $, localStorage, alert, jQuery, beloading, ARABIC, ENGLISH */ // to avoide false linter
 
 var version = ' 0.2.6 beta' // current version to modify all, easily
 var loader = false // global name for beloader to get duration
@@ -41,29 +41,37 @@ var addStyle = function () {
     }
   }
   for (var i = 0; noi > i; i += 1) {
-    if ($('#ar' + i)) {
+    if ($('#en' + i)) {
       if (fontFamilies.hasOwnProperty(i)) {
         if (i === 36) {
-          $('#ar' + i + ' thead > tr > th').css(fontFamilies[i])
-          $('#ar' + i + ' tbody > tr > td').css(fontFamilies.all)
+          $('#en' + i + ' thead > tr > th').css(fontFamilies[i])
+          $('#en' + i + ' tbody > tr > td').css(fontFamilies.all)
         } else $('#ar' + i).css(fontFamilies[i])
       } else {
-        $('#ar' + i).css(fontFamilies.all)
+        $('#en' + i).css(fontFamilies.all)
       }
+    }
+  }
+}
+
+var removeStyle = function removeStyle () {
+  for (var i = 0; noi > i; i += 1) {
+    if ($('#en' + i)) {
+      $('#en' + i).css({})
     }
   }
 }
 
 var slang = function slang () {
   // function to toggle hide show english and arabic elments
-  if ($('#en1').hasClass('hide')) {
+  if (localStorage.arabic === 'yes') {
     localStorage.arabic = 'no'
     for (var i = 0; i < noi; i += 1) {
-      if ($('#en' + i) || $('#ar' + i)) { // check if element exist
-        $('#ar' + i).addClass('hide')
-        $('#en' + i).removeClass('hide')
+      if ($('#en' + i)) { // check if element exist
+        $('#en' + i).html(ENGLISH['en' + i])
       }
     }
+    removeStyle()
     $('#ilogo').attr('src', 'images/logo.gif')
     $('#guig').attr('src', 'images/gui.gif')
     $('#uia').attr('src', 'images/version.gif')
@@ -73,11 +81,11 @@ var slang = function slang () {
   } else {
     localStorage.arabic = 'Yes'
     for (i = 0; i < noi; i += 1) {
-      if ($('#en' + i) || $('#ar' + i)) {
-        $('#en' + i).addClass('hide')
-        $('#ar' + i).removeClass('hide')
+      if ($('#en' + i)) {
+        $('#en' + i).html(ARABIC['en' + i])
       }
     }
+    addStyle()
     $('#ilogo').attr('src', 'images/logo_ar.gif')
     $('#guig').attr('src', 'images/gui_ar.gif')
     $('#uia').attr('src', 'images/version_ar.gif')
@@ -156,7 +164,7 @@ jQuery(document).ready(function ($) {
 
 window.addEventListener('load', function () {
   // things todo, when everything loaded
-  addStyle() // add arabic fonts
+  // addStyle() // add arabic fonts
   // locking if locked before
   if (localStorage.lock === 'Yes') {
     setTimeout(function () {
