@@ -147,12 +147,12 @@ jQuery(document).ready(function ($) {
     loader = beloading({
       duration: 2,
       text_font: '"Changa", sans-serif',
-      text: 'مدير إدارة الحشود الحر , يقوم بالتحميل '
+      text: ARABIC['loading']
     })
   } else {
     loader = beloading({
       duration: 2,
-      text: 'Free Queue Manager is loading ...'
+      text: ENGLISH['loading']
     })
   }
   if (localStorage.arabic === 'Yes') slang(); else localStorage.arabic = 'No'
