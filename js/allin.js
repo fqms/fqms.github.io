@@ -54,9 +54,9 @@ var addStyle = function () {
   }
 }
 
-var slang = function slang () {
+var slang = function slang (doar = false) {
   // function to toggle hide show english and arabic elments
-  if (localStorage.arabic === 'Yes') {
+  if (localStorage.arabic === 'Yes' && !doar) {
     localStorage.arabic = 'No'
     for (var i = 0; i < noi; i += 1) {
       if ($('#en' + i)) { // check if element exist
@@ -76,7 +76,6 @@ var slang = function slang () {
         $('#en' + i).html(ARABIC['en' + i])
       }
     }
-    addStyle()
     $('#ilogo').attr('src', 'images/logo_ar.gif')
     $('#guig').attr('src', 'images/gui_ar.gif')
     $('#uia').attr('src', 'images/version_ar.gif')
@@ -147,10 +146,10 @@ jQuery(document).ready(function ($) {
     })
   }
   if (localStorage.arabic === undefined) localStorage.arabic = 'No'
-  if (localStorage.arabic === 'Yes') slang()
+  if (localStorage.arabic === 'Yes') slang(true)
   if (localStorage.lock === undefined) localStorage.lock = 'No'
   if (location.href.substr(location.href.length - 2) === 'ar') {
-    if (localStorage.arabic === 'No' || localStorage.arabic === undefined) slang()
+    if (localStorage.arabic === 'No' || localStorage.arabic === undefined) slang(true)
   }
 })
 
