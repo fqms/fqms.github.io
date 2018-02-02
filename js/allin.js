@@ -46,7 +46,7 @@ var addStyle = function () {
         if (i === 36) {
           $('#en' + i + ' thead > tr > th').css(fontFamilies[i])
           $('#en' + i + ' tbody > tr > td').css(fontFamilies.all)
-        } else $('#ar' + i).css(fontFamilies[i])
+        } else $('#en' + i).css(fontFamilies[i])
       } else {
         $('#en' + i).css(fontFamilies.all)
       }
@@ -64,7 +64,7 @@ var removeStyle = function removeStyle () {
 
 var slang = function slang () {
   // function to toggle hide show english and arabic elments
-  if (localStorage.arabic === 'yes') {
+  if (localStorage.arabic === 'Yes') {
     localStorage.arabic = 'no'
     for (var i = 0; i < noi; i += 1) {
       if ($('#en' + i)) { // check if element exist
