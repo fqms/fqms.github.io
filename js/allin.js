@@ -57,7 +57,7 @@ var addStyle = function () {
 var slang = function slang () {
   // function to toggle hide show english and arabic elments
   if (localStorage.arabic === 'Yes') {
-    localStorage.arabic = 'no'
+    localStorage.arabic = 'No'
     for (var i = 0; i < noi; i += 1) {
       if ($('#en' + i)) { // check if element exist
         $('#en' + i).html(ENGLISH['en' + i])
