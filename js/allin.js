@@ -54,14 +54,6 @@ var addStyle = function () {
   }
 }
 
-var removeStyle = function removeStyle () {
-  for (var i = 0; noi > i; i += 1) {
-    if ($('#en' + i)) {
-      $('#en' + i).css({})
-    }
-  }
-}
-
 var slang = function slang () {
   // function to toggle hide show english and arabic elments
   if (localStorage.arabic === 'Yes') {
@@ -71,7 +63,6 @@ var slang = function slang () {
         $('#en' + i).html(ENGLISH['en' + i])
       }
     }
-    removeStyle()
     $('#ilogo').attr('src', 'images/logo.gif')
     $('#guig').attr('src', 'images/gui.gif')
     $('#uia').attr('src', 'images/version.gif')
@@ -164,7 +155,7 @@ jQuery(document).ready(function ($) {
 
 window.addEventListener('load', function () {
   // things todo, when everything loaded
-  // addStyle() // add arabic fonts
+  addStyle() // add arabic fonts
   // locking if locked before
   if (localStorage.lock === 'Yes') {
     setTimeout(function () {
