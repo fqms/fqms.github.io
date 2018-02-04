@@ -133,6 +133,7 @@ jQuery(document).ready(function ($) {
   // things todo when jquery loads
   // setting loading screen
   $('.version').append(version)
+  addStyle() // add fonts
   if (localStorage.arabic === 'Yes') {
     loader = beloading({
       duration: 2,
@@ -155,7 +156,6 @@ jQuery(document).ready(function ($) {
 
 window.addEventListener('load', function () {
   // things todo, when everything loaded
-  addStyle() // add arabic fonts
   // locking if locked before
   if (localStorage.lock === 'Yes') {
     setTimeout(function () {
