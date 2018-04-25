@@ -1,18 +1,18 @@
 /* global location, $, localStorage, alert, jQuery, beloading, ARABIC, ENGLISH */ // to avoide false linter
 
-var version = ' 0.2.6 beta' // current version to modify all, easily
+var version = ' 0.3 beta' // current version to modify all, easily
 var loader = false // global name for beloader to get duration
 var noi = 44 // number of elements to translate
 var links = {
   sourceforge: {
-    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2.6/FQM_0.2.6_Windows.zip/download',
-    linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2.6/FQM_0.2.6_Linux_SourceCode.zip/download',
-    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.2.6/FQM_0.2.6_MacOS.zip/download'
+    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_Windows_0.3.zip/download',
+    linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_Linux_0.3.zip/download',
+    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_MacOS_0.3.zip/download'
   },
   archive: {
-    windows: 'https://archive.org/download/FQM0.2.6/FQM_0.2.6_Windows.zip',
-    linux: 'https://archive.org/download/FQM0.2.6/FQM_0.2.6_Linux_SourceCode.zip',
-    macos: 'https://archive.org/download/FQM0.2.6/FQM_0.2.6_MacOS.zip'
+    windows: 'https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.zip',
+    linux: 'https://archive.org/download/free_queue_manager03/FQM_Linux_0.3.zip',
+    macos: 'https://archive.org/download/free_queue_manager03/FQM_MacOS_0.3.zip'
   }
 }
 
