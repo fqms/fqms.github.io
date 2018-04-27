@@ -36,7 +36,6 @@ a {
   cursor: pointer;
 }
 
-.skiptranslate < .goog-te-banner-frame,  .goog-te-banner-frame {
+.goog-te-banner-frame {
   display: none;
-  background-color: gray;
 }
