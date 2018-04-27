@@ -35,7 +35,3 @@ a {
 .btn {
   cursor: pointer;
 }
-
-body > .skiptranslate {
-  display: none;
-}
