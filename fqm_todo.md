@@ -3,8 +3,10 @@
 ## To Add:
 #### [ ] Future goals and todos
 #### [ ] Donation section
-#### [ ] implement gtranslate from index_tet
-#### [ ] use icon
+#### [ ] implement gtranslate from index_test
+#### [ ] add class="notranslate" to key words
+#### [ ] remove AR photos
+#### [ ] add es, fr and it to language file for beloading
 
 ## To Update:
 #### [x] fix css underline in download links
