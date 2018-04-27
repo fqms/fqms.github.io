@@ -33,6 +33,11 @@
 </head>
 
 <body class="text-center">
+  <div id="google_translate_element"></div><script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,es,fr,it', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, autoDisplay: true}, 'google_translate_element');
+  }
+  </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-inverse" id="thev">
     <div class="container">
       <a class="navbar-brand version" href="#cover">FQM </a>
@@ -73,6 +78,8 @@
   <div class="cover d-flex align-items-center pt-5 bg-inverse" id="cover">
     <div class="container">
       <div class="row">
+        <div class="col-xs-12 text-center">
+        </div> 
         <div class="col-md-6 text-md-left align-self-center my-5">
           <h1 class="text-white display-1">FQM</h1>
           <h4 class="text-white" id="en6">Free Queue Management, made easy, simple ..</h4>
