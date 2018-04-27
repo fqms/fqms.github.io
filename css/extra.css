@@ -37,5 +37,5 @@ a {
 }
 
 .skiptranslate < .goog-te-banner-frame {
-  displ
+  display: none;
 }
