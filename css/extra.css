@@ -35,3 +35,7 @@ a {
 .btn {
   cursor: pointer;
 }
+
+.goog-te-banner-frame {
+  display: none;
+}
