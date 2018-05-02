@@ -1,12 +1,15 @@
 # FQM.github.io :
 
 ## To Add:
-#### [ ] Future goals and todos
-#### [ ] Donation section
-#### [ ] implement gtranslate from index_test
-#### [ ] add class="notranslate" to key words
-#### [ ] remove AR photos
-#### [ ] add es, fr and it to language file for beloading
+> - [ ] implement gtranslate from index_test
+> - [ ] add class="notranslate" to key words
+> - [ ] simplify en text to make sense in translation
+> - [ ] remove AR photos
+> - [ ] add es, fr and it to language file for beloading
+> - [ ] remove lock, unlock language from the html lang and onload js
+> - [ ] make adding fixed top after beloading default
+> - [ ] remove live demo .html and images
+
 
 ## To Update:
 #### [x] fix css underline in download links
