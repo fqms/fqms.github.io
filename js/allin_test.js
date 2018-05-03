@@ -22,87 +22,10 @@ $('#femailar').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '
 $('#fnews').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
 $('#fnewsar').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
 
-var addStyle = function () {
-  var fontFamilies = {
-    all: {
-      'font-family': '"Changa", sans-serif'
-    }, // all font-families
-    8: {
-      'font-family': '"Lateef", cursive',
-      'font-size': '170%'
-    },
-    12: {
-      'font-family': '"Lateef", cursive',
-      'font-size': '170%'
-    },
-    36: {
-      'font-size': '250%',
-      'font-family': '"Lateef", cursive'
-    }
-  }
-  for (var i = 0; noi > i; i += 1) {
-    if ($('#en' + i)) {
-      if (fontFamilies.hasOwnProperty(i)) {
-        if (i === 36) {
-          $('#en' + i + ' thead > tr > th').css(fontFamilies[i])
-          $('#en' + i + ' tbody > tr > td').css(fontFamilies.all)
-        } else $('#en' + i).css(fontFamilies[i])
-      } else {
-        $('#en' + i).css(fontFamilies.all)
-      }
-    }
-  }
-}
-
-var slang = function slang (doar = false) {
-  // function to toggle hide show english and arabic elments
-  if (localStorage.arabic === 'Yes' && !doar) {
-    localStorage.arabic = 'No'
-    for (var i = 0; i < noi; i += 1) {
-      if ($('#en' + i)) { // check if element exist
-        $('#en' + i).html(ENGLISH['en' + i])
-      }
-    }
-    $('#ilogo').attr('src', 'images/logo.gif')
-    $('#guig').attr('src', 'images/gui.gif')
-    $('#uia').attr('src', 'images/version.gif')
-    $('#pimg').attr('src', 'images/phone.png')
-    $('#licl').attr('href', 'https://en.wikipedia.org/wiki/Mozilla_Public_License')
-    $('.mlink').attr('data-target', '#mailus')
-  } else {
-    localStorage.arabic = 'Yes'
-    for (i = 0; i < noi; i += 1) {
-      if ($('#en' + i)) {
-        $('#en' + i).html(ARABIC['en' + i])
-      }
-    }
-    $('#ilogo').attr('src', 'images/logo_ar.gif')
-    $('#guig').attr('src', 'images/gui_ar.gif')
-    $('#uia').attr('src', 'images/version_ar.gif')
-    $('#pimg').attr('src', 'images/phone_ar.png')
-    $('#licl').attr('href', 'https://ar.wikipedia.org/wiki/Mozilla_Public_License')
-    $('.mlink').attr('data-target', '#mailus_ar')
-  }
-}
 
 var wmsg = function wmsg () {
-  // just a wraning message
-  alert('Notice: this website is still under construction ..\n\n\n تنبيه: هذا الموقع لزال قيد الإنشاء ..')
-}
-
-var tlock = function tlock () {
-  // to toggle lock or unlock navbar
-  if ($('#lockit').hasClass('fa-lock')) {
-    localStorage.lock = 'No'
-    $('#lockit').removeClass('fa-lock')
-    $('#lockit').addClass('fa-unlock')
-    $('#thev').removeClass('fixed-top')
-  } else {
-    localStorage.lock = 'Yes'
-    $('#lockit').removeClass('fa-unlock')
-    $('#lockit').addClass('fa-lock')
-    $('#thev').addClass('fixed-top')
-  }
+  // just a warning message
+  alert('Notice: this website is still under construction ...\n\n\n')
 }
 
 var lswitch = function lswitch () {
@@ -133,35 +56,18 @@ jQuery(document).ready(function ($) {
   // things todo when jquery loads
   // setting loading screen
   $('.version').append(version)
-  addStyle() // add fonts
-  if (localStorage.arabic === 'Yes') {
-    loader = beloading({
-      duration: 2,
-      text_font: '"Changa", sans-serif',
-      text: ARABIC['loading']
-    })
-  } else {
-    loader = beloading({
-      duration: 2,
-      text: ENGLISH['loading']
-    })
-  }
-  if (localStorage.arabic === undefined) localStorage.arabic = 'No'
-  if (localStorage.arabic === 'Yes') slang(true)
-  if (localStorage.lock === undefined) localStorage.lock = 'No'
-  if (location.href.substr(location.href.length - 2) === 'ar') {
-    if (localStorage.arabic === 'No' || localStorage.arabic === undefined) slang(true)
-  }
+  loader = beloading({
+    duration: 2,
+    text_font: '"Changa", sans-serif',
+    text: "Free Queue Manager is loading ...",
+    callback: function () {
+      $('#thev').addClass('fixed-top')
+    }
+  })
 })
 
 window.addEventListener('load', function () {
   // things todo, when everything loaded
-  // locking if locked before
-  if (localStorage.lock === 'Yes') {
-    setTimeout(function () {
-      tlock()
-    }, loader.defaults.effect_duration)
-  }
   // displaying messages if found urls hashtag
   if (location.href.substr(location.href.length - 6) === 'thanke') {
     $('#thanke').removeClass('hide')
