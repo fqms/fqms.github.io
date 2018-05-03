@@ -1,14 +1,14 @@
 # FQM.github.io :
 
 ## To Add:
-> - [ ] implement gtranslate from index_test
-> - [ ] add class="notranslate" to key words
-> - [ ] simplify en text to make sense in translation
-> - [ ] remove AR photos
-> - [ ] add es, fr and it to language file for beloading
-> - [ ] remove lock, unlock language from the html lang and onload js
-> - [ ] make adding fixed top after beloading default
-> - [ ] remove live demo .html and images
+> - [x] implement gtranslate from index_test
+> - [x] add class="notranslate" to key words
+> - [x] simplify en text to make sense in translation
+> - [x] remove AR photos
+> - [x] add es, fr and it to language file for beloading
+> - [x] remove lock, unlock language from the html lang and onload js
+> - [x] make adding fixed top after beloading default
+> - [x] remove live demo .html and images
 
 
 ## To Update:
