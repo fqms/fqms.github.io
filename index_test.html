@@ -236,7 +236,7 @@
       </div>
     </div>
   </div>
-  <div class="section py-5" id="updates">
+  <div class="section py-5 uniqueness" id="updates">
     <div class="container">
       <div class="row">
         <div class="col-md-12 bg-inverse shb">
@@ -245,12 +245,12 @@
       </div>
       <div class="row">
         <div class="col-md-6 pt-3">
-              <a style="width: 100%;" href="#" class="btn btn-outline-info btn-md h5">
+              <a style="width: 100%;" href="javascript:unique.back()" class="btn btn-outline-info btn-md h5">
                 <span class='fa fa-lg fa-arrow-left'></span>
               </a>
         </div>
         <div class="col-md-6 pt-3 pb-2">
-            <a style="width: 100%;" href="#" class="btn btn-outline-info btn-md h5">
+            <a style="width: 100%;" href="javascript:unique.next()" class="btn btn-outline-info btn-md h5">
               <span class='fa fa-lg fa-arrow-right'></span>
             </a>
         </div>
@@ -353,6 +353,123 @@
       </div>
     </div>
   </div>
+  <div class="section py-5 uniqueness" id="updates">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 bg-inverse shb">
+            <h1 class="text-white pt-2 pb-2">Updates: 0.2 beta</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 pt-3">
+                <a style="width: 100%;" href="javascript:unique.back()" class="btn btn-outline-info btn-md h5">
+                  <span class='fa fa-lg fa-arrow-left'></span>
+                </a>
+          </div>
+          <div class="col-md-6 pt-3 pb-2">
+              <a style="width: 100%;" href="javascript:unique.next()" class="btn btn-outline-info btn-md h5">
+                <span class='fa fa-lg fa-arrow-right'></span>
+              </a>
+          </div>
+        </div>
+        <div class="row pt-2">
+          <table class="table table-striped shb">
+            <thead>
+              <tr class="bg-inverse">
+                <th class="text-center ar2" style="font-size: 150%">Update / Feature</th>
+                <th class="text-center ar2" style="font-size: 150%">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="h5">
+                <td class="text-center">
+                  Implementing new display screen UI features
+                </td>
+                <td class="text-center"> Currently stable, tested on most recent Firefox and Chrome </td>
+              </tr>
+              <tr class="h5">
+                <td class="text-center">
+                  Implementing new audio announcement repeating features
+                </td>
+                <td class="text-center">
+                  Stable and tested on major browsers and operating systems
+                </td>
+              </tr>
+              <tr class="h5">
+                <td class="text-center">
+                  Add Italian, Spanish and French support to text-to-speech audio announcement
+                </td>
+                <td class="text-center">
+                  Not sure of the quality of translation, but it works.
+                </td>
+              </tr>
+              <tr class="h5">
+                <td class="text-center">
+                  Add Italian, Spanish and French support to printed tickets
+                </td>
+                <td class="text-center">
+                  Implemented with English letters, hopefully native letters will be utilized in coming releases
+                </td>
+              </tr>
+              <tr class="text-danger h5">
+                <td class="text-center">
+                  Add multiple operators for offices
+                </td>
+                <td class="text-center">
+                  Usable, with a basic user interface, to be improved in the future
+                </td>
+              </tr>
+              <tr class="h5">
+                  <td class="text-center">
+                    Unlimited multimedia files
+                  </td>
+                  <td class="text-center">
+                    allowing bigger, more multimedia files to be stored and used 
+                  </td>
+              </tr>
+              <tr class="h5 text-danger">
+                  <td class="text-center">
+                    Implementing better unsaved forms reminder
+                  </td>
+                  <td class="text-center">
+                    Stable and tested on Firefox and Chrome, more improvements in the coming release
+                  </td>
+              </tr>
+              <tr class="h5">
+                  <td class="text-center">
+                    Better auto-reloading for manage
+                  </td>
+                  <td class="text-center">
+                    Stable and more flexible implementation of auto-reloading without backend storage  
+                  </td>
+              </tr>
+              <tr class="h5">
+                <td colspan="2" class="text-center">
+                  <a style="width: 100%;" href="https://github.com/mrf345/fqm/blob/master/todos/0.3.md" 
+                  target="_blank" class="btn btn-outline-info btn-lg"> 
+                    <span class="fa fa-search"></span> <br />
+                    Track next release development progress
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-12 pt-4">
+          <div class="shb bg-inverse">
+            <form class="form-horizontal text-center" style='padding: 3%;' method="POST" id="fnews">
+              <h3 class="text-white ar1">Join our mailing list for more updates :
+                <button type="submit" class="btn btn-primary">Join</button>
+              </h3>
+              <input type="email" name="email" class="form-control text-center ar1" placeholder="Enter email">
+              <input type="hidden" name="_subject" value="FQM 0.3 updates subs" />
+              <input type="text" name="_gotcha" style="display:none" />
+              <input type="hidden" name="_next" value="//fqms.github.io/#thankj" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   <div class="py-5 section bg-inverse pt-4 shb" id="download">
     <div class="container">
       <div class="row">
@@ -481,9 +598,8 @@
   <script src="js/bootstrap-4.0.0-alpha.6.min.js"></script>
   <script src="js/smooth-scroll.js"></script>
   <script src='js/jquery-ui.min.js'></script>
-  <!-- <script src="js/beloading.js"></script> -->
   <script src="https://cdn.rawgit.com/mrf345/beloading/e2fe88b9/src/beloading.js"></script>
-  <script src="js/language_test.js"></script>
+  <script src="https://cdn.rawgit.com/mrf345/uniqueness/e72cbd8a/src/uniqueness.js"></script>
   <script src="js/allin_test.js"></script>
 </body>
 </html>

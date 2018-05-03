@@ -2,6 +2,8 @@
 
 var version = ' 0.3 beta' // current version to modify all, easily
 var loader = false // global name for beloader to get duration
+var unique = false // global name for uniqueness
+
 var links = {
   sourceforge: {
     windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_Windows_0.3.zip/download',
@@ -61,6 +63,12 @@ jQuery(document).ready(function ($) {
     text: "Free Queue Manager is loading ..."
   }, callback=function () {
     setTimeout(function () { $('#thev').addClass('fixed-top') }, 1800)
+  })
+  unique = uniqueness({
+    effect: 'fade',
+    effect_duration: 1.2
+  }, callback=function () {
+    console.log('uniqueness has changed !')
   })
 })
 
