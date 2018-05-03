@@ -381,67 +381,73 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="h5">
-                <td class="text-center">
-                  Implementing new display screen UI features
-                </td>
-                <td class="text-center"> Currently stable, tested on most recent Firefox and Chrome </td>
-              </tr>
-              <tr class="h5">
-                <td class="text-center">
-                  Implementing new audio announcement repeating features
-                </td>
-                <td class="text-center">
-                  Stable and tested on major browsers and operating systems
-                </td>
-              </tr>
-              <tr class="h5">
-                <td class="text-center">
-                  Add Italian, Spanish and French support to text-to-speech audio announcement
-                </td>
-                <td class="text-center">
-                  Not sure of the quality of translation, but it works.
-                </td>
-              </tr>
-              <tr class="h5">
-                <td class="text-center">
-                  Add Italian, Spanish and French support to printed tickets
-                </td>
-                <td class="text-center">
-                  Implemented with English letters, hopefully native letters will be utilized in coming releases
-                </td>
-              </tr>
-              <tr class="text-danger h5">
-                <td class="text-center">
-                  Add multiple operators for offices
-                </td>
-                <td class="text-center">
-                  Usable, with a basic user interface, to be improved in the future
-                </td>
-              </tr>
-              <tr class="h5">
-                  <td class="text-center">
-                    Unlimited multimedia files
-                  </td>
-                  <td class="text-center">
-                    allowing bigger, more multimedia files to be stored and used 
-                  </td>
-              </tr>
-              <tr class="h5 text-danger">
-                  <td class="text-center">
-                    Implementing better unsaved forms reminder
-                  </td>
-                  <td class="text-center">
-                    Stable and tested on Firefox and Chrome, more improvements in the coming release
-                  </td>
-              </tr>
-              <tr class="h5">
-                  <td class="text-center">
-                    Better auto-reloading for manage
-                  </td>
-                  <td class="text-center">
-                    Stable and more flexible implementation of auto-reloading without backend storage  
-                  </td>
+                <tr class="h5">
+                    <td class="text-center">
+                      Support usb POS printers and interacts
+                      with them on Windows platforms
+                    </td>
+                    <td class="text-center"> Works and tested on XP and above </td>
+                  </tr>
+                  <tr class="h5">
+                    <td class="text-center">
+                      Implementing PySide Qthread, to manage the web server
+                    </td>
+                    <td class="text-center">
+                      Works and
+                      solved running error on MacOS when using multiprocessing thread </td>
+                  </tr>
+                  <tr class="h5">
+                    <td class="text-center">
+                      Arabic language support to GUI and Web UI
+                    </td>
+                    <td class="text-center">
+                      Works perfectly </td>
+                  </tr>
+                  <tr class="h5">
+                    <td class="text-center">
+                      Adding QR code shortcuts support, to the major routes
+                    </td>
+                    <td class="text-center">
+                      Works perfectly using Flask-QRcode</td>
+                  </tr>
+                  <tr class="text-danger h5">
+                    <td class="text-center">
+                      Support printing tickets in Arabic
+                    </td>
+                    <td class="text-center">
+                      Almost impossible directly, but there's unstable work-around using
+                      Pillow library to create an image of the ticket and print it
+                      instead of dealing with unicode and Arabic letters
+                    </td>
+                  </tr>
+                  <tr class="h5">
+                      <td class="text-center">
+                        Adding more interactive front-end features and improving appearance
+                      </td>
+                      <td class="text-center">
+                        Works perfectly and bugs free so far </td>
+                  </tr>
+                  <tr class="h5 text-danger">
+                      <td class="text-center">
+                        Improving performance on browsers other than Firefox
+                      </td>
+                      <td class="text-center">
+                        A work in progress , supports Chrome on major platform so far </td>
+                  </tr>
+                  <tr class="h5">
+                      <td class="text-center">
+                        Dual text to speech announcement in two languages
+                      </td>
+                      <td class="text-center">
+                        Works perefectly , using gTTS library  and with added threading to
+                        reduce response time </td>
+                  </tr>
+                  <tr class="h5">
+                      <td class="text-center">
+                        Autoreload touch and display screens, whenever customized
+                      </td>
+                      <td class="text-center">
+                        Tested on Firefox and works well so far </td>
               </tr>
               <tr class="h5">
                 <td colspan="2" class="text-center">
