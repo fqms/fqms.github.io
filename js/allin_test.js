@@ -2,7 +2,6 @@
 
 var version = ' 0.3 beta' // current version to modify all, easily
 var loader = false // global name for beloader to get duration
-var noi = 44 // number of elements to translate
 var links = {
   sourceforge: {
     windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_Windows_0.3.zip/download',
@@ -59,10 +58,9 @@ jQuery(document).ready(function ($) {
   loader = beloading({
     duration: 2,
     text_font: '"Changa", sans-serif',
-    text: "Free Queue Manager is loading ...",
-    callback: function () {
-      $('#thev').addClass('fixed-top')
-    }
+    text: "Free Queue Manager is loading ..."
+  }, callback=function () {
+    setTimeout(function () { $('#thev').addClass('fixed-top') }, 1800)
   })
 })
 

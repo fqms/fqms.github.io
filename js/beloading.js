@@ -6,10 +6,10 @@
  */
 
 
-const beloading = function beload (options,callback=() => {}) {
-  const checkType = function checkType (type, args) {
+var beloading = function beload (options,callback=function () {}) {
+  var checkType = function checkType (type, args) {
     // checking the type of each variable in the passed array
-    for (let a in args) {
+    for (var a in args) {
       if (typeof args[a] !== type) return false
     }
     return true
@@ -30,9 +30,6 @@ const beloading = function beload (options,callback=() => {}) {
     text_size: options.text_size || '300%', // text and icon size
     effect_duration: options.effect_duration * 1000 || 3000, // fade effect duration in seconds
     trail: options.trail || 'false', // to add escape button, and cancel on load event
-    callback: options.callback || function () {
-      console.log('Beloading is done !E')
-    } // function to call when beloading is done 
   }
 
   this.defaults = {
@@ -60,15 +57,15 @@ const beloading = function beload (options,callback=() => {}) {
         this.stop()
         callback()
       }
-      if (document.readyState === "complete") toCall()
+      if (document.readyState === "compvare") toCall()
       else $(window).on('load', toCall)
     }
   }
 
   this.loading = function loading () {
     // here elements and css styles will be created and loaded
-    const gets = Math.round((options.effect_duration / 2) / 1000)
-    const div = $('<div>').css({
+    var gets = Math.round((options.effect_duration / 2) / 1000)
+    var div = $('<div>').css({
       'background-color': options.background,
       'opacity': '1',
       'width': '100%',
@@ -87,7 +84,7 @@ const beloading = function beload (options,callback=() => {}) {
       '-ms-transition': 'opacity ' + gets + 's ease-in',
       'transition': 'opacity ' + gets + 's ease-in'
     }).addClass('beloader')
-    const div2 = $('<div>').css({
+    var div2 = $('<div>').css({
       'width': '70%',
       'margin-left': '30%',
       'margin-right': '30%'
@@ -113,8 +110,8 @@ const beloading = function beload (options,callback=() => {}) {
 
   this.effectit = function effectit () {
     // here loop fade effect is created
-    const def = options.effect_duration / 4
-    const ofc = options.effect_duration - def
+    var def = options.effect_duration / 4
+    var ofc = options.effect_duration - def
     $('.beloadert').toggle('fade', {}, def).toggle('fade', {}, ofc)
     this.defaults.loops = setInterval(function () {
       $('.beloadert').toggle('fade', {}, def).toggle('fade', {}, ofc)
@@ -132,7 +129,6 @@ const beloading = function beload (options,callback=() => {}) {
     $('.beloadert').stop().fadeOut()
     setTimeout(function () {
       $('.beloader').remove()
-      options.callback()
     }, Math.round(options.effect_duration / 2) + 500)
   }
 
