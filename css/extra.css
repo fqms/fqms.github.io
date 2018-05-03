@@ -35,3 +35,21 @@ a {
 .btn {
   cursor: pointer;
 }
+
+.goog-te-banner-frame {
+  display: none;
+}
+
+h1, h2, h4, a, td, a > *, .ar1 {
+  font-family: 'Changa';
+}
+
+p, .ar2, th {
+  font-family: 'Amiri';
+  font-size: 130% !important;
+}
+
+i {
+  font-style: normal;
+
+}
