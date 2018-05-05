@@ -60,7 +60,7 @@ var toShare = function toShare (id) {
     shareus({
       text: 'Make queue management systems great again !',
       textStyle: {'font-family': '"Changa", sans-serif'},
-      buttonText: "I don't care. Download"
+      buttonText: "I don't care. Download",
       buttonClass: 'h3 navbar-btn btn-secondary ar1',
       buttonDo: function () {
         $('<a>').attr('href', $('#' + id).attr('thelink')).attr('target', '_blank').click()
