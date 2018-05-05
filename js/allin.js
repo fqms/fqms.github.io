@@ -36,21 +36,41 @@ var lswitch = function lswitch () {
     $('#sourceforge').addClass('active')
     $('#sourceforge').prop('disabled', true)
     $('#archive').prop('disabled', false)
-    $('#winl').attr('href', links.sourceforge.windows).attr('target', '_blank')
-    $('#linl').attr('href', links.sourceforge.linux).attr('target', '_blank')
-    $('#macl').attr('href', links.sourceforge.macos).attr('target', '_blank')
+    $('#winl').attr('thelink', links.sourceforge.windows).attr('target', '_blank')
+    $('#linl').attr('thelink', links.sourceforge.linux).attr('target', '_blank')
+    $('#macl').attr('thelink', links.sourceforge.macos).attr('target', '_blank')
   } else {
     $('#sourceforge').removeClass('active')
     $('#sourceforge').prop('disabled', false)
     $('#archive').prop('disabled', true)
     $('#archive').addClass('active')
-    $('#winl').attr('href', links.archive.windows).attr('target', '')
-    $('#linl').attr('href', links.archive.linux).attr('target', '')
-    $('#macl').attr('href', links.archive.macos).attr('target', '')
+    $('#winl').attr('thelink', links.archive.windows).attr('target', '')
+    $('#linl').attr('thelink', links.archive.linux).attr('target', '')
+    $('#macl').attr('thelink', links.archive.macos).attr('target', '')
   }
   $('#winl').fadeOut().fadeIn()
   $('#linl').fadeOut().fadeIn()
   $('#macl').fadeOut().fadeIn()
+}
+
+var toShare = function toShare (id) {
+  // to load shareUs easily or easierly 
+  if (shareus) {
+    $('.navbar').removeClass('fixed-top')
+    shareus({
+      text: 'Make queuing systems great again ! ',
+      textStyle: {'font-family': '"Changa", sans-serif'},
+      buttonClass: 'h3 navbar-btn btn-secondary ar1',
+      buttonDo: function () {
+        window.open($('#' + id).attr('thelink'), '_blank').focus()
+        $('.navbar').addClass('fixed-top')
+      },
+      facebookLink: 'https://www.facebook.com/sharer.php?u=https://fqms.github.io',
+      googlePLink: 'https://plus.google.com/share?url=https://fqms.github.io',
+      linkedinLink: 'http://www.linkedin.com/shareArticle?mini=true&amp;url=https://fqms.github.io',
+      twitterLink: 'https://twitter.com/share?url=https://fqms.github.io&amp;text=FQM;hashtags=FQM'
+    }).__init__()
+  }
 }
 
 jQuery(document).ready(function ($) {
@@ -67,8 +87,6 @@ jQuery(document).ready(function ($) {
   unique = uniqueness({
     effect: 'fade',
     effect_duration: 1.2
-  }, callback=function () {
-    console.log('uniqueness has changed !')
   })
 })
 

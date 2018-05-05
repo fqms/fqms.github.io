@@ -490,22 +490,22 @@
           </div>
           <div class="row mt-5">
             <div class="col-xs-12 col-md-4">
-              <a id="winl" href="https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.zip"
-              onclick="$('#shareus').removeClass('hide');$('#win_in').removeClass('hide');"
+              <a id="winl" thelink="https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.zip"
+              onclick="toShare('winl')" style="cursor: pointer;"
               data-toggle="tooltip" title="Tested on Windows XP, 7, 8, 10 32-bit and 64-bit">
                 <p class="dimit text-white text-center ar1 h3 notranslate"> <span class="center-block img-fluid fa fa-5x fa-windows pb-1"></span><br> Windows </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a id="linl" href="https://archive.org/download/free_queue_manager03/FQM_Linux_0.3.zip" data-toggle="tooltip"
-                onclick="$('#shareus').removeClass('hide');$('#linux_in').removeClass('hide');"
+              <a id="linl" thelink="https://archive.org/download/free_queue_manager03/FQM_Linux_0.3.zip" data-toggle="tooltip"
+              onclick="toShare('linl')" style="cursor: pointer;"
                title="Tested on Ubuntu 14.04 . And can run on any later-on released linux distros">
                 <p class="dimit text-white text-center ar1 h3 notranslate"> <span class="center-block img-fluid fa fa-5x fa-linux pb-1"></span><br> GNU/Linux </p>
               </a>
             </div>
             <div class="col-xs-12 col-md-4">
-              <a id="macl" href="https://archive.org/download/free_queue_manager03/FQM_MacOS_0.3.zip"
-              onclick="$('#shareus').removeClass('hide');$('#macos_in').removeClass('hide');"
+              <a id="macl" thelink="https://archive.org/download/free_queue_manager03/FQM_MacOS_0.3.zip"
+              onclick="toShare('macl')" style="cursor: pointer;"
               data-toggle="tooltip" title="Tested on MacOS 10.8.4, And can run on any later-on released MacOS">
                 <p class="dimit text-white text-center h3 ar1 notranslate"> <span class="center-block img-fluid fa fa-5x fa-apple pb-1"></span><br> MacOS </p>
               </a>
@@ -606,6 +606,7 @@
   <script src='js/jquery-ui.min.js'></script>
   <script src="https://cdn.rawgit.com/mrf345/beloading/e2fe88b9/src/beloading.js"></script>
   <script src="https://cdn.rawgit.com/mrf345/uniqueness/e72cbd8a/src/uniqueness.js"></script>
+  <script src="https://cdn.rawgit.com/mrf345/shareus/5f0e0a96/src/shareus.js"></script>
   <script src="js/allin.js"></script>
 </body>
 </html>
