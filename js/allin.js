@@ -62,14 +62,13 @@ var toShare = function toShare (id) {
       textStyle: {'font-family': '"Changa", sans-serif'},
       buttonText: "I don't care. Download",
       buttonClass: 'h3 navbar-btn btn-secondary ar1',
-      buttonDo: function () {
-        window.open($('#' + id).attr('thelink'), 'NewFQMDownload' + id)
-        $('.navbar').addClass('fixed-top')
-      },
+      buttonLink: $('#' + id).attr('thelink'),
       facebookLink: 'https://www.facebook.com/sharer.php?u=https://fqms.github.io',
       googlePLink: 'https://plus.google.com/share?url=https://fqms.github.io',
       linkedinLink: 'http://www.linkedin.com/shareArticle?mini=true&amp;url=https://fqms.github.io',
       twitterLink: 'https://twitter.com/share?url=https://fqms.github.io&amp;text=FQM;hashtags=FQM'
+    }, callback=function () {
+      $('.navbar').addClass('fixed-top')
     }).__init__()
   }
 }
