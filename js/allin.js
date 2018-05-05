@@ -63,7 +63,7 @@ var toShare = function toShare (id) {
       buttonText: "I don't care. Download",
       buttonClass: 'h3 navbar-btn btn-secondary ar1',
       buttonDo: function () {
-        $('<a>').attr('href', $('#' + id).attr('thelink')).attr('target', '_blank').click()
+        window.open($('#' + id).attr('thelink'), 'NewFQMDownload' + id)
         $('.navbar').addClass('fixed-top')
       },
       facebookLink: 'https://www.facebook.com/sharer.php?u=https://fqms.github.io',
