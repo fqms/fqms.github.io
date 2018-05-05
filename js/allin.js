@@ -58,11 +58,12 @@ var toShare = function toShare (id) {
   if (shareus) {
     $('.navbar').removeClass('fixed-top')
     shareus({
-      text: 'Make queuing systems great again ! ',
+      text: 'Make queue management systems great again !',
       textStyle: {'font-family': '"Changa", sans-serif'},
+      buttonText: "I don't care. Download"
       buttonClass: 'h3 navbar-btn btn-secondary ar1',
       buttonDo: function () {
-        window.open($('#' + id).attr('thelink'), '_blank').focus()
+        $('<a>').attr('href', $('#' + id).attr('thelink')).attr('target', '_blank').click()
         $('.navbar').addClass('fixed-top')
       },
       facebookLink: 'https://www.facebook.com/sharer.php?u=https://fqms.github.io',
