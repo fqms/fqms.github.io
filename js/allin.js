@@ -63,10 +63,7 @@ var toShare = function toShare (id) {
       buttonText: "I don't care. Download",
       buttonClass: 'h3 navbar-btn btn-secondary ar1',
       buttonLink: $('#' + id).attr('thelink'),
-      facebookLink: 'https://www.facebook.com/sharer.php?u=https://fqms.github.io',
-      googlePLink: 'https://plus.google.com/share?url=https://fqms.github.io',
-      linkedinLink: 'http://www.linkedin.com/shareArticle?mini=true&amp;url=https://fqms.github.io',
-      twitterLink: 'https://twitter.com/share?url=https://fqms.github.io&amp;text=FQM;hashtags=FQM'
+      shareLink: 'https://fqms.github.io'
     }, callback=function () {
       $('.navbar').addClass('fixed-top')
     }).__init__()
