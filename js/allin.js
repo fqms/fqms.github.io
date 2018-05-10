@@ -3,8 +3,9 @@
 var version = ' 0.3.1 beta' // current version to modify all, easily
 var loader = false // global name for beloader to get duration
 var unique = false // global name for uniqueness
+var allIn = {} // private object
 
-var links = {
+allIn.links = {
   sourceforge: {
     windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3.1/FQM_Windows_0.3.1.zip/download',
     linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_Linux_0.3.zip/download',
@@ -36,17 +37,17 @@ var lswitch = function lswitch () {
     $('#sourceforge').addClass('active')
     $('#sourceforge').prop('disabled', true)
     $('#archive').prop('disabled', false)
-    $('#winl').attr('thelink', links.sourceforge.windows).attr('target', '_blank')
-    $('#linl').attr('thelink', links.sourceforge.linux).attr('target', '_blank')
-    $('#macl').attr('thelink', links.sourceforge.macos).attr('target', '_blank')
+    $('#winl').attr('thelink', allIn.links.sourceforge.windows).attr('target', '_blank')
+    $('#linl').attr('thelink', allIn.links.sourceforge.linux).attr('target', '_blank')
+    $('#macl').attr('thelink', allIn.links.sourceforge.macos).attr('target', '_blank')
   } else {
     $('#sourceforge').removeClass('active')
     $('#sourceforge').prop('disabled', false)
     $('#archive').prop('disabled', true)
     $('#archive').addClass('active')
-    $('#winl').attr('thelink', links.archive.windows).attr('target', '')
-    $('#linl').attr('thelink', links.archive.linux).attr('target', '')
-    $('#macl').attr('thelink', links.archive.macos).attr('target', '')
+    $('#winl').attr('thelink', allIn.links.archive.windows).attr('target', '')
+    $('#linl').attr('thelink', allIn.links.archive.linux).attr('target', '')
+    $('#macl').attr('thelink', allIn.links.archive.macos).attr('target', '')
   }
   $('#winl').fadeOut().fadeIn()
   $('#linl').fadeOut().fadeIn()
