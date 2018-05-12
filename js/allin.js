@@ -73,36 +73,41 @@ var toShare = function toShare (id) {
 
 jQuery(document).ready(function ($) {
   // things todo when jquery loads
-  // setting loading screen
   $('.version').append(version)
   loader = beloading({
     duration: 2,
     text_font: '"Changa", sans-serif',
     text: "Free Queue Manager is loading ..."
   }, callback=function () {
-    setTimeout(function () { $('#thev').addClass('fixed-top') }, 1800)
+    setTimeout(
+      function () {
+        allIn.toCallForAll = function () {
+          $('#thev').addClass('fixed-top')
+        }
+        msgNotifier({
+          url_hash: ['thanke', 'thankj'],
+          iconClass: ['fa fa-envelope', 'fa fa-address-card'],
+          text: [
+            'Thanks for contacting us, will replay as soon as possible.',
+            'Thanks for joining our mailing list, Will keep you updated.'
+          ],
+          textStyle: {
+            'color': 'white',
+            'font-family': '"Changa", sans-serif',
+            'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
+          },
+          buttonStyle: {
+            'color': 'white',
+            'font-family': '"Changa", mono',
+            'font-size': '140%',
+            'font-stretch': 'ultra-expanded'
+          }
+        }, callback=allIn.toCallForAll)
+      }, 1800
+    )
   })
   unique = uniqueness({
     effect: 'fade',
     effect_duration: 1.2
   })
-})
-
-window.addEventListener('load', function () {
-  // things todo, when everything loaded
-  // displaying messages if found urls hashtag
-  if (location.href.substr(location.href.length - 6) === 'thanke') {
-    $('#thanke').removeClass('hide')
-    $(window).scrollTop('#thanke')
-    setTimeout(function () {
-      $('#thanke').fadeOut()
-    }, 10000)
-  }
-  if (location.href.substr(location.href.length - 6) === 'thankj') {
-    $('#thankj').removeClass('hide')
-    $(window).scrollTop('#thankj')
-    setTimeout(function () {
-      $('#thankj').fadeOut()
-    }, 10000)
-  }
 })
