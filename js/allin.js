@@ -1,4 +1,4 @@
-/* global location, $, localStorage, alert, jQuery, beloading, ARABIC, ENGLISH */ // to avoide false linter
+/* global location, $, localStorage, alert, jQuery, beloading */ // to avoide false linter
 
 var version = ' 0.3.1 beta' // current version to modify all, easily
 var loader = false // global name for beloader to get duration
@@ -19,7 +19,6 @@ allIn.links = {
 }
 
 // setting formspree emails with js to avoide spam
-$('#femail').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
 $('#fnews').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
 
 
