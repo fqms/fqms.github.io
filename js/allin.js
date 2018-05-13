@@ -78,6 +78,7 @@ allIn.typicalStyle = {
 var contactUsStore  = function () {
   $('.navbar').removeClass('fixed-top')
   contactUs({
+    title: 'FQM ' + version,
     email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
     nextUrl: '//fqms.github.io/#thanke',
     titleStyle: allIn.typicalStyle,
