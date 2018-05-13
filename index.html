@@ -58,7 +58,10 @@
             <a class="nav-link" href="#updates">Updates</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#mailus">Support</a>
+            <a class="nav-link"
+              data-toggle="tooltip" title="Contact us for support and reporting"
+              onclick="contactUsStore()" style="cursor: pointer;"
+            >Support</a>
           </li>
         </ul>
         <a class="btn navbar-btn btn-secondary mx-3" href="#download">
@@ -86,7 +89,9 @@
                 <span class="dimit center-block fa fa-4x fa-github text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
-              <a class="mlink" href="#" data-toggle="modal" data-target="#mailus" data-toggle="tooltip" title="Contact us for support and bugs reporting">
+              <a data-toggle="tooltip" title="Contact us for support and bugs reporting"
+                onclick="contactUsStore()" style="cursor: pointer;"
+              >
                 <span class="dimit center-block fa fa-4x fa-envelope-o text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
@@ -532,39 +537,15 @@
             <i class="fa fa-fw fa-github-square fa-3x text-white"></i></a>
         </div>
         <div class="col-3 col-md-1 align-self-center">
-          <a class="mlink" href="#" data-toggle="modal" data-target="#mailus" data-toggle="tooltip" title="Contact us for support and reporting">
+          <a 
+            data-toggle="tooltip" title="Contact us for support and reporting"
+            onclick="contactUsStore()" style="cursor: pointer;"
+          >
             <i class="fa fa-fw fa-envelope fa-3x text-white"></i></a>
         </div>
       </div>
     </div>
   </div>
-  <div class="modal" id="mailus">
-    <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-          <p class="modal-title text-center ar1 h3"> Contact us </p>
-		      <button type="button" class="close" data-dismiss="modal">&times;</button>
-	       </div>
-         <form class="form-horizontal text-center" method="POST" id="femail">
-	      <div class="modal-body">
-          <br />
-          <input type="text" name="name" class="ar1 form-control text-center" placeholder="Enter your name">
-          <br />
-            <input type="email" name="email" class="ar1 form-control text-center" placeholder="Enter email">
-          <br />
-            <textarea class="form-control ar1" name="comment" rows="5" id="comment" placeholder="Enter your message .."></textarea>
-          <br />
-          <input type="hidden" name="_subject" value="FQM 0.3 emails" />
-          <input type="text" name="_gotcha" style="display:none" />
-          <input type="hidden" name="_next" value="//fqms.github.io/#thanke" />
-	      </div>
-	      <div class="modal-footer">
-		      <button type="submit" class="ar1 close btn-danger">Send</button>
-	      </div>
-        </form>
-    </div>
-  </div>
-</div>
   <div class="modal fade" id="demo">
     <div class="modal-dialog">
 	    <div class="modal-content">
@@ -587,8 +568,10 @@
   <script src="js/jquery-ui.min.js"></script>
   <script src="https://cdn.rawgit.com/mrf345/beloading/2e540995/src/beloading.js"></script>
   <script src="https://cdn.rawgit.com/mrf345/uniqueness/bea5b5e9/src/uniqueness.js"></script>
-  <script src="https://cdn.rawgit.com/mrf345/shareus/8a401782/src/shareus.js"></script>
+  <script src="https://cdn.rawgit.com/mrf345/shareus/1e8e0cb0/src/shareus.js"></script>
+  <script src="https://cdn.rawgit.com/mrf345/browser_notifier/357909e4/src/browserNotifier.js"></script>
   <script src="https://cdn.rawgit.com/mrf345/msg_notifier/dde8eb6f/src/msgNotifier.js"></script>
+  <script src="https://cdn.rawgit.com/mrf345/contactus/441ac497/src/contactus.js"></script>
   <script src="js/allin.js"></script>
 </body>
 </html>

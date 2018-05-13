@@ -20,9 +20,7 @@ allIn.links = {
 
 // setting formspree emails with js to avoide spam
 $('#femail').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
-$('#femailar').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
 $('#fnews').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
-$('#fnewsar').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
 
 
 var wmsg = function wmsg () {
@@ -71,6 +69,36 @@ var toShare = function toShare (id) {
   }
 }
 
+allIn.typicalStyle = {
+  'color': 'white',
+  'font-family': '"Changa", sans-serif',
+  'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
+}
+
+var contactUsStore  = function () {
+  $('.navbar').removeClass('fixed-top')
+  contactUs({
+    email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
+    nextUrl: '//fqms.github.io/#thanke',
+    titleStyle: allIn.typicalStyle,
+    nameStyle: allIn.typicalStyle,
+    emailStyle: allIn.typicalStyle,
+    commentText: 'Your message : ',
+    commentStyle: allIn.typicalStyle,
+    submitStyle: Object.assign({
+      'margin-right': '10%',
+      'cursor': 'pointer'
+    }, allIn.typicalStyle),
+    cancelStyle: Object.assign({
+      'margin-left': '10%',
+      'cursor': 'pointer'
+    }, allIn.typicalStyle),
+    inputStyle: {'font-family': '"Changa", sans-serif'}
+  }, callback=function () {
+    $('.navbar').addClass('fixed-top')
+  }).__init__()
+}
+
 jQuery(document).ready(function ($) {
   // things todo when jquery loads
   $('.version').append(version)
@@ -81,28 +109,39 @@ jQuery(document).ready(function ($) {
   }, callback=function () {
     setTimeout(
       function () {
-        allIn.toCallForAll = function () {
-          $('#thev').addClass('fixed-top')
-        }
-        msgNotifier({
-          url_hash: ['thanke', 'thankj'],
-          iconClass: ['fa fa-envelope', 'fa fa-address-card'],
-          text: [
-            'Thanks for contacting us, will replay as soon as possible.',
-            'Thanks for joining our mailing list, Will keep you updated.'
-          ],
-          textStyle: {
-            'color': 'white',
-            'font-family': '"Changa", sans-serif',
-            'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
-          },
-          buttonStyle: {
-            'color': 'white',
-            'font-family': '"Changa", mono',
+        browserNotifier({
+          'buttonClass': 'btn navbar-btn btn-secondary',
+          'buttonStyle': {
             'font-size': '140%',
-            'font-stretch': 'ultra-expanded'
+            'font-weight': 'bold',
+            'font-stretch': 'ultra-expanded',
+            'font-family': '"Changa", sans-serif'
+          },
+          'textStyle': allIn.typicalStyle
+        }, function () {
+          allIn.toCallForAll = function () {
+            $('#thev').addClass('fixed-top')
           }
-        }, callback=allIn.toCallForAll)
+          msgNotifier({
+            url_hash: ['thanke', 'thankj'],
+            iconClass: ['fa fa-envelope', 'fa fa-address-card'],
+            text: [
+              'Thanks for contacting us, will replay back as soon as possible.',
+              'Thanks for joining our mailing list, Will keep you updated.'
+            ],
+            textStyle: {
+              'color': 'white',
+              'font-family': '"Changa", sans-serif',
+              'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
+            },
+            buttonStyle: {
+              'color': 'white',
+              'font-family': '"Changa", mono',
+              'font-size': '130%',
+              'font-stretch': 'ultra-expanded'
+            }
+          }, callback=allIn.toCallForAll)
+        })
       }, 1800
     )
   })
