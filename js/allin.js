@@ -1,13 +1,14 @@
 /* global location, $, localStorage, alert, jQuery, beloading */ // to avoide false linter
 
-var version = ' 0.3.1 beta' // current version to modify all, easily
+var version = ' 0.3.2 beta' // current version to modify all, easily
 var loader = false // global name for beloader to get duration
 var unique = false // global name for uniqueness
 var allIn = {} // private object
 
 allIn.links = {
   sourceforge: {
-    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3.1/FQM_Windows_0.3.1.zip/download',
+    // windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3.1/FQM_Windows_0.3.1.zip/download',
+    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3.2/FQM_Windows_0.3.2.zip/download',
     linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_Linux_0.3.zip/download',
     macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_MacOS_0.3.zip/download'
   },
@@ -77,8 +78,8 @@ allIn.typicalStyle = {
 var contactUsStore  = function () {
   $('.navbar').removeClass('fixed-top')
   contactUs({
-    title: 'Contact Us',
-    titleText: 'FQM ' + version,
+    titleText: 'Contact Us',
+    title: 'FQM ' + version,
     email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
     nextUrl: '//fqms.github.io/#thanke',
     titleStyle: allIn.typicalStyle,
@@ -150,4 +151,5 @@ jQuery(document).ready(function ($) {
     effect: 'fade',
     effect_duration: 1.2
   })
+  lswitch()
 })
