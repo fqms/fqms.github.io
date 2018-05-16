@@ -5,4 +5,4 @@
 > - [ ] brief document of msgNotify, contactUs
 
 ## To Fix:
-> - [ ] fix contact us title, probably mistake in contactUs
+> - [x] fix contact us title, probably mistake in contactUs

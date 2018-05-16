@@ -13,7 +13,8 @@ allIn.links = {
     macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_MacOS_0.3.zip/download'
   },
   archive: {
-    windows: 'https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.1.zip',
+    // windows: 'https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.1.zip',
+    windows: 'https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.2.zip',
     linux: 'https://archive.org/download/free_queue_manager03/FQM_Linux_0.3.zip',
     macos: 'https://archive.org/download/free_queue_manager03/FQM_MacOS_0.3.zip'
   }
@@ -78,8 +79,8 @@ allIn.typicalStyle = {
 var contactUsStore  = function () {
   $('.navbar').removeClass('fixed-top')
   contactUs({
-    titleText: 'Contact Us',
     title: 'FQM ' + version,
+    titleText: 'Contact Us',
     email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
     nextUrl: '//fqms.github.io/#thanke',
     titleStyle: allIn.typicalStyle,
@@ -151,5 +152,4 @@ jQuery(document).ready(function ($) {
     effect: 'fade',
     effect_duration: 1.2
   })
-  lswitch()
 })
