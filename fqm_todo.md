@@ -1,8 +1,8 @@
 # FQM.github.io :
 
 ## To Add:
-> - [ ] crate and implement formValidator
-> - [ ] brief document of msgNotify, contactUs
+> - [x] crate and implement formValidator
+> - [ ] brief document of msgNotify, contactUs, formValidator
 
 ## To Fix:
 > - [x] fix contact us title, probably mistake in contactUs
