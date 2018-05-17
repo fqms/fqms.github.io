@@ -76,6 +76,11 @@ allIn.typicalStyle = {
   'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
 }
 
+allIn.emailText = '| Please, enter a valid email ... |'
+allIn.emailValidator = function (data) {
+  return data.length > 3 && data.indexOf('@') !== -1 && data.indexOf('.') !== -1
+}
+
 var contactUsStore  = function () {
   $('.navbar').removeClass('fixed-top')
   contactUs({
@@ -88,6 +93,7 @@ var contactUsStore  = function () {
     emailStyle: allIn.typicalStyle,
     commentText: 'Your message : ',
     commentStyle: allIn.typicalStyle,
+    errorStyle: allIn.typicalStyle,
     submitStyle: Object.assign({
       'margin-right': '10%',
       'cursor': 'pointer'
@@ -151,5 +157,16 @@ jQuery(document).ready(function ($) {
   unique = uniqueness({
     effect: 'fade',
     effect_duration: 1.2
+  })
+  formValidator({
+    textClass: 'h3',
+    textStyle: {
+      'font-family': '"Changa", mono',
+      'margin-top': '2%'
+    },
+    formIds: ['#fnews'],
+    inputIds: [['#toValidE']],
+    texts: [[allIn.emailText]],
+    validators: [[allIn.emailValidator]]
   })
 })
