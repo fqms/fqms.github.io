@@ -133,7 +133,13 @@ jQuery(document).ready(function ($) {
             'font-stretch': 'ultra-expanded',
             'font-family': '"Changa", sans-serif'
           },
-          'textStyle': allIn.typicalStyle
+          'textStyle': allIn.typicalStyle,
+          storeVal: 'browserNotifier',
+          validator: function () {
+            if (navigator.userAgent.indexOf(returnBN.options.browser) === -1) {
+              return true
+            } else return false
+          }
         }, function () {
           allIn.toCallForAll = function () {
             $('#thev').addClass('fixed-top')
