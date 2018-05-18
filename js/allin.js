@@ -136,7 +136,7 @@ jQuery(document).ready(function ($) {
           'textStyle': allIn.typicalStyle,
           storeVal: 'browserNotifier',
           validator: function () {
-            if (navigator.userAgent.indexOf(returnBN.options.browser) === -1) {
+            if (navigator.userAgent.indexOf('Firefox') === -1) {
               return true
             } else return false
           }
