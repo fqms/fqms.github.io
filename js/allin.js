@@ -1,9 +1,16 @@
-/* global location, $, localStorage, alert, jQuery, beloading */ // to avoide false linter
+/* global location, $, localStorage, alert, jQuery, beloading, releases */ // to avoide false linter
 
-var version = ' 0.3.2 beta' // current version to modify all, easily
+
+var version
+Object.keys(releases).forEach(function (v) {
+  if (window.navigator.userAgent.indexOf(v) !== -1) {
+    version = releases[v] // current version to modify all, easily
+  }
+})
 var loader = false // global name for beloader to get duration
 var unique = false // global name for uniqueness
 var allIn = {} // private object
+
 
 allIn.links = {
   sourceforge: {
