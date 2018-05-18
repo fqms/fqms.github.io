@@ -136,9 +136,11 @@ jQuery(document).ready(function ($) {
           'textStyle': allIn.typicalStyle,
           storeVal: 'browserNotifier',
           validator: function () {
-            if (navigator.userAgent.indexOf('Firefox') === -1) {
-              return true
-            } else return false
+            return new Promise(function (resolve, reject) {
+              if (navigator.userAgent.indexOf('Firefox') === -1) {
+                resolve(true)
+              } else reject(false)
+            })
           }
         }, function () {
           allIn.toCallForAll = function () {
