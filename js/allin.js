@@ -121,7 +121,8 @@ jQuery(document).ready(function ($) {
   loader = beloading({
     duration: 2,
     text_font: '"Changa", sans-serif',
-    text: "Free Queue Manager is loading ..."
+    text: "Free Queue Manager is loading ...",
+    fadeIn: 'true'
   }, callback=function () {
     setTimeout(
       function () {
