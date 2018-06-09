@@ -1,12 +1,13 @@
 /* global location, $, localStorage, alert, jQuery, beloading, releases */ // to avoide false linter
 
 
-var version
+var version = false
 Object.keys(releases).forEach(function (v) {
   if (window.navigator.userAgent.indexOf(v) !== -1) {
     version = releases[v] // current version to modify all, easily
-  } else version = releases['Windows']
+  }
 })
+if (!version) version = releases['Windows']
 var loader = false // global name for beloader to get duration
 var unique = false // global name for uniqueness
 var allIn = {} // private object
