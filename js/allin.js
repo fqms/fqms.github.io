@@ -5,7 +5,7 @@ var version
 Object.keys(releases).forEach(function (v) {
   if (window.navigator.userAgent.indexOf(v) !== -1) {
     version = releases[v] // current version to modify all, easily
-  }
+  } else version = releases['Windows']
 })
 var loader = false // global name for beloader to get duration
 var unique = false // global name for uniqueness
@@ -14,13 +14,11 @@ var allIn = {} // private object
 
 allIn.links = {
   sourceforge: {
-    // windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3.1/FQM_Windows_0.3.1.zip/download',
     windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3.2/FQM_Windows_0.3.2.zip/download',
     linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_Linux_0.3.zip/download',
     macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_MacOS_0.3.zip/download'
   },
   archive: {
-    // windows: 'https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.1.zip',
     windows: 'https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.2.zip',
     linux: 'https://archive.org/download/free_queue_manager03/FQM_Linux_0.3.zip',
     macos: 'https://archive.org/download/free_queue_manager03/FQM_MacOS_0.3.zip'
