@@ -15,20 +15,20 @@ var allIn = {} // private object
 
 allIn.links = {
   sourceforge: {
-    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3.2/FQM_Windows_0.3.2.zip/download',
-    linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_Linux_0.3.zip/download',
-    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.3/FQM_MacOS_0.3.zip/download'
+    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4/FQM_04_Windows.zip/download',
+    linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4/FQM_04_Linux.zip/download',
+    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4/FQM_04_MacOS.zip/download'
   },
   archive: {
-    windows: 'https://archive.org/download/free_queue_manager03/FQM_Windows_0.3.2.zip',
-    linux: 'https://archive.org/download/free_queue_manager03/FQM_Linux_0.3.zip',
-    macos: 'https://archive.org/download/free_queue_manager03/FQM_MacOS_0.3.zip'
+    windows: 'https://archive.org/download/free_queue_manager_0.4/FQM_04_Windows.zip',
+    linux: 'https://archive.org/download/free_queue_manager_0.4/FQM_04_Linux.zip',
+    macos: 'https://archive.org/download/free_queue_manager_0.4/FQM_04_MacOS.zip'
   }
 }
 
 // setting formspree emails with js to avoide spam
 $('#fnews').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
-
+$('#femail').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
 
 var wmsg = function wmsg () {
   // just a warning message
@@ -42,39 +42,39 @@ var lswitch = function lswitch () {
     $('#sourceforge').addClass('active')
     $('#sourceforge').prop('disabled', true)
     $('#archive').prop('disabled', false)
-    $('#winl').attr('thelink', allIn.links.sourceforge.windows).attr('target', '_blank')
-    $('#linl').attr('thelink', allIn.links.sourceforge.linux).attr('target', '_blank')
-    $('#macl').attr('thelink', allIn.links.sourceforge.macos).attr('target', '_blank')
+    $('#winl').attr('href', allIn.links.sourceforge.windows).attr('target', '_blank')
+    $('#linl').attr('href', allIn.links.sourceforge.linux).attr('target', '_blank')
+    $('#macl').attr('href', allIn.links.sourceforge.macos).attr('target', '_blank')
   } else {
     $('#sourceforge').removeClass('active')
     $('#sourceforge').prop('disabled', false)
     $('#archive').prop('disabled', true)
     $('#archive').addClass('active')
-    $('#winl').attr('thelink', allIn.links.archive.windows).attr('target', '')
-    $('#linl').attr('thelink', allIn.links.archive.linux).attr('target', '')
-    $('#macl').attr('thelink', allIn.links.archive.macos).attr('target', '')
+    $('#winl').attr('href', allIn.links.archive.windows).attr('target', '')
+    $('#linl').attr('href', allIn.links.archive.linux).attr('target', '')
+    $('#macl').attr('href', allIn.links.archive.macos).attr('target', '')
   }
   $('#winl').fadeOut().fadeIn()
   $('#linl').fadeOut().fadeIn()
   $('#macl').fadeOut().fadeIn()
 }
 
-var toShare = function toShare (id) {
-  // to load shareUs easily or easierly 
-  if (shareus) {
-    $('.navbar').removeClass('fixed-top')
-    shareus({
-      text: 'Make queue management systems great again !',
-      textStyle: {'font-family': '"Changa", sans-serif'},
-      buttonText: "I don't care. Download",
-      buttonClass: 'h3 navbar-btn btn-secondary ar1',
-      buttonLink: $('#' + id).attr('thelink'),
-      shareLink: 'https://fqms.github.io'
-    }, callback=function () {
-      $('.navbar').addClass('fixed-top')
-    }).__init__()
-  }
-}
+// var toShare = function toShare (id) {
+//   // to load shareUs easily or easierly 
+//   if (shareus) {
+//     $('.navbar').removeClass('fixed-top')
+//     shareus({
+//       text: 'Make queue management systems great again !',
+//       textStyle: {'font-family': '"Changa", sans-serif'},
+//       buttonText: "I don't care. Download",
+//       buttonClass: 'h3 navbar-btn btn-secondary ar1',
+//       buttonLink: $('#' + id).attr('thelink'),
+//       shareLink: 'https://fqms.github.io'
+//     }, callback=function () {
+//       $('.navbar').addClass('fixed-top')
+//     }).__init__()
+//   }
+// }
 
 allIn.typicalStyle = {
   'color': 'white',
@@ -87,32 +87,32 @@ allIn.emailValidator = function (data) {
   return data.length > 3 && data.indexOf('@') !== -1 && data.indexOf('.') !== -1
 }
 
-var contactUsStore  = function () {
-  $('.navbar').removeClass('fixed-top')
-  contactUs({
-    title: 'FQM ' + version,
-    titleText: 'Contact Us',
-    email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
-    nextUrl: '//fqms.github.io/#thanke',
-    titleStyle: allIn.typicalStyle,
-    nameStyle: allIn.typicalStyle,
-    emailStyle: allIn.typicalStyle,
-    commentText: 'Your message : ',
-    commentStyle: allIn.typicalStyle,
-    errorStyle: allIn.typicalStyle,
-    submitStyle: Object.assign({
-      'margin-right': '10%',
-      'cursor': 'pointer'
-    }, allIn.typicalStyle),
-    cancelStyle: Object.assign({
-      'margin-left': '10%',
-      'cursor': 'pointer'
-    }, allIn.typicalStyle),
-    inputStyle: {'font-family': '"Changa", sans-serif'}
-  }, callback=function () {
-    $('.navbar').addClass('fixed-top')
-  }).__init__()
-}
+// var contactUsStore  = function () {
+//   $('.navbar').removeClass('fixed-top')
+//   contactUs({
+//     title: 'FQM ' + version,
+//     titleText: 'Contact Us',
+//     email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
+//     nextUrl: '//fqms.github.io/#thanke',
+//     titleStyle: allIn.typicalStyle,
+//     nameStyle: allIn.typicalStyle,
+//     emailStyle: allIn.typicalStyle,
+//     commentText: 'Your message : ',
+//     commentStyle: allIn.typicalStyle,
+//     errorStyle: allIn.typicalStyle,
+//     submitStyle: Object.assign({
+//       'margin-right': '10%',
+//       'cursor': 'pointer'
+//     }, allIn.typicalStyle),
+//     cancelStyle: Object.assign({
+//       'margin-left': '10%',
+//       'cursor': 'pointer'
+//     }, allIn.typicalStyle),
+//     inputStyle: {'font-family': '"Changa", sans-serif'}
+//   }, callback=function () {
+//     $('.navbar').addClass('fixed-top')
+//   }).__init__()
+// }
 
 jQuery(document).ready(function ($) {
   // things todo when jquery loads
