@@ -66,7 +66,7 @@ var getStars = function getStars () {
     })
 }
 
-window.placeCounters = function (duration=1000) {
+var placeCounters = function placeCounters (duration=1000) {
     getDownloads()
     .then(function (nDownloads) {
         $('.downloadsCounter').text(nDownloads)
