@@ -53,3 +53,31 @@ i {
   font-style: normal;
 
 }
+
+@-webkit-keyframes beat {
+  0%   { filter: brightness(1) }
+  50% { filter: brightness(0.5) }
+  100%   { filter: brightness(1) }
+}
+@-moz-keyframes beat {
+  0%   { filter: brightness(1) }
+  50% { filter: brightness(0.5) }
+  100%   { filter: brightness(1) }
+}
+@-o-keyframes beat {
+  0%   { filter: brightness(1) }
+  50% { filter: brightness(0.5) }
+  100%   { filter: brightness(1) }
+}
+@keyframes beat {
+  0%   { filter: brightness(1) }
+  50% { filter: brightness(0.5) }
+  100%   { filter: brightness(1) }
+}
+
+.beatit {
+  -webkit-animation: beat 2s infinite; 
+  -moz-animation:    beat 2s infinite; 
+  -o-animation:      beat 2s infinite; 
+  animation:         beat 2s infinite;
+}
