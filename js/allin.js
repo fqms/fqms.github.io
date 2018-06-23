@@ -144,7 +144,7 @@ jQuery(document).ready(function ($) {
           }
         }, function () {
           allIn.toCallForAll = function () {
-            $('#thev').addClass('fixed-top')
+            //$('#thev').addClass('fixed-top')
           }
           msgNotifier({
             url_hash: ['thanke', 'thankj'],
