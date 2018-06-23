@@ -117,6 +117,7 @@ allIn.emailValidator = function (data) {
 jQuery(document).ready(function ($) {
   // things todo when jquery loads
   $('.version').append(version)
+  window.placeCounters() // to load counters
   loader = beloading({
     duration: 2,
     text_font: '"Changa", sans-serif',
