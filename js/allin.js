@@ -87,32 +87,32 @@ allIn.emailValidator = function (data) {
   return data.length > 3 && data.indexOf('@') !== -1 && data.indexOf('.') !== -1
 }
 
-// var contactUsStore  = function () {
-//   $('.navbar').removeClass('fixed-top')
-//   contactUs({
-//     title: 'FQM ' + version,
-//     titleText: 'Contact Us',
-//     email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
-//     nextUrl: '//fqms.github.io/#thanke',
-//     titleStyle: allIn.typicalStyle,
-//     nameStyle: allIn.typicalStyle,
-//     emailStyle: allIn.typicalStyle,
-//     commentText: 'Your message : ',
-//     commentStyle: allIn.typicalStyle,
-//     errorStyle: allIn.typicalStyle,
-//     submitStyle: Object.assign({
-//       'margin-right': '10%',
-//       'cursor': 'pointer'
-//     }, allIn.typicalStyle),
-//     cancelStyle: Object.assign({
-//       'margin-left': '10%',
-//       'cursor': 'pointer'
-//     }, allIn.typicalStyle),
-//     inputStyle: {'font-family': '"Changa", sans-serif'}
-//   }, callback=function () {
-//     $('.navbar').addClass('fixed-top')
-//   }).__init__()
-// }
+var contactUsStore  = function () {
+  $('.navbar').removeClass('fixed-top')
+  contactUs({
+    title: 'FQM ' + version,
+    titleText: 'Contact Us',
+    email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
+    nextUrl: '//fqms.github.io/#thanke',
+    titleStyle: allIn.typicalStyle,
+    nameStyle: allIn.typicalStyle,
+    emailStyle: allIn.typicalStyle,
+    commentText: 'Your message : ',
+    commentStyle: allIn.typicalStyle,
+    errorStyle: allIn.typicalStyle,
+    submitStyle: Object.assign({
+      'margin-right': '10%',
+      'cursor': 'pointer'
+    }, allIn.typicalStyle),
+    cancelStyle: Object.assign({
+      'margin-left': '10%',
+      'cursor': 'pointer'
+    }, allIn.typicalStyle),
+    inputStyle: {'font-family': '"Changa", sans-serif'}
+  }, callback=function () {
+    $('.navbar').addClass('fixed-top')
+  }).__init__()
+}
 
 jQuery(document).ready(function ($) {
   // things todo when jquery loads

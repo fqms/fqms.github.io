@@ -104,7 +104,7 @@
                 <span class="dimit center-block fa fa-4x fa-github text-white"> </span></a>
             </div>
             <div class="col-md-3 col-3">
-              <a href="#" data-toggle="modal" data-target="#mailus"
+              <a onclick="contactUsStore()"
                 data-toggle="tooltip" title="Contact us for support and bugs reporting"
                  style="cursor: pointer;"
               >
@@ -682,10 +682,8 @@
             <i class="fa fa-fw fa-github-square fa-3x text-white"></i></a>
         </div>
         <div class="col-3 col-md-1 align-self-center">
-          <a 
-            href="#" data-toggle="modal" data-target="#mailus"
-            data-toggle="tooltip" title="Contact us for support and reporting"
-            style="cursor: pointer;"
+          <a data-toggle="tooltip" title="Contact us for support and reporting"
+            style="cursor: pointer;" onclick='contactUsStore()'
           >
             <i class="fa fa-fw fa-envelope fa-3x text-white"></i></a>
         </div>
@@ -707,38 +705,10 @@
       </div>
     </div>
   </div>
-  <div class="modal" id="mailus">
-      <div class="modal-dialog ar2">
-        <div class="modal-content">
-          <div class="modal-header">
-            <p class="modal-title text-center h3 ar1"> Contact us </p>
-            <button type="button" class="close" data-dismiss="modal" style='cursor: pointer;'>&times;</button>
-           </div>
-           <form class="form-horizontal text-center" method="POST" id="femail">
-          <div class="modal-body">
-            <br />
-            <input type="text" name="name" class="form-control text-center mt-1 mb-1 mailName" placeholder="Enter your name">
-            <br />
-              <input type="email" name="email" class="form-control text-center mt-1 mb-1 mailEmail" placeholder="Enter email">
-            <br />
-              <textarea class="form-control mt-2 mb-2 mailComment" name="comment" rows="5" id="comment" placeholder="Hello dear FQM developer ..."></textarea>
-            <br />
-            <input type="hidden" name="_subject" value="FQM emails 0.4" />
-            <input type="text" name="_gotcha" style="display:none" />
-            <input type="hidden" name="_next" value="//fqms.github.io/#thanke" />
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="close btn-danger ar1" style='cursor: pointer;'>Send</button>
-          </div>
-          </form>
-      </div>
-    </div>
-  </div>
   <script src="https://cdn.rawgit.com/mrf345/uniqueness/bea5b5e9/src/uniqueness.js"></script>
-  <!-- <script src="https://cdn.rawgit.com/mrf345/shareus/1e8e0cb0/src/shareus.js"></script> -->
   <script src="https://cdn.rawgit.com/mrf345/browser_notifier/aa1ab3e1/src/browserNotifier.js"></script>
   <script src="https://cdn.rawgit.com/mrf345/msg_notifier/dde8eb6f/src/msgNotifier.js"></script>
-  <!-- <script src="https://cdn.rawgit.com/mrf345/contactus/b3cec148/src/contactus.js"></script> -->
+  <script src="https://cdn.rawgit.com/mrf345/contactus/b3cec148/src/contactus.js"></script>
   <script src="https://cdn.rawgit.com/mrf345/form_validator/fb30ca4f/src/formValidator.js"></script>
   <script src="js/releases.js"></script>
   <script src="js/counter.js"></script>
