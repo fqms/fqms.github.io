@@ -34,6 +34,7 @@ var getDownloads = function getDownloads () {
         }
         Promise.all([
             'https://sourceforge.net/projects/free-queue-manager/files/stats/json?start_date=2017-01-29&end_date=' + new Date().toISOString().split('T')[0],
+            'https://archive.org/details/free_queue_manager_0.4.1?output=json',
             'https://archive.org/details/free_queue_manager_0.4?output=json',
             'https://archive.org/details/FreeQueueManagement?output=json',
             'https://archive.org/details/Free_Queue_Manager_0.2.5?output=json',
