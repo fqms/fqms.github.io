@@ -15,14 +15,14 @@ var allIn = {} // private object
 
 allIn.links = {
   sourceforge: {
-    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_Windows.zip/download',
-    linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_Linux.zip/download',
-    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_MacOS.zip/download'
+    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.3/FQM_0.4.3_Windows.zip/download',
+    // linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_Linux.zip/download',
+    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.3/FQM_0.4.3_Sourcecode.zip/download'
   },
   archive: {
-    windows: 'https://archive.org/download/free_queue_manager_0.4.1/FQM_041_Windows.zip',
-    linux: 'https://archive.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip',
-    macos: 'https://archive.org/download/free_queue_manager_0.4.1/FQM_041_MacOS.zip'
+    windows: 'https://archive.org/download/FQM0.4.3/FQM_0.4.3_Windows.zip',
+    // linux: 'https://archive.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip',
+    macos: 'https://archive.org/download/FQM0.4.3/FQM_0.4.3_Sourcecode.zip'
   }
 }
 
@@ -43,7 +43,7 @@ var lswitch = function lswitch () {
     $('#sourceforge').prop('disabled', true)
     $('#archive').prop('disabled', false)
     $('#winl').attr('href', allIn.links.sourceforge.windows).attr('target', '_blank')
-    $('#linl').attr('href', allIn.links.sourceforge.linux).attr('target', '_blank')
+    // $('#linl').attr('href', allIn.links.sourceforge.linux).attr('target', '_blank')
     $('#macl').attr('href', allIn.links.sourceforge.macos).attr('target', '_blank')
   } else {
     $('#sourceforge').removeClass('active')
@@ -51,7 +51,7 @@ var lswitch = function lswitch () {
     $('#archive').prop('disabled', true)
     $('#archive').addClass('active')
     $('#winl').attr('href', allIn.links.archive.windows).attr('target', '')
-    $('#linl').attr('href', allIn.links.archive.linux).attr('target', '')
+    // $('#linl').attr('href', allIn.links.archive.linux).attr('target', '')
     $('#macl').attr('href', allIn.links.archive.macos).attr('target', '')
   }
   $('#winl').fadeOut().fadeIn()

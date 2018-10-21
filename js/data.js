@@ -14,7 +14,7 @@ var getData = function getData () {
     'downloadUrl': 'https://archive.org/details/free_queue_manager03',
     'operatingSystem': 'Linux, Windows, MacOS',
     'screenshot': 'https://fqms.github.io/images/phone.png',
-    'softwareVersion': '0.3'
+    'softwareVersion': '0.4'
   }, {
     '@context': 'http://schema.org',
     '@type': 'SoftwareApplication',
@@ -30,6 +30,6 @@ var getData = function getData () {
     'downloadUrl': 'https://archive.org/details/free_queue_manager03',
     'operatingSystem': 'Linux, Windows, MacOS',
     'screenshot': 'https://fqms.github.io/images/phone.png',
-    'softwareVersion': '0.3'
+    'softwareVersion': '0.4'
   } ]
 }
