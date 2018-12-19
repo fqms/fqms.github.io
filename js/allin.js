@@ -17,7 +17,7 @@ allIn.links = {
   sourceforge: {
     windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.5/FQM_05_Windows.zip/download',
     // linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_Linux.zip/download',
-    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.5/FQM_05_Windows.zip/download'
+    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.5/FQM_05_Sourcecode.zip/download'
   },
   archive: {
     windows: 'https://archive.org/download/Free_Queue_Manager_05/FQM_05_Windows.zip',
