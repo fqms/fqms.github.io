@@ -1,9 +1,11 @@
 # FQM.github.io :
 
 ## To Add:
-> - [x] crate and implement formValidator
-> - [ ] brief document of msgNotify, contactUs, formValidator
-> - [x] Add total download counter with sourceforge API
-
-## To Fix:
-> - [x] fix contact us title, probably mistake in contactUs
+- [ ] create simple modularizer.js and move the release notes to it
+- [ ] create a script to automate all the new release process
+- [ ] replace archive.org with github completely
+- [ ] replace all fetch with ajax
+- [ ] Add github release counter metadata api
+- [ ] Refactor allin.js, counter.js
+- [ ] Move all libs to node.js libs including modularizer.js
+- [ ] Add unit tests
