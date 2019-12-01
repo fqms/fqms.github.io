@@ -20,9 +20,9 @@ allIn.links = {
     macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.5/FQM_05_Sourcecode.zip/download'
   },
   archive: {
-    windows: 'https://archive.org/download/Free_Queue_Manager_05/FQM_05_Windows.zip',
+    windows: 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Windows.zip',
     // linux: 'https://archive.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip',
-    macos: 'https://archive.org/download/Free_Queue_Manager_05/FQM_05_Sourcecode.zip'
+    macos: 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Sourcecode.zip'
   }
 }
 
