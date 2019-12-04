@@ -1,7 +1,8 @@
 # FQM.github.io :
 
 ## To Add:
-- [ ] create simple modularizer.js and move the release notes to it
+- [x] create simple modularizer.js and move the release notes to it
+- [ ] remove firefox notification
 - [ ] create a script to automate all the new release process
 - [ ] replace archive.org with github completely
 - [ ] replace all fetch with ajax
