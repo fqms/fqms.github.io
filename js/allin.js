@@ -1,6 +1,5 @@
 /* global location, $, localStorage, alert, jQuery, beloading, releases */ // to avoide false linter
 
-
 var version = false
 Object.keys(releases).forEach(function (v) {
   if (window.navigator.userAgent.indexOf(v) !== -1) {
@@ -12,16 +11,15 @@ var loader = false // global name for beloader to get duration
 var unique = false // global name for uniqueness
 var allIn = {} // private object
 
-
 allIn.links = {
   sourceforge: {
     windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.5/FQM_05_Windows.zip/download',
     // linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_Linux.zip/download',
     macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.5/FQM_05_Sourcecode.zip/download'
   },
-  archive: {
+  github: {
     windows: 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Windows.zip',
-    // linux: 'https://archive.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip',
+    // linux: 'https://github.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip',
     macos: 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Sourcecode.zip'
   }
 }
@@ -37,22 +35,22 @@ var wmsg = function wmsg () {
 
 var lswitch = function lswitch () {
   // function to switch links
-  if ($('#archive').hasClass('active')) {
-    $('#archive').removeClass('active')
+  if ($('#github').hasClass('active')) {
+    $('#github').removeClass('active')
     $('#sourceforge').addClass('active')
     $('#sourceforge').prop('disabled', true)
-    $('#archive').prop('disabled', false)
+    $('#github').prop('disabled', false)
     $('#winl').attr('href', allIn.links.sourceforge.windows).attr('target', '_blank')
     // $('#linl').attr('href', allIn.links.sourceforge.linux).attr('target', '_blank')
     $('#macl').attr('href', allIn.links.sourceforge.macos).attr('target', '_blank')
   } else {
     $('#sourceforge').removeClass('active')
     $('#sourceforge').prop('disabled', false)
-    $('#archive').prop('disabled', true)
-    $('#archive').addClass('active')
-    $('#winl').attr('href', allIn.links.archive.windows).attr('target', '')
-    // $('#linl').attr('href', allIn.links.archive.linux).attr('target', '')
-    $('#macl').attr('href', allIn.links.archive.macos).attr('target', '')
+    $('#github').prop('disabled', true)
+    $('#github').addClass('active')
+    $('#winl').attr('href', allIn.links.github.windows).attr('target', '')
+    // $('#linl').attr('href', allIn.links.github.linux).attr('target', '')
+    $('#macl').attr('href', allIn.links.github.macos).attr('target', '')
   }
   $('#winl').fadeOut().fadeIn()
   $('#linl').fadeOut().fadeIn()
@@ -126,47 +124,28 @@ jQuery(document).ready(function ($) {
   }, callback=function () {
     setTimeout(
       function () {
-        browserNotifier({
-          'buttonClass': 'btn navbar-btn btn-secondary',
-          'buttonStyle': {
-            'font-size': '140%',
-            'font-weight': 'bold',
-            'font-stretch': 'ultra-expanded',
-            'font-family': '"Changa", sans-serif'
+        allIn.toCallForAll = function () {
+          $('#thev').addClass('fixed-top')
+        }
+        msgNotifier({
+          url_hash: ['thanke', 'thankj'],
+          iconClass: ['fa fa-envelope', 'fa fa-address-card'],
+          text: [
+            'Thanks for contacting us, will replay back as soon as possible.',
+            'Thanks for joining our mailing list, Will keep you updated.'
+          ],
+          textStyle: {
+            'color': 'white',
+            'font-family': '"Changa", sans-serif',
+            'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
           },
-          'textStyle': allIn.typicalStyle,
-          storeVal: 'browserNotifier',
-          validator: function () {
-            return new Promise(function (resolve, reject) {
-              if (navigator.userAgent.indexOf('Firefox') === -1) {
-                resolve(true)
-              } else reject(false)
-            })
+          buttonStyle: {
+            'color': 'white',
+            'font-family': '"Changa", mono',
+            'font-size': '130%',
+            'font-stretch': 'ultra-expanded'
           }
-        }, function () {
-          allIn.toCallForAll = function () {
-            $('#thev').addClass('fixed-top')
-          }
-          msgNotifier({
-            url_hash: ['thanke', 'thankj'],
-            iconClass: ['fa fa-envelope', 'fa fa-address-card'],
-            text: [
-              'Thanks for contacting us, will replay back as soon as possible.',
-              'Thanks for joining our mailing list, Will keep you updated.'
-            ],
-            textStyle: {
-              'color': 'white',
-              'font-family': '"Changa", sans-serif',
-              'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
-            },
-            buttonStyle: {
-              'color': 'white',
-              'font-family': '"Changa", mono',
-              'font-size': '130%',
-              'font-stretch': 'ultra-expanded'
-            }
-          }, callback=allIn.toCallForAll)
-        })
+        }, callback=allIn.toCallForAll)
       }, 1800
     )
   })
