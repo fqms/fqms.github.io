@@ -38,369 +38,44 @@
       enable_page_level_ads: true
     });
   </script>
-  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/external/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-  <script src="js/bootstrap-4.0.0-alpha.6.min.js"></script>
-  <script src="js/smooth-scroll.js"></script>
-  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/external/bootstrap-4.0.0-alpha.6.min.js"></script>
+  <script src="js/external/smooth-scroll.js"></script>
+  <script src="js/external/jquery-ui.min.js"></script>
   <script src="js/beloading.js"></script>
-  <script src="https://gitcdn.xyz/cdn/mrf345/modularize/c7ff2ffd1dd6f3a1e5c96db26b5d598c1b111caa/bin/Modularize.min.js"></script>
-  <script>
-    new Modularize(
-      '/templates/updates', {}, '.updatesModularize', 1, [], 'html', false, true, 0
-    ).load().then(function(templates) {
-      $.getScript('js/uniqueness.js')
-      $.getScript('js/allin.js')
-    })
-  </script>
-</head>
-
-<body class="text-center">
-  <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ar,es,fr,it', layout:google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: true}, 'google_translate_element');
-  }
-  </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-inverse" id="thev">
-    <div class="container">
-      <a class="navbar-brand notranslate version" href="#cover">FQM </a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link" href="#app">Introduction</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#features">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#license">License</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#updates">Updates</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-              data-toggle="tooltip" title="Contact us for support and reporting"
-              style="cursor: pointer;" onclick="contactUsStore()"
-            >Support</a>
-          </li>
-        </ul>
-        <a class="btn navbar-btn btn-secondary mx-3" href="#download">
-           <span class="fa fa-download"></span>
-          Download
-        </a>
-        <div class='btn navbar-btn mx-4' id="google_translate_element"></div>
-      </div>
-    </div>
-  </nav>
-  <div class="cover d-flex align-items-center pt-5 bg-inverse shb" id="cover">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-        </div> 
-        <div class="col-md-6 text-md-left align-self-center my-5">
-          <h1 class="text-white display-1">FQM</h1>
-          <h4 class="text-white">Queue Management, made easy and simple for all</h4>
-          <div class="row mt-5 text-center">
-            <div class="col-md-2 col-3">
-              <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" data-toggle="tooltip" title="Youtube account for tutorials and demonstrations" target="_blank">
-                <span class="dimit center-block fa fa-4x fa-youtube text-white"> </span></a>
-            </div>
-            <div class="col-md-3 col-3">
-              <a href="https://github.com/mrf345/fqm" data-toggle="tooltip" title="Github source code account" target="_blank">
-                <span class="dimit center-block fa fa-4x fa-github text-white"> </span></a>
-            </div>
-            <div class="col-md-3 col-3">
-              <a onclick="contactUsStore()"
-                data-toggle="tooltip" title="Contact us for support and bugs reporting"
-                 style="cursor: pointer;"
-              >
-                <span class="dimit center-block fa fa-4x fa-envelope-o text-white"> </span></a>
-            </div>
-            <div class="col-md-3 col-3">
-              <a data-toggle="tooltip" title="Share us"
-                style="cursor: pointer;"
-                onclick="$('.shareUs').toggleClass('hide'); $(this).toggleClass('beatit')"
-              >
-                <span class="dimit center-block fa fa-4x fa-heart text-white"> </span></a>
-            </div>
-          </div>
-          <div class="row mt-3 text-center shareUs hide">
-            <div class="col-md-2 col-3">
-              <a href="https://www.facebook.com/sharer.php?u=https://fqms.github.io" data-toggle="tooltip" title="On Facebook" target="_blank">
-                <span class="dimit center-block fa fa-4x fa-facebook-square text-white"> </span></a>
-            </div>
-            <div class="col-md-3 col-3">
-              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://fqms.github.io" data-toggle="tooltip" title="On LinkedIn" target="_blank">
-                <span class="dimit center-block fa fa-4x fa-linkedin-square text-white"> </span></a>
-            </div>
-            <div class="col-md-3 col-3">
-              <a href="https://twitter.com/share?url=https://fqms.github.io" target="_blank"
-                data-toggle="tooltip" title="On Twitter"
-              >
-                <span class="dimit center-block fa fa-4x fa-twitter-square text-white"> </span></a>
-            </div>
-            <div class="col-md-3 col-3 hidden">
-              <a href="https://plus.google.com/share?url=https://fqms.github.io" data-toggle="tooltip" title="On Google+" target="_blank">
-                <span class="dimit center-block fa fa-4x fa-google-plus-square text-white"> </span></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-            <!--
-            <a href="#" data-target="#demo" data-toggle="modal"
-          --> <a href="javascript:wmsg();"
-            data-toggle="tooltip" title="Watch video demonstration">
-
-              <img class="img-fluid d-block mx-auto lightit snb" id="ilogo" src="images/logo.gif" alt="Logo animation">
-            </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section py-5 text-center" id="app">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 col-xs-12 my-3 align-self-center">
-          <h2 class="text-white bg-inverse my-3 text-center shb pt-2 pb-2">What is FQM</h2>
-          <p class="lead"><i class='notranslate'>Free Queue Manager.</i> Web based management 
-          system developed for the purpose of easing the process of organizing queues and lines. Like many other
-          queue management systems, this system does provide a basic control panel that allow the users
-          and customers alike to interact with it via a basic and simple user interface. Point that
-          makes this system different from others, the fact it's free to use, modify and share.
-          Which makes it a good alternative to the many expensive management systems.
-          Moreover, The independent nature of this system,
-          has influenced the development towards more independent IT solutions, that won't require you
-          to be more dependant on specific operating system or hardware, instead finding new solutions that fits all.</p>
-        </div>
-        <div class="col-md-5 push-md-2 col-xs-12 my-3 align-self-center">
-          <h2 class="text-white bg-inverse my-3 text-center shb version pt-2 pb-2">Version </h2>
-          <p class="lead">
-            In this beta release of the system, a lot of improvements made in 
-            regard to the speed and responsiveness of the system. As well as multiple 
-            newly added features. Nevertheless, the current state of the system is still 
-            under-testing but with the recent improvements on the core functionalities and 
-            code, the performance speed of the current release is almost double that of the 
-            previous one. Lastly improvements and additions in regard to internationalization 
-            been made. The current version supports five languages English, Arabic, French, Italian and Spanish 
-            in printing and text-to-speech verbal announcements. More improvements in that regard are currently 
-            in development, If you have any corrections or suggestions, contact support.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section py-5" id="features">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="pb-2 pt-2 text-white bg-inverse shb">Major Features</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="align-self-center text-left col-lg-4 col-md-6">
-          <div class="row my-5">
-            <div class="col-10">
-              <h4   >Web-based platform</h4>
-              <p   >It gives the ability to multiple users and devices to interact with
-                system at the same time, without the need for Internet access.
-                It has the ability to run on any local network .</p>
-            </div>
-            <div class="col-2"><i class="d-block fa fa-3x fa-globe"></i></div>
-          </div>
-          <div class="row my-5">
-            <div class="col-10">
-              <h4   >Customization</h4>
-              <p   >Gives the user the ability to customize every interface ,
-              granting a unique and special experience for every user .</p>
-            </div>
-            <div class="col-2"><i class="d-block fa  fa-3x fa-wrench"></i></div>
-          </div>
-          <div class="row my-5">
-            <div class="col-10">
-              <h4   >User management</h4>
-              <p   >Offers a user-based platform, so multiple users have the ability
-                to register, log-in and monitor their own assigned by Admin tasks .</p>
-            </div>
-            <div class="col-2"><i class="d-block fa  fa-3x fa-users"></i></div>
-          </div>
-        </div>
-        <div class="my-3 col-lg-4 col-md-6 align-self-center">
-          <img class="img-fluid d-block mx-auto" id="pimg" src="images/phone.png" alt="Phone features image"> 
-        </div>
-        <div class="align-self-center text-left col-lg-4 col-md-12">
-          <div class="row my-5">
-            <div class="col-3"><i class="d-block fa fa-print fa-3x"></i></div>
-            <div class="col-9">
-              <h4>POS Printers</h4>
-              <p>Support for major POS USB printers on the market.
-              By a simple click, you can assign any connected USB printer,
-              Supports printing four languages English, Arabic, French, Italian and Spanish.
-            </p>
-            </div>
-          </div>
-          <div class="row my-5">
-            <div class="col-3"><i class="d-block mx-auto fa  fa-3x fa-film"></i></div>
-            <div class="col-9">
-              <h4   >Multimedia</h4>
-              <p   >Offers a multimedia platform, that any permitted user can upload videos, images
-              or sound files to, so they can be incorporated in the customization process .</p>
-            </div>
-          </div>
-          <div class="row my-5">
-            <div class="col-3"><i class="d-block fa fa-3x fa-bullhorn"></i></div>
-            <div class="col-9">
-              <h4>Verbal announcement</h4>
-              <p>Supports text-to-speech clear and high-quality verbal
-              announcement, in five different languages English, Arabic, French, Italian and Spanish
-              and with different preferences and settings .</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <a style="width: 100%;" href="images/user_guide.pdf" target="_blank" class="btn btn-outline-info btn-lg h4 ar1">
-            <span class="fa fa-university fa-lg pt-1"></span> <br /> <br />
-            Read the User Guide
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="updatesModularize"><!-- Loads automatically --></div>
-    <div class='section'>
-      <div class='container'>
-        <div class='row'>
-          <div class="col-md-12 pb-4">
-            <div class="shb bg-inverse">
-              <form class="form-horizontal text-center" style='padding: 3%;' method="POST" id="fnews">
-                <h3 class="text-white ar1">Join our mailing list for more updates :
-                  <button type="submit" class="btn btn-primary">Join</button>
-                </h3>
-                <input id="toValidE" type="email" name="email" class="form-control text-center ar1" placeholder="Enter email">
-                <input type="hidden" name="_subject" value="FQM 0.4 updates subs" />
-                <input type="text" name="_gotcha" style="display:none" />
-                <input type="hidden" name="_next" value="//fqms.github.io/#thankj" />
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <div class="py-5 section bg-inverse pt-4 shb" id="download">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-md-left align-self-center my-5">
-          <h1 class="display-4 text-center">Download FQM</h1>
-          <div class="row mt-5 mb-3 text-center">
-            <div class="col-xs-12 col-sm-6 mt-3 mb-1">
-              <span class='fa fa-download fa-3x mb-2'></span>
-              <h3 class='ar1'>Total downloads</h3>
-              <h2 class='mb-4 downloadsCounter'>0</h2>
-            </div>
-            <div class="col-xs-12 col-sm-6 mt-3 mb-1">
-              <span class='fa fa-star fa-3x mb-2'></span>
-              <h3 class='ar1'>Github stars</h3>
-              <h2 class='mb-4 starsCounter'>0</h2>
-            </div>
-          </div>
-          <h4 class="text-center" style='margin-top: 3%;'>Free to download, use and share on the major operating systems ..</h4>
-          <div class="col-md-12 text-center" style='margin-top: 5%;'>
-            <div class="btn-group">
-               <button id="archive" onclick="lswitch();" type="button" class="btn btn-danger active h4 notranslate" disabled=" " >Github</button>
-               <button id="sourceforge" onclick="lswitch();" type="button" class="btn btn-primary h4 notranslate">Sourceforge</button>
-            </div>
-          </div>
-          <div class="row mt-5">
-            <div class="col-xs-12 col-md-6">
-              <a id="winl" href="https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Windows.zip" style="cursor: pointer;"
-              data-toggle="tooltip" title="Tested on Windows XP, 7, 8, 10 32-bit and 64-bit">
-                <p class="dimit text-white text-center ar1 h3 notranslate"> <span class="center-block img-fluid fa fa-5x fa-windows pb-1"></span><br> Windows </p>
-              </a>
-            </div>
-            <!-- <div class="col-xs-12 col-md-4">
-              <a id="linl" href="https://archive.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip" data-toggle="tooltip" style="cursor: pointer;"
-               title="Tested on Ubuntu 14.04 . And can run on any later-on released linux distros">
-                <p class="dimit text-white text-center ar1 h3 notranslate"> <span class="center-block img-fluid fa fa-5x fa-linux pb-1"></span><br> GNU/Linux </p>
-              </a>
-            </div> -->
-            <div class="col-xs-12 col-md-6">
-              <a id="macl" href="https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Sourcecode.zip" style="cursor: pointer;"
-              data-toggle="tooltip" title="Extract all and run ./installer.sh in terminal, Tested on MacOS 10.8.4,">
-                <p class="dimit text-white text-center h3 ar1 notranslate"> <span class="center-block img-fluid fa fa-5x fa-terminal pb-1"></span><br> Linux & MacOS </p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div id="license" class="col-md-12 text-md-left align-self-center my-5 text-center">
-          <center>
-            <a id="licl" href="https://en.wikipedia.org/wiki/Mozilla_Public_License" target="_blank" data-toggle="tooltip" title="MPL license details">
-              <img class="img-fluid display-4 dimit" src="images/license.png" alt="Mozilla MPL license">
-            </a>
-          </center>
-          <h4 class="text-center"    style='margin-top: 5%;'>
-            This work is a free, open-source project licensed under Mozilla Public License version 2.0 .<br />
-            Which means anyone can modify and improve this project. Get involved :
-          </h4>
-            <div class="col-xs-12 text-center" style='margin-top: 8%;'>
-                <a href="https://github.com/mrf345/FQM" target="_blank" data-toggle="tooltip" title="Source code on Github">
-                  <img class="img-responsive dimit" src="images/github.png" alt="Github logo">
-                </a>
-                <a href="https://sourceforge.net/p/free-queue-manager/code/ci/master/tree/" target="_blank" data-toggle="tooltip" title="Source code on SourceForge">
-                  <img class="img-responsive dimit" src="images/sourceforge.png" alt="Sourceforge logo">
-                </a>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-5 bg-inverse" id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <p class="text-left lead ar1 notranslate">&copy; FQM - Since 2017 with contagious passion</p>
-        </div>
-        <div class="col-3 col-md-1 align-self-center">
-          <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" data-toggle="tooltip" title="Youtube account for tutorials and demonistrations" target="_blank">
-            <i class="fa fa-fw fa-youtube-square fa-3x text-white"></i></a>
-        </div>
-        <div class="col-3 col-md-1 align-self-center">
-          <a href="https://github.com/mrf345/fqm" data-toggle="tooltip" title="Github source-code account" target="_blank">
-            <i class="fa fa-fw fa-github-square fa-3x text-white"></i></a>
-        </div>
-        <div class="col-3 col-md-1 align-self-center">
-          <a data-toggle="tooltip" title="Contact us for support and reporting"
-            style="cursor: pointer;" onclick='contactUsStore()'
-          >
-            <i class="fa fa-fw fa-envelope fa-3x text-white"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="demo">
-    <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-          <p class="modal-title text-center h3"> Video demonstration </p>
-		      <button type="button" class="close" data-dismiss="modal">&times;</button>
-	       </div>
-	      <div class="modal-body">
-	      </div>
-	      <div class="modal-footer">
-		      <button type="button" class="close btn-warning pull-left" data-dismiss="modal">Close</button>
-	      </div>
-      </div>
-    </div>
-  </div>
-  <script src="js/browserNotifier.js"></script>
-  <script src="js/msgNotifier.js"></script>
-  <script src="js/contactus.js"></script>
-  <script src="js/formValidator.js"></script>
   <script src="js/releases.js"></script>
   <script src="js/counter.js"></script>
+  <script src="https://gitcdn.xyz/cdn/mrf345/modularize/463a3546fc603a6b655e752a7ea6249606ed2dc4/bin/Modularize.min.js"></script>
+</head>
+
+<body class="text-center sectionsModularize">
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en', includedLanguages: 'en,ar,es,fr,it',
+          layout:google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: true
+        }, 'google_translate_element')
+      }
+
+      var config = [
+        {templatesPath: '/templates/sections', appendTo: 'body', data: {
+          1: {postfix: 'navigation'}, 2: {postfix: 'header'}, 3: {postfix: 'introduction'},
+          4: {postfix: 'features'}, 5: {postfix: 'updates'}, 6: {postfix: 'join'},
+          7: {postfix: 'downloads'}, 8: {postfix: 'footer'}, 9: {postfix: 'demo'}
+        }},
+        {templatesPath: '/templates/updates', appendTo: '.updatesModularize', reverse: true},
+      ]
+
+      var scripts = [
+        'js/uniqueness.js', 'js/allin.js', '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit',
+        'js/browserNotifier.js', 'js/msgNotifier.js', 'js/contactus.js', 'js/formValidator.js',
+      ]
+
+      new Modularize(undefined, config)
+        .load().then(function(templates) {
+          scripts.forEach(function(link) { $.getScript(link) })
+        })
+    </script>
 </body>
 </html>

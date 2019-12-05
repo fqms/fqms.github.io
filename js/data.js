@@ -11,7 +11,7 @@ var getData = function getData () {
     },
     'datePublished': '2017-10-15',
     'applicationCategory': 'Software',
-    'downloadUrl': 'https://archive.org/details/free_queue_manager03',
+    'downloadUrl': 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Windows.zip',
     'operatingSystem': 'Linux, Windows, MacOS',
     'screenshot': 'https://fqms.github.io/images/phone.png',
     'softwareVersion': '0.4'
@@ -27,7 +27,7 @@ var getData = function getData () {
     },
     'datePublished': '2017-10-15',
     'applicationCategory': 'Software',
-    'downloadUrl': 'https://archive.org/details/free_queue_manager03',
+    'downloadUrl': 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Windows.zip',
     'operatingSystem': 'Linux, Windows, MacOS',
     'screenshot': 'https://fqms.github.io/images/phone.png',
     'softwareVersion': '0.4'
