@@ -31,13 +31,6 @@
     gtag('js', new Date())
     gtag('config', 'UA-105759902-2')
   </script>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-2578858493736533",
-      enable_page_level_ads: true
-    });
-  </script>
   <script src="js/external/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="js/external/bootstrap-4.0.0-alpha.6.min.js"></script>
@@ -46,10 +39,11 @@
   <script src="js/beloading.js"></script>
   <script src="js/releases.js"></script>
   <script src="js/counter.js"></script>
-  <script src="https://gitcdn.xyz/cdn/mrf345/modularize/463a3546fc603a6b655e752a7ea6249606ed2dc4/bin/Modularize.min.js"></script>
+  <script src="https://gitcdn.xyz/cdn/mrf345/modularize/3fa423134b9d25092b9641d40e1e6aea2638850d/bin/Modularize.min.js"></script>
 </head>
 
 <body class="text-center sectionsModularize">
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
@@ -67,15 +61,15 @@
         {templatesPath: '/templates/updates', appendTo: '.updatesModularize', reverse: true},
       ]
 
-      var scripts = [
-        'js/uniqueness.js', 'js/allin.js', '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit',
-        'js/browserNotifier.js', 'js/msgNotifier.js', 'js/contactus.js', 'js/formValidator.js',
-      ]
-
       new Modularize(undefined, config)
         .load().then(function(templates) {
-          scripts.forEach(function(link) { $.getScript(link) })
+          $.getScript('js/uniqueness.js')
+          $.getScript('js/allin.js')
         })
     </script>
+    <script src='js/browserNotifier.js'></script>
+    <script src="js/msgNotifier.js"></script>
+    <script src="js/contactus.js"></script>
+    <script src="js/formValidator.js"></script>
 </body>
 </html>
