@@ -1,6 +1,8 @@
 // Dependencies: jQuery, jQuery-UI
 
-var formValidator = function (options={}, callback=function () {}) {
+var formValidator = function (options, callback) {
+    options = options || {}
+    callback = callback || Function
     rFormValidator = {} // object to return
 
     rFormValidator.options = {

@@ -6,7 +6,8 @@
 
 */
 
-var uniqueness = function Unique (options, callback=function (data) {}) {
+var uniqueness = function Unique (options, callback) {
+  callback = callback || Function
   var checkType = function checkType (type, args) {
     // checking the type of each variable in the passed array
     for (var a in args) {
@@ -87,7 +88,8 @@ var uniqueness = function Unique (options, callback=function (data) {}) {
     return true
   }
 
-  uniquenessReturn.effect = function effect (effect, duration, index, doe = true) {
+  uniquenessReturn.effect = function effect (effect, duration, index, doe) {
+    doe = doe || true
     // to apply the effect and toggle the element
     if (effects.indexOf(effect) === -1) {
       throw new Error('effect(effect) takes a valid jquery ui effect')

@@ -58,7 +58,7 @@
           4: {postfix: 'features'}, 5: {postfix: 'updates'}, 6: {postfix: 'join'},
           7: {postfix: 'downloads'}, 8: {postfix: 'footer'}, 9: {postfix: 'demo'}
         }},
-        {templatesPath: '/templates/updates', appendTo: '.updatesModularize', reverse: true},
+        {templatesPath: '/templates/updates', appendTo: '.updatesModularize', reverseOrder: true},
       ]
 
       new Modularize(undefined, config)
@@ -67,7 +67,6 @@
           $.getScript('js/allin.js')
         })
     </script>
-    <script src='js/browserNotifier.js'></script>
     <script src="js/msgNotifier.js"></script>
     <script src="js/contactus.js"></script>
     <script src="js/formValidator.js"></script>
