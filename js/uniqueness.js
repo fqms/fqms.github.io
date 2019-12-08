@@ -19,7 +19,7 @@ var uniqueness = function Unique (options, callback) {
   // to generate a random int of certain range, it takes the length of
   // the randint as an argument
     if (!checkType('number')) throw new TypeError('randint() requires numbers')
-    return Math.floor(Math.random() * (10 ** digits))
+    return Math.floor(Math.random() * Math.pow(10, digits))
   }
   var choice = function choice (list) {
   // to chose randomly from an Array

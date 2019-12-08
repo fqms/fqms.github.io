@@ -174,7 +174,8 @@ var contactUs = function (options, callback) {
     .append(returnCUS.elements.form)
     .append(returnCUS.elements.row)
 
-    returnCUS.__effect__ = function (toKill=false) {
+    returnCUS.__effect__ = function (toKill) {
+        toKill = toKill || false
         if (returnCUS.loop || toKill) {
             clearInterval(returnCUS.loop)
             returnCUS.loop = false

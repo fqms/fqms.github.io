@@ -20,8 +20,39 @@
   <link href="https://fonts.googleapis.com/css?family=Changa|Amiri" rel="stylesheet">
   <script src='js/data.js' type='text/javascript'></script>
   <script type="application/ld+json">
-  /* global getData */
-    getData()
+    [ {
+      '@context': 'http://schema.org',
+      '@type': 'SoftwareApplication',
+      'name': 'FQM',
+      'image': 'https://fqms.github.io/images/logo.gif',
+      'url': 'https://fqms.github.io/',
+      'author': {
+        '@type': 'Person',
+        'name': 'Mohamed Feddad'
+      },
+      'datePublished': '2019-01-15',
+      'applicationCategory': 'Software',
+      'downloadUrl': 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Windows.zip',
+      'operatingSystem': 'Linux, Windows, MacOS',
+      'screenshot': 'https://fqms.github.io/images/phone.png',
+      'softwareVersion': '0.5'
+    }, {
+      '@context': 'http://schema.org',
+      '@type': 'SoftwareApplication',
+      'name': 'Free Queue Management',
+      'image': 'https://fqms.github.io/images/logo.gif',
+      'url': 'https://fqms.github.io/',
+      'author': {
+        '@type': 'Person',
+        'name': 'Mohamed Feddad'
+      },
+      'datePublished': '2019-01-15',
+      'applicationCategory': 'Software',
+      'downloadUrl': 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Windows.zip',
+      'operatingSystem': 'Linux, Windows, MacOS',
+      'screenshot': 'https://fqms.github.io/images/phone.png',
+      'softwareVersion': '0.5'
+    } ]
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105759902-2"></script>
   <script type='text/javascript'>
@@ -40,6 +71,7 @@
   <script src="js/releases.js"></script>
   <script src="js/counter.js"></script>
   <script src="https://gitcdn.xyz/cdn/mrf345/modularize/3fa423134b9d25092b9641d40e1e6aea2638850d/bin/Modularize.min.js"></script>
+  <script src="js/uniqueness.js"></script>
 </head>
 
 <body class="text-center sectionsModularize">
@@ -63,7 +95,6 @@
 
       new Modularize(undefined, config)
         .load().then(function(templates) {
-          $.getScript('js/uniqueness.js')
           $.getScript('js/allin.js')
         })
     </script>
