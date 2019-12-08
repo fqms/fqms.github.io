@@ -6,7 +6,7 @@
  */
 
 
-var beloading = function beload (options,callback=function () {}) {
+var beloading = function beload (options) {
   var checkType = function checkType (type, args) {
     // checking the type of each variable in the passed array
     for (var a in args) {
@@ -57,7 +57,7 @@ var beloading = function beload (options,callback=function () {}) {
     if (options.trail === 'false') {
       function toCall () {
         beloadingReturn.stop()
-        callback()
+        if (callback) callback()
       }
       if (document.readyState === "complete") toCall()
       else $(window).on('load', toCall)

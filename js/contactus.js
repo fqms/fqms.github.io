@@ -1,6 +1,8 @@
 // Dependencies: jQuery, jQuery-ui, FontAwesome
 
-var contactUs = function (options={}, callback=function () {}) {
+var contactUs = function (options, callback) {
+    options = options || {}
+    callback = callback || Function
     returnCUS = {
         loop: false // to store effect loop
     } // unique object name to return

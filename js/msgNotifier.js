@@ -1,6 +1,8 @@
 // Dependencies: jQuery, jQuery-ui, FontAwesome
 
-var msgNotifier = function (options={}, callback=function () {}) {
+var msgNotifier = function (options, callback) {
+    options = options || options
+    callback = callback || Function
     returnMN = {} // unique object name to return
     
     returnMN.options = {
