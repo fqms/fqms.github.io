@@ -114,7 +114,6 @@ var contactUsStore  = function () {
 
 jQuery(document).ready(function ($) {
   // things todo when jquery loads
-  placeCounters() // to load counters
   loader = beloading({
     duration: 2,
     text_font: '"Changa", sans-serif',
