@@ -114,7 +114,6 @@ var contactUsStore  = function () {
 
 jQuery(document).ready(function ($) {
   // things todo when jquery loads
-  $('.version').append(version)
   placeCounters() // to load counters
   loader = beloading({
     duration: 2,
@@ -148,10 +147,6 @@ jQuery(document).ready(function ($) {
         }, callback=allIn.toCallForAll)
       }, 1800
     )
-  })
-  unique = uniqueness({
-    effect: 'fade',
-    effect_duration: 1.2
   })
   formValidator({
     textClass: 'h3',
