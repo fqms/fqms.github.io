@@ -67,7 +67,6 @@
   <script src="js/external/bootstrap-4.0.0-alpha.6.min.js"></script>
   <script src="js/external/smooth-scroll.js"></script>
   <script src="js/external/jquery-ui.min.js"></script>
-  <script src="js/beloading.js"></script>
   <script src="js/releases.js"></script>
   <script src="js/counter.js"></script>
   <script src="https://gitcdn.xyz/cdn/mrf345/modularize/3fa423134b9d25092b9641d40e1e6aea2638850d/bin/Modularize.min.js"></script>
@@ -81,9 +80,11 @@
 <body class="text-center sectionsModularize">
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
+      var SUPPORTED_LANGUAGES = ['en', 'ar', 'es', 'fr', 'it']
+
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
-          pageLanguage: 'en', includedLanguages: 'en,ar,es,fr,it',
+          pageLanguage: SUPPORTED_LANGUAGES[0], includedLanguages: SUPPORTED_LANGUAGES.join(','),
           layout:google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: true
         }, 'google_translate_element')
       }
@@ -99,7 +100,10 @@
 
       new Modularize(undefined, config)
         .load().then(function(templates) {
+          $.getScript('js/imageLoader.js')
+            .done(function () { imageLoader() })
           $('.version').append(version)
+          placeCounters()
           unique = uniqueness({
             effect: 'fade',
             effect_duration: 1
