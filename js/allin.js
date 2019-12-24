@@ -1,4 +1,4 @@
-/* global location, $, localStorage, alert, jQuery, beloading, releases */ // to avoide false linter
+/* global location, $, localStorage, alert, jQuery, releases */ // to avoide false linter
 
 var version = false
 Object.keys(releases).forEach(function (v) {
@@ -114,39 +114,29 @@ var contactUsStore  = function () {
 
 jQuery(document).ready(function ($) {
   // things todo when jquery loads
-  loader = beloading({
-    duration: 2,
-    text_font: '"Changa", sans-serif',
-    text: "Free Queue Manager is loading ...",
-    fadeIn: 'true'
-  }, callback=function () {
-    setTimeout(
-      function () {
-        allIn.toCallForAll = function () {
-          $('#thev').addClass('fixed-top')
-        }
-        msgNotifier({
-          url_hash: ['thanke', 'thankj'],
-          iconClass: ['fa fa-envelope', 'fa fa-address-card'],
-          text: [
-            'Thanks for contacting us, will replay back as soon as possible.',
-            'Thanks for joining our mailing list, Will keep you updated.'
-          ],
-          textStyle: {
-            'color': 'white',
-            'font-family': '"Changa", sans-serif',
-            'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
-          },
-          buttonStyle: {
-            'color': 'white',
-            'font-family': '"Changa", mono',
-            'font-size': '130%',
-            'font-stretch': 'ultra-expanded'
-          }
-        }, callback=allIn.toCallForAll)
-      }, 1800
-    )
-  })
+  allIn.toCallForAll = function () {
+    $('#thev').addClass('fixed-top')
+  }
+
+  msgNotifier({
+    url_hash: ['thanke', 'thankj'],
+    iconClass: ['fa fa-envelope', 'fa fa-address-card'],
+    text: [
+      'Thanks for contacting us, will replay back as soon as possible.',
+      'Thanks for joining our mailing list, Will keep you updated.'
+    ],
+    textStyle: {
+      'color': 'white',
+      'font-family': '"Changa", sans-serif',
+      'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
+    },
+    buttonStyle: {
+      'color': 'white',
+      'font-family': '"Changa", mono',
+      'font-size': '130%',
+      'font-stretch': 'ultra-expanded'
+    }
+  }, allIn.toCallForAll)
   formValidator({
     textClass: 'h3',
     textStyle: {
