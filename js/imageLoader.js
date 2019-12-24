@@ -7,8 +7,8 @@ function imageLoader (selector) {
     var parent = image.parentElement
     var src = image.getAttribute('loader')
     var span = document.createElement('span')
-    span.style.display = 'none'
-    image.style.display = 'none'
+    span.style.setProperty('display', 'none', 'important')
+    image.style.setProperty('display', 'none', 'important')
 
     loadingCss.forEach(function (css) { span.classList.add(css) })
     parent.insertBefore(span, parent.firstChild)
