@@ -113,30 +113,7 @@ var contactUsStore  = function () {
 }
 
 jQuery(document).ready(function ($) {
-  // things todo when jquery loads
-  allIn.toCallForAll = function () {
-    $('#thev').addClass('fixed-top')
-  }
 
-  msgNotifier({
-    url_hash: ['thanke', 'thankj'],
-    iconClass: ['fa fa-envelope', 'fa fa-address-card'],
-    text: [
-      'Thanks for contacting us, will replay back as soon as possible.',
-      'Thanks for joining our mailing list, Will keep you updated.'
-    ],
-    textStyle: {
-      'color': 'white',
-      'font-family': '"Changa", sans-serif',
-      'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
-    },
-    buttonStyle: {
-      'color': 'white',
-      'font-family': '"Changa", mono',
-      'font-size': '130%',
-      'font-stretch': 'ultra-expanded'
-    }
-  }, allIn.toCallForAll)
   formValidator({
     textClass: 'h3',
     textStyle: {
