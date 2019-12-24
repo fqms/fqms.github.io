@@ -14,12 +14,12 @@ function imageLoader (selector) {
     parent.insertBefore(span, parent.firstChild)
     $(span).fadeIn(1000)
 
-    $.get(src)
-      .done(function (data) {
-        image.src = src
-        $(span).fadeOut(1500)
-        $(image).fadeIn(2500)
-        console.log('loaded')
-      })
+    $(image).on('load', function () {
+      $(span).fadeOut(1500)
+      $(image).fadeIn(2500)
+      console.warn('loaded')
+    })
+
+    image.src = src
   })
 }
