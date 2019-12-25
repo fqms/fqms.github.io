@@ -75,6 +75,7 @@
   <script src="js/msgNotifier.js"></script>
   <script src="js/contactus.js"></script>
   <script src="js/formValidator.js"></script>
+  <script src="js/beloading.js"></script>
 </head>
 
 <body class="text-center sectionsModularize">
@@ -90,6 +91,13 @@
         {templatesPath: '/templates/updates', appendTo: '.updatesModularize', reverseOrder: true},
       ]
 
+      var fixNavbarToTop = function () { $('.navbar').addClass('fixed-top') }
+
+      var waitingScreen = beloading(
+        {text: 'FQM loading, please wait ...', manually: true, text_font: '"Changa", sans-serif'},
+        fixNavbarToTop
+      )
+
       new Modularize(undefined, config)
         .load().then(function(templates) {
           $.getScript('js/imageLoader.js')
@@ -103,13 +111,15 @@
                 }, 'google_translate_element')
               }
             })
-          $('.navbar').addClass('fixed-top')
+
           $('.version').append(version)
           placeCounters()
-          unique = uniqueness({
+
+          var unique = uniqueness({
             effect: 'fade',
             effect_duration: 1
-          })
+          },)
+
           msgNotifier({
            url_hash: ['thanke', 'thankj'],
            iconClass: ['fa fa-envelope', 'fa fa-address-card'],
@@ -127,9 +137,11 @@
              'font-family': '"Changa", mono',
              'font-size': '130%',
              'font-stretch': 'ultra-expanded'
-           }
-          , function() { $('#thev').addClass('fixed-top')  }
+           },
+           fixNavbarToTop
           })
+
+          waitingScreen.stop()
         })
     </script>
 </body>

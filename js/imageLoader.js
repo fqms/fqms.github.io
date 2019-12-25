@@ -17,7 +17,6 @@ function imageLoader (selector) {
     $(image).on('load', function () {
       $(span).fadeOut(1500)
       $(image).fadeIn(2500)
-      console.warn('loaded')
     })
 
     image.src = src
