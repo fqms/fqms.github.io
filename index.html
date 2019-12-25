@@ -91,11 +91,11 @@
         {templatesPath: '/templates/updates', appendTo: '.updatesModularize', reverseOrder: true},
       ]
 
-      var fixNavbarToTop = function () { $('.navbar').addClass('fixed-top') }
-
       var waitingScreen = beloading(
         {text: 'FQM loading, please wait ...', manually: true, text_font: '"Changa", sans-serif'},
-        fixNavbarToTop
+        function () {
+          if (window.location.hash.indexOf('thank') === -1) $('.navbar').addClass('fixed-top')
+        }
       )
 
       new Modularize(undefined, config)
@@ -120,26 +120,28 @@
             effect_duration: 1
           })
 
-          msgNotifier({
-           url_hash: ['thanke', 'thankj'],
-           iconClass: ['fa fa-envelope', 'fa fa-address-card'],
-           text: [
-             'Thanks for contacting us, will replay back as soon as possible.',
-             'Thanks for joining our mailing list, Will keep you updated.'
-           ],
-           textStyle: {
-             'color': 'white',
-             'font-family': '"Changa", sans-serif',
-             'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
-           },
-           buttonStyle: {
-             'color': 'white',
-             'font-family': '"Changa", mono',
-             'font-size': '130%',
-             'font-stretch': 'ultra-expanded'
-           },
-           fixNavbarToTop
-          })
+          msgNotifier(
+            {
+              url_hash: ['thanke', 'thankj'],
+              iconClass: ['fa fa-envelope', 'fa fa-address-card'],
+              text: [
+                'Thanks for contacting us, will replay back as soon as possible.',
+                'Thanks for joining our mailing list, Will keep you updated.'
+              ],
+              textStyle: {
+                'color': 'white',
+                'font-family': '"Changa", sans-serif',
+                'text-shadow': '0 0 30px rgba(255,255,255,0.5)'
+              },
+              buttonStyle: {
+                'color': 'white',
+                'font-family': '"Changa", mono',
+                'font-size': '130%',
+                'font-stretch': 'ultra-expanded'
+              }
+            },
+            function() { $('.navbar').addClass('fixed-top') }
+          )
 
           waitingScreen.stop()
         })
