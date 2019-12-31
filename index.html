@@ -144,6 +144,9 @@
           )
 
           waitingScreen.stop()
+
+          var hash = $(window.location.hash)[0]
+          if (hash) hash.scrollIntoView()
         })
     </script>
 </body>
