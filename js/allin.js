@@ -24,10 +24,6 @@ allIn.links = {
   }
 }
 
-// setting formspree emails with js to avoide spam
-$('#fnews').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
-$('#femail').attr('action', '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com')
-
 var wmsg = function wmsg () {
   // just a warning message
   alert('Notice: this website is still under construction ...\n\n\n')
