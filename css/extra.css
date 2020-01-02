@@ -81,3 +81,10 @@ i {
   -o-animation:      beat 2s infinite; 
   animation:         beat 2s infinite;
 }
+
+small {
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 255, 13, 0.63);
+  font-stretch: ultra-condensed;
+  font-size: 95%;
+  font-style: italic;
+}

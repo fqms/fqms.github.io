@@ -13,14 +13,14 @@ var allIn = {} // private object
 
 allIn.links = {
   sourceforge: {
-    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.5/FQM_05_Windows.zip/download',
+    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.6/FQM_06_Windows.zip/download',
     // linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_Linux.zip/download',
-    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.5/FQM_05_Sourcecode.zip/download'
+    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.6/FQM_06_Sourcecode.zip/download'
   },
   github: {
-    windows: 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Windows.zip',
+    windows: 'https://github.com/mrf345/FQM/releases/download/0.6.2/FQM_06_Windows.zip',
     // linux: 'https://github.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip',
-    macos: 'https://github.com/mrf345/FQM/releases/download/0.5/FQM_05_Sourcecode.zip'
+    macos: 'https://github.com/mrf345/FQM/archive/0.6.2.zip'
   }
 }
 
@@ -107,18 +107,3 @@ var contactUsStore  = function () {
     $('.navbar').addClass('fixed-top')
   }).__init__()
 }
-
-jQuery(document).ready(function ($) {
-
-  formValidator({
-    textClass: 'h3',
-    textStyle: {
-      'font-family': '"Changa", mono',
-      'margin-top': '2%'
-    },
-    formIds: ['#fnews'],
-    inputIds: [['#toValidE']],
-    texts: [[allIn.emailText]],
-    validators: [[allIn.emailValidator]]
-  })
-})
