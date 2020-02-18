@@ -13,14 +13,14 @@ var allIn = {} // private object
 
 allIn.links = {
   sourceforge: {
-    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.6/FQM_06_Windows.zip/download',
+    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.7/FQM_07_Windows.zip/download',
     // linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_Linux.zip/download',
-    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.6/FQM_06_Sourcecode.zip/download'
+    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.7/FQM_07_Sourcecode.zip/download'
   },
   github: {
-    windows: 'https://github.com/mrf345/FQM/releases/download/0.6.2/FQM_06_Windows.zip',
+    windows: 'https://github.com/mrf345/FQM/releases/download/0.7/FQM_07_Windows.zip',
     // linux: 'https://github.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip',
-    macos: 'https://github.com/mrf345/FQM/archive/0.6.2.zip'
+    macos: 'https://github.com/mrf345/FQM/archive/0.7.zip'
   }
 }
 

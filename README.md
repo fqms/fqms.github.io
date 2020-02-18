@@ -1,11 +1,7 @@
-# fqm.github.io :
+# fqm.github.io
 
-### To Add 0.6 relase:
-- [x] create simple modularizer.js and move the release notes to it
-- [x] remove firefox notification
-- [x] replace archive.org with github completely
-- [x] replace all fetch with ajax
-- [x] Add github release counter metadata api
-- [x] Refactor allin.js, counter.js
-- [x] Add modularize and move update to templates
-- [ ] ~~create a script to automate all the new release process~~
+### TODO 0.7 release:
+- [ ] Add 0.7 updates
+- [ ] Update about with summary of 0.7 release
+- [ ] Remove leftover TODOs and FIXMEs in `index.html`
+- [ ] Add update `todo_now.md` and move the current one to todos folder
