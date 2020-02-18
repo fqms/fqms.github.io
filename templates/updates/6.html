@@ -1,0 +1,146 @@
+<div class="section py-5 uniqueness updates" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 bg-inverse shb">
+          <h1 class="text-white version pt-2 pb-2">Updates: </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 pt-3">
+              <a style="width: 100%;" href="javascript:unique.back()" class="btn btn-outline-info btn-md h5">
+                <span class='fa fa-lg fa-arrow-left'></span>
+              </a>
+        </div>
+        <div class="col-md-6 pt-3 pb-2">
+            <a style="width: 100%;" href="javascript:unique.next()" class="btn btn-outline-info btn-md h5">
+              <span class='fa fa-lg fa-arrow-right'></span>
+            </a>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <table class="table table-striped shb">
+          <thead>
+            <tr class="bg-inverse">
+              <th class="text-center ar2" style="font-size: 150%">Update / Feature</th>
+              <th class="text-center ar2" style="font-size: 150%">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="h5">
+                <td class="text-center">
+                  Add multiple <small>Display</small> and <small>Touch</small> screens support based on offices
+                  <a href="https://github.com/mrf345/FQM/pull/79" target="_blank" rel="noopener noreferrer">(Demo)</a>
+                </td>
+                <td class="text-center">
+                  Partially implemented, a full distinct customization and repeat announcement for each screen
+                  is yet to be implemented in future releases.
+                </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add flag setting to enable or disable strict pulling of <small>common task</small>'s tickets across offices
+                <a target='_blank' rel="noopener noreferrer" href='https://github.com/mrf345/FQM/pull/61'>(Demo)</a>
+              </td>
+              <td class="text-center"> Newly implemented, stable and has good test coverage.</td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add ability to pull random ticket from a task or office queue
+                <a href="https://github.com/mrf345/FQM/pull/70" target="_blank" rel="noopener noreferrer">(Demo)</a>
+              </td>
+              <td class="text-center">
+                Stable and has a good test coverage.
+              </td>
+            </tr>
+            <tr class="h5">
+                <td class="text-center">
+                  Add ability to put a random ticket in-hold, so it won't be pulled util the status has been switched back off
+                  <a href="https://github.com/mrf345/FQM/pull/74" target="_blank" rel="noopener noreferrer">(Demo)</a>
+                </td>
+                <td class="text-center">
+                  Newly implemented there's with limited interface and options.
+                </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add time spent in waiting column to tasks and offices screens
+              </td>
+              <td class="text-center">
+                Stable and supports localization of time and wording.
+              </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add <small>Printed</small> ticket's font size scaling 
+                <a href="https://github.com/mrf345/FQM/pull/81" target="_blank" rel="noopener noreferrer">(Demo)</a>
+              </td>
+              <td class="text-center">
+                Unstable with minimal test coverage. Lacks full multilingual support currently.
+              </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add flag setting to disable all the visual effects and online wallpapers
+                <a href="https://github.com/mrf345/FQM/pull/71" target="_blank" rel="noopener noreferrer">(Demo)</a> 
+              </td>
+              <td class="text-center">
+                Newly introduced and work as expected.
+              </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add option to always display ticket's number besides its name if the ticket type is <small>Registered</small>
+                instead of <small>Printed</small> <a href="https://github.com/mrf345/FQM/pull/76" target="_blank" rel="noopener noreferrer">(Demo)</a>
+              </td>
+              <td class="text-center">
+                Stable and has good test-coverage.
+              </td>
+            </tr>
+            <tr class="text-danger h5">
+                <td class="text-center">
+                  Fix display's screen Video none-responsive resolution
+                  <a href="https://github.com/mrf345/FQM/pull/82" target="_blank" rel="noopener noreferrer">(Demo)</a>
+                </td>
+                <td class="text-center">
+                  Resolved and works as expected.
+                </td>
+              </tr>
+            <tr class="text-danger h5">
+              <td class="text-center">
+                Fix generating <small>Text-To-Speech</small> announcement latency, by implementing an instant caching mechanism.
+              </td>
+              <td class="text-center">
+                Stable enough for an initial implementation but lacks any test-coverage and an unbound database thread.
+              </td>
+            </tr>
+            <tr class="text-danger h5">
+              <td class="text-center">
+                Fix unused Multimedia files always showing up as being used bug.
+              </td>
+              <td class="text-center">
+                Resolved and works as expected.
+              </td>
+            </tr>
+            <tr class="text-danger h5">
+              <td class="text-center">
+                Fix database migration setup to allow importing data from previous releases into newer releases without system failures.
+              </td>
+              <td class="text-center">
+                Stable and manually tested cross-platform, but still lacks automatic test-coverage.
+              </td>
+            </tr>
+            <tr class="h5">
+              <td colspan="2" class="text-center">
+                <a style="width: 100%;" href="https://github.com/mrf345/fqm/blob/master/todo_now.md" 
+                target="_blank" class="btn btn-outline-info btn-lg"> 
+                  <span class="fa fa-search"></span> <br />
+                  Track next release development progress
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
