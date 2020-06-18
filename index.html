@@ -80,6 +80,7 @@
 <body class="text-center sectionsModularize">
     <script>
       var SUPPORTED_LANGUAGES = ['en', 'ar', 'es', 'fr', 'it']
+      var DURATION = 3000
 
       var config = [
         {templatesPath: '/templates/sections', appendTo: 'body', data: {
@@ -90,11 +91,16 @@
         {templatesPath: '/templates/updates', appendTo: '.updatesModularize', reverseOrder: true},
       ]
 
+      function fixTopBar() {
+        setTimeout(
+          function() { $('.navbar').addClass('fixed-top') },
+          DURATION
+        )
+      }
+
       var waitingScreen = beloading(
-        {text: 'FQM loading, please wait ...', manually: true, text_font: '"Changa", sans-serif'},
-        function () {
-          if (window.location.hash.indexOf('thank') === -1) $('.navbar').addClass('fixed-top')
-        }
+        {text: 'FQM loading, please wait ...', manually: true, text_font: '"Changa", sans-serif', duration: DURATION},
+        function () { if (window.location.hash.indexOf('thank') === -1) fixTopBar() }
       )
 
       new Modularize(undefined, config)
@@ -123,6 +129,7 @@
 
           msgNotifier(
             {
+              duration: DURATION,
               url_hash: ['thanke', 'thankj'],
               iconClass: ['fa fa-envelope', 'fa fa-address-card'],
               text: [
@@ -141,7 +148,7 @@
                 'font-stretch': 'ultra-expanded'
               }
             },
-            function() { $('.navbar').addClass('fixed-top') }
+            fixTopBar
           )
 
           formValidator({
