@@ -1,5 +1,5 @@
 var releases = {
-  Windows: '0.7 beta',
-  Linux: '0.7 beta',
-  Mac: '0.7 beta'
+  Windows: '0.8 beta',
+  Linux: '0.8 beta',
+  Mac: '0.8 beta'
 }

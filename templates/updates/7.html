@@ -1,0 +1,142 @@
+<div class="section py-5 uniqueness updates" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 bg-inverse shb">
+          <h1 class="text-white version pt-2 pb-2">Updates: </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 pt-3">
+              <a style="width: 100%;" href="javascript:unique.back()" class="btn btn-outline-info btn-md h5">
+                <span class='fa fa-lg fa-arrow-left'></span>
+              </a>
+        </div>
+        <div class="col-md-6 pt-3 pb-2">
+            <a style="width: 100%;" href="javascript:unique.next()" class="btn btn-outline-info btn-md h5">
+              <span class='fa fa-lg fa-arrow-right'></span>
+            </a>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <table class="table table-striped shb">
+          <thead>
+            <tr class="bg-inverse">
+              <th class="text-center ar2" style="font-size: 150%">Update / Feature</th>
+              <th class="text-center ar2" style="font-size: 150%">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="h5">
+                <td class="text-center">
+                  Add an alternative POS printers driver for Unix-like operating systems officially: <small>Gnu/Linux</small>
+                  and <small>MacOS</small> <a target='_blank' rel="noopener noreferrer" href='https://github.com/mrf345/FQM/pull/131'>(Demo)</a>
+                </td>
+                <td class="text-center">
+                  Partially and newly implemented, error handling and printer's feedback is yet to be developed.
+                </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add a single row queuing setup. Basically the same queuing experience without the need for a <small>Touch Screen</small>
+                <a target='_blank' rel="noopener noreferrer" href='https://github.com/mrf345/FQM/pull/144'>(Demo)</a>
+              </td>
+              <td class="text-center"> Newly implemented, more work is needed to improve its overall usability.</td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add support for <small>Urdu</small> and <small>German</small> text-to-speech announcement options.
+              </td>
+              <td class="text-center">
+                Stable and has a good test coverage.
+              </td>
+            </tr>
+            <tr class="h5">
+                <td class="text-center">
+                  Refactor <small>Text-To-Speech</small> generator and Add documentation to help users, add support for their language easily
+                  <a href="https://github.com/mrf345/FQM/blob/master/docs/localization.md" target="_blank" rel="noopener noreferrer">(Ref)</a>
+                </td>
+                <td class="text-center">
+                  Stable and well tested prior to the refactoring.
+                </td>
+            </tr>
+            <tr class="h5">
+              <td class="text-center">
+                Add <small>Display Screen</small> customization option for handling audio announcement queuing
+                <a target='_blank' rel="noopener noreferrer" href='https://github.com/mrf345/FQM/pull/139'>(Demo)</a>
+              </td>
+              <td class="text-center">
+                Enabled by default. Stable and well tested.
+              </td>
+            </tr>
+            <tr class="text-danger h5">
+                <td class="text-center">
+                  Fix several issues with cross-platform printers setup
+                  <a href="https://github.com/mrf345/FQM/issues/135" target="_blank" rel="noopener noreferrer">(Ref1)</a>
+                  <a href="https://github.com/mrf345/FQM/issues/122" target="_blank" rel="noopener noreferrer">(Ref2)</a>
+                  <a href="https://github.com/mrf345/FQM/issues/125" target="_blank" rel="noopener noreferrer">(Ref3)</a>
+                </td>
+                <td class="text-center">
+                  Resolved and added test-coverage to hopefully avoid them in the future. 
+                </td>
+              </tr>
+            <tr class="text-danger h5">
+              <td class="text-center">
+                Fix <small>Customization > Video</small> screen and upload issues
+                <a href="https://github.com/mrf345/FQM/issues/118" target="_blank" rel="noopener noreferrer">(Ref1)</a>
+                <a href="https://github.com/mrf345/FQM/issues/119" target="_blank" rel="noopener noreferrer">(Ref2)</a>
+              </td>
+              <td class="text-center">
+                Stable and well tested.
+              </td>
+            </tr>
+            <tr class="text-danger h5">
+              <td class="text-center">
+                Fix <small>Text-To-Speech</small> caching tasks causing race condition on some operating systems
+                <a href="https://github.com/mrf345/FQM/issues/105" target="_blank" rel="noopener noreferrer">(Ref)</a>
+              </td>
+              <td class="text-center">
+                Resolved and works as expected.
+              </td>
+            </tr>
+            <tr class="text-danger h5">
+              <td class="text-center">
+                Fix database migrations fails to load on newly generated databases
+                <a href="https://github.com/mrf345/FQM/issues/129" target="_blank" rel="noopener noreferrer">(Ref)</a>
+              </td>
+              <td class="text-center">
+                Manually tested and works as expected cross-platform.
+              </td>
+            </tr>
+            <tr class="text-danger h5">
+                <td class="text-center">
+                  Fix audio file notification is disabled alongside audio announcement
+                  <a href="https://github.com/mrf345/FQM/issues/108" target="_blank" rel="noopener noreferrer">(Ref)</a>
+                </td>
+                <td class="text-center">
+                  Resolved and well tested.
+                </td>
+            </tr>
+            <tr class="text-danger h5">
+                <td class="text-center">
+                  Fix <small>Display Screen</small> excessive CPU usage on low spec devices
+                  <a href="https://github.com/mrf345/FQM/issues/103" target="_blank" rel="noopener noreferrer">(Ref)</a>
+                </td>
+                <td class="text-center">
+                  Resolved and has test-coverage.
+                </td>
+            </tr>
+            <tr class="h5">
+              <td colspan="2" class="text-center">
+                <a style="width: 100%;" href="https://github.com/mrf345/FQM/projects/1" 
+                target="_blank" class="btn btn-outline-info btn-lg"> 
+                  <span class="fa fa-search"></span> <br />
+                  Track next release development progress
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

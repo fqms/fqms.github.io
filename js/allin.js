@@ -13,14 +13,14 @@ var allIn = {} // private object
 
 allIn.links = {
   sourceforge: {
-    windows: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.7/FQM_07_Windows.zip/download',
-    // linux: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.4.1/FQM_041_Linux.zip/download',
-    macos: 'https://sourceforge.net/projects/free-queue-manager/files/FQM%200.7/FQM_07_Sourcecode.zip/download'
+    windows: 'https://sourceforge.net/projects/free-queue-manager/files/0.8/FQM_win_08.zip/download',
+    linux: 'https://sourceforge.net/projects/free-queue-manager/files/0.8/FQM_linux_08.zip/download',
+    macos: 'https://sourceforge.net/projects/free-queue-manager/files/0.8/FQM_mac_08.zip/download'
   },
   github: {
-    windows: 'https://github.com/mrf345/FQM/releases/download/0.7/FQM_07_Windows.zip',
-    // linux: 'https://github.org/download/free_queue_manager_0.4.1/FQM_041_Linux.zip',
-    macos: 'https://github.com/mrf345/FQM/archive/0.7.zip'
+    windows: 'https://github.com/mrf345/FQM/releases/download/0.8/FQM_win_08.zip',
+    linux: 'https://github.com/mrf345/FQM/releases/download/0.8/FQM_linux_08.zip',
+    macos: 'https://github.com/mrf345/FQM/releases/download/0.8/FQM_mac_08.zip'
   }
 }
 
@@ -37,7 +37,7 @@ var lswitch = function lswitch () {
     $('#sourceforge').prop('disabled', true)
     $('#github').prop('disabled', false)
     $('#winl').attr('href', allIn.links.sourceforge.windows).attr('target', '_blank')
-    // $('#linl').attr('href', allIn.links.sourceforge.linux).attr('target', '_blank')
+    $('#linl').attr('href', allIn.links.sourceforge.linux).attr('target', '_blank')
     $('#macl').attr('href', allIn.links.sourceforge.macos).attr('target', '_blank')
   } else {
     $('#sourceforge').removeClass('active')
@@ -45,7 +45,7 @@ var lswitch = function lswitch () {
     $('#github').prop('disabled', true)
     $('#github').addClass('active')
     $('#winl').attr('href', allIn.links.github.windows).attr('target', '')
-    // $('#linl').attr('href', allIn.links.github.linux).attr('target', '')
+    $('#linl').attr('href', allIn.links.github.linux).attr('target', '')
     $('#macl').attr('href', allIn.links.github.macos).attr('target', '')
   }
   $('#winl').fadeOut().fadeIn()
