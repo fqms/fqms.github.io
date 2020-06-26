@@ -86,7 +86,7 @@ var contactUsStore  = function () {
   contactUs({
     title: 'FQM ' + version,
     titleText: 'Contact Us',
-    email: '//formspree.io/' + 'freequem' + '@' + 'gmail' + '.' + 'com',
+    email: '//us-central1-fqms-202404.cloudfunctions.net/api/support',
     nextUrl: '//fqms.github.io/#thanke',
     titleStyle: allIn.typicalStyle,
     nameStyle: allIn.typicalStyle,
